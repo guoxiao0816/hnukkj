@@ -1,0 +1,120 @@
+@media screen and (max-width:700px){
+    body{font-size:14px;}
+
+    .h1, h1{font-size: 27px !important;}
+    .h1, .h2, .h3, h1, h2, h3{margin-top: 10px;margin-bottom:10px;}
+    .h4, .h5, .h6, h4, h5, h6{margin-top: 10px;margin-bottom:10px;}
+    .h2, h2{font-size: 20px;}
+    .h3, h3{font-size: 16px;}
+    .h4, h4{font-size: 14px;}
+    .h5, h5{font-size: 14px;}
+
+
+}
+@media screen and (max-width:700px){
+    .menu{height:60px;}
+    /*好评度*/
+    .reviewspercen{font-size: 40px;}
+    .reviewspercen span{font-size:20px;}
+    .total{line-height:1.5em;border: none;margin-top:2%;}
+    #histogram{line-height: 1.8em;}
+    /*评论列表查找*/
+    .reviews-choose li{padding-right: 0.5%;padding-left: 0.5%;}
+
+    /*首页我们承诺*/
+    .promise_title{margin:30px 0}
+    .promise .h2{margin:10px 0}
+    .promise .col-xs-6{margin-bottom: 20px;}
+    .recommend .recommend_first{margin-left:0;}
+    .index_title h1{
+        font-size:40px;
+    }
+    /*优快驾校*/
+
+    .school{margin-top:0;}
+    .banner, .banner .swiper-wrapper, .banner .swiper-slide{height:150px !important}
+    .index_title{padding-top:30px;margin-top:0;padding-bottom: 30px;}
+    .index_title h3{margin-bottom:10px;}
+    .school_box .col-lg-4{margin-top:15px;}
+    .banner.photo img{height: 100%;}
+    .swiper_recommend .h4{line-height:1.7em;}
+    .swiper_recommend{margin-top:20px;}
+    .people_show .col-lg-3{margin-bottom: 20px;height: auto;}
+    .nav > li > a{padding:0 3px;}
+    .ensure{background: none;}
+    .simply-scroll .simply-scroll-list div.col-lg-3{width: 200px !important;}
+    .ensure .clearfix{text-align: center;}
+    .ensure_icon{float: none !important;}
+    .label{font-size: 12px;padding:0 5px;font-weight: normal;}
+    .icon-xingxing{margin-left: 0;margin-right: 3px;font-size: 14px;}
+    .foot{font-size: 14px;}
+
+    /*学车顾问*/
+    .adviser .adviser_content{top:0;left:6%;}
+    .adviser .adviser_content h4{margin:0}
+
+    /*网上驾校*/
+    .school_list .school_info{line-height: 1.5em;}
+    .school_list .school_info .col-lg-5{margin-top:10px;}
+    .school_list .school_info{padding-top: 10px;padding-bottom:5px;}
+    .school_list a{margin-bottom: 10px;}
+    .school_list h2{margin-bottom: 0;}
+    .school_list .more_school{font-size: 14px;}
+
+    /*驾校详情页begin*/
+    /*驾校教练*/
+    .jxjl{font-size: 12px;}
+    /*班型详情*/
+    .panel-body{padding:0;}
+    .bx-char{font-size:12px;margin-left:0 !important;}
+    .bx-name{font-size: 12px;padding-left: 9% !important;margin-left:5%;}
+    #jxxq #page{text-align: center !important;}
+    .bxxq-table.h3{font-size: 12px;}
+    .bxxq .bxbm{font-size:12px;width: 24%;}
+    .bx-price{font-size:14px;float:none;}
+    .bx-price del{font-size: 12px;padding-left: 0;}
+    .bxxq-list .col-xs-3, .bxxq-list .col-xs-6{height:100px;padding-top:0;}
+    .bxxq-table-slide a{padding:0;}
+    /*班型详情*/
+    /*驾校详情页end*/
+    /*教练详情begin*/
+    .teacher-photo{margin-bottom: 20px;}
+    .teacher-info p{font-size: 14px;}
+    /*教练详情end*/
+    /*诚聘英才*/
+    .office-word{padding: 10px 10px 0}
+
+
+    /*学车流程*/
+    .xclc-title .h1{font-size: 25px;color: #02698f;}
+    .xclc-title .h2{font-size: 20px;color: #02698f;}
+    .xclc-title{background-size: 70% !important;}
+    .xclc-word{font-size: 12px;}
+    .even .xclc-word p{margin-top: 0;}
+
+    /*关于我们*/
+    .about-list li, .about-word-box{padding:0 5px;}
+    .about-list i{font-size: 50px;}
+    .about-list p{font-size:16px;}
+
+    /*招商合作*/
+    .zshz-banner{height:150px;}
+    .zshz{margin-top:30;}
+    .zshz-small .iconfont{margin-right:0;}
+    .zshz-list{margin-bottom:30px;}
+    .zshz-list>li{margin-top: 20px;}
+    /*关于优快*/
+    .aboutUK-banner{height:150px;}
+    /*活动详情*/
+    #hdxq .djs-style .number{padding:17px 15px;font-size:3rem;}
+    #hdxq .colon{font-size:5rem;margin-top:0.4rem;}
+    .hdxq-banner{margin-bottom:4rem;height: 20rem;background-size:150% 100% !important;}
+    .themes-red .hdjz{font-size: 10px;}
+    #hdxq font.iconfont{font-size: 13px;}
+    .hdjz .pl-10{padding-left:0px;}
+    .hdjz .pr-10{padding-right:0px;}
+    #hdxq font.iconfont{margin-right:0;}
+    .hdjs{font-size: 15px;}
+    #hdxq .djs-style{border-bottom-width: 5px;}
+    #container_html img{width: 100%;}
+}

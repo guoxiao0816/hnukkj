@@ -1,0 +1,68 @@
+<li class="aui-list-item aui-margin-t-10">
+            <div class="aui-media-list-item-inner">
+                <a href="#" class="aui-list-item-media">
+                    <img src="images/liulangnan.png" class="aui-img-round"  style="width:1.5rem">
+                </a>
+                <div class="aui-list-item-inner">
+                    <a href="/htxq">
+                        <div class="aui-list-item-header">
+                             <div class="aui-card-list-user-name">路人甲</div>
+                             <div class="aui-label">标签</div>
+                             <div class="aui-label aui-label-info">标签</div>
+                        </div>
+                        <p>54分钟前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自 郑州市</p>
+                        <div href="" class="aui-row aui-row-padded  aui-margin-t-5" style="margin-left: 0;">
+                            <h4>科目三已过，电脑显示我没考</h4>
+                            <div class="label_con"> 明天就要考科目三了，我是特意来许愿的老天、大神、典典都保佑吧保佑我这次能顺利过关，我在这里提前先谢谢各路大神了，拜托</div>
+                            <div class="gallery">
+                                <div class="aui-col-xs-4">
+                                  <img class="lazy" data-original="http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/dace7025d0bc473a8a25452704b0dbef.jpeg!list.3">
+                                   <div class="imgdpd" style="background-image: url(http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/dace7025d0bc473a8a25452704b0dbef.jpeg!list.3);"></div>
+                                                            </div>
+                                                            <div class="aui-col-xs-4">
+                                                                <img class="lazy" data-original="http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/26c04728bfac497ea38210fa732d0f99.jpeg!list.3">
+                                                                <div class="imgdpd" style="background-image: url(http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/26c04728bfac497ea38210fa732d0f99.jpeg!list.3);"></div>
+                                                            </div>
+                                                            <div class="aui-col-xs-4">
+                                                                <img class="lazy" src="images/Class.jpg">
+                                                                <div class="imgdpd" style=" background-image: url(images/Class.jpg);"></div>
+                                                            </div>
+                                                            <div class="aui-col-xs-4">
+                                                                <img class="lazy" src="images/banner1.png">
+                                                                <div class="imgdpd" style="background-image: url(images/banner1.png);"></div>
+                                                            </div>
+                                                            <div class="aui-col-xs-4">
+                                                                <img class="lazy" src="images/xianyu.jpg">
+                                                                <div class="imgdpd" style="background-image: url(images/xianyu.jpg);"></div>
+                                                            </div>
+                                                        </div>
+                        </div>
+                    </a>
+                    <div class="topiclabel aui-margin-t-5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="###">科目三</a></div>
+                            <div class="swiper-slide"><a href="###">郑州市</a></div>
+                            <div class="swiper-slide"><a href="###">啊</a></div>
+                            <div class="swiper-slide"><a href="###">科三经验分享</a></div>
+                            <div class="swiper-slide"><a href="###">郑州市</a></div>
+                            <div class="swiper-slide"><a href="###">播种驾校</a></div>
+
+                           <!-- <a href="###">科目三</a>
+                            <a href="###">郑州市</a>
+                            <a href="###">科目三</a>
+                            <a href="###">郑州市</a>
+                            <a href="###">啊</a>
+                            <a href="###">科三经验分享</a>
+                            <a href="###">啊</a>
+                            -->
+                        </div>
+                    </div>
+                    <div class="aui-info aui-margin-t-5" style="padding:0">
+                        <div class="aui-info-item"></div>
+                        <div class="aui-info-item">
+                            <span class="iconfont">&#xe695; 1</span><span class="iconfont aui-margin-l-10">&#xe696; 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
