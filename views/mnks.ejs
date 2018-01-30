@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .chexing .aui-col-xs-3{ border-right: 1px solid #eeeeee;padding:0;margin: 1rem 0;}
+        .lianxi .aui-col-xs-3{width: 20%!important;}
+        .chexing .aui-col-xs-3:last-child{ border-right: none;}
+        .weui-toast_content{color: #FFFfff;}
+        .chexing_bj:before{content:url("/images/include/mnks_sel.png");position: absolute;top: -10px;right: 10px;height: 1rem; width: 1rem;}
+        .mnks_icon{width: 1.8rem!important;}
+        .mnks_icon_min{width: 1rem!important;margin-right: .75rem;vertical-align: text-bottom;}
+        .mnks_icon_min_inline{width: 1.5rem!important; margin-right: .7rem;   display: inline-block !important;  vertical-align: middle; }
+    </style>
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-tab screening aui-border-b" id="tab">
+    <div class="aui-tab-item aui-active recom aui-border-r">科一</div>
+    <div class="aui-tab-item nearby aui-border-r">科二</div>
+    <div class="aui-tab-item sequenc aui-border-r">科三</div>
+    <div class="aui-tab-item screen aui-border-r">科四</div>
+    <div class="aui-tab-item screen">拿本</div>
+</div>
+<div class="aui-content" style="margin-top: 2.2rem;">
+    <div class="swiper-container" id="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide_KM1">
+                <section class="aui-grid">
+                    <div class="lianxi aui-row">
+                        <a href="###" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/随机练习.png" alt="">
+                            <div class="aui-grid-label">随机练习</div>
+                        </a>
+                        <a href="###" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/难题练习.png" alt="">
+                            <div class="aui-grid-label">难题练习</div>
+                        </a>
+                        <a href="###" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/专项练习.png" alt="">
+                            <div class="aui-grid-label">专项练习</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/章节练习.png" alt="">
+                            <div class="aui-grid-label">章节练习</div>
+                        </a>
+                        <a href="/iconshorthand" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/图标速记.png" alt="">
+                            <div class="aui-grid-label">图标速记</div>
+                        </a>
+                    </div>
+                </section>
+
+                <!--两大块-->
+                <ul class="aui-list aui-media-list aui-row aui-margin-t-10">
+                    <a href="###" class="aui-list-item aui-col-xs-6 aui-padded-t-10 aui-padded-b-10">
+                        <div class="aui-media-list-item-inner aui-border-r">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title"><font color="#ffa340" size="4">顺序练习</font></div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    题目：1/1331
+                                </div>
+                            </div>
+                            <div class="aui-list-item-media" style="width: 3rem;">
+                                <img src="/images/include/mnks_shunxu.png">
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="###" class="aui-list-item aui-col-xs-6 aui-padded-t-10 aui-padded-b-10">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title"><font color="#268079" size="4">模拟考试</font></div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    时间：45MIN
+                                </div>
+                            </div>
+                            <div class="aui-list-item-media" style="width: 3rem;">
+                                <img src="/images/include/mnks_mn.png">
+                            </div>
+                        </div>
+                    </a>
+                </ul>
+                <ul class="aui-list aui-media-list aui-row aui-text-center aui-margin-t-10">
+                    <a href="###" class="aui-list-item aui-col-xs-6">
+                        <div class="aui-list-item-inner aui-border-r">
+                            <div class="aui-list-item-title"><img class="mnks_icon_min_inline" src="images/include/专家课程.png" alt="">专家课程</div>
+                        </div>
+                    </a>
+                    <a href="/dtjq" class="aui-list-item aui-col-xs-6">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-title"><img class="mnks_icon_min_inline" src="images/include/km1答题技巧.png" alt="">答题技巧</div>
+                        </div>
+                    </a>
+                    <a href="" class="aui-list-item aui-col-xs-6">
+                        <div class="aui-list-item-inner aui-border-r">
+                            <div class="aui-list-item-title"><img class="mnks_icon_min_inline" src="images/include/科一考规.png" alt="">科一考规</div>
+                        </div>
+                    </a>
+                    <a href="" class="aui-list-item aui-col-xs-6">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-title"><img class="mnks_icon_min_inline" src="images/include/交通法规.png" alt="">交通法规</div>
+                        </div>
+                    </a>
+                </ul>
+                <section class="chexing aui-grid aui-margin-t-10">
+                    <div class="aui-row">
+                        <a href="javascript:void(0)" class="aui-col-xs-3 chexing_bj">
+                            <font color="#fe7ec0" class="aui-iconfont iconfont">&#xe6b3;</font>
+                            <div class="aui-grid-label">小车</div>
+                        </a>
+                        <a href="javascript:void(0)" class="aui-col-xs-3">
+                            <font color="#3ddaf2" class="aui-iconfont iconfont">&#xe6b7;</font>
+                            <div class="aui-grid-label">货车</div>
+                        </a>
+                        <a href="javascript:void(0)" class="aui-col-xs-3">
+                            <font color="#70bc46" class="aui-iconfont iconfont">&#xe6b8;</font>
+                            <div class="aui-grid-label">客车</div>
+                        </a>
+                        <a href="javascript:void(0)" class="aui-col-xs-3">
+                            <font color="#fead5e" class="aui-iconfont iconfont">&#xe6b6;</font>
+                            <div class="aui-grid-label">摩托车</div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="swiper-slide" id="slide_KM2">
+                <div class="swiper-container" id="swiper_KM2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/l1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="images/l2.png" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination pagination-KM2"></div>
+                </div>
+                <section class="aui-grid aui-margin-t-10 KM2">
+                    <div class="aui-row">
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/考前准备.png" alt="">
+                            <div class="aui-grid-label">考前准备</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/合格标准.png" alt="">
+                            <div class="aui-grid-label">合格标准</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/经验技巧.png" alt="">
+                            <div class="aui-grid-label">经验技巧</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/考试秘籍.png" alt="">
+                            <div class="aui-grid-label">考试秘籍</div>
+                        </a>
+                        <a href="/zxzk?km=2" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/自学直考.png" alt="">
+                            <div class="aui-grid-label">自学直考</div>
+                        </a>
+                    </div>
+                </section>
+                <ul class="aui-list aui-media-list aui-margin-t-10 video">
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            科目二学车视频
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-row aui-row-padded">
+                                <a href="" class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font>
+                                        <div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">倒车入库</div>
+                                </a>
+                                <a href="" class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font>
+                                        <div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">坡道定点停车与起步</div>
+                                </a>
+                                <a href="" class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font>
+                                        <div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">侧方停车</div>
+                                </a>
+                                <a href="" class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">曲线行驶</div>
+                                </a>
+                                <a href="" class="aui-col-xs-6">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">直角转弯</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide" id="slide_KM3">
+                <div class="swiper-container" id="swiper_KM3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/l1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="images/l2.png" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination pagination-KM3"></div>
+                </div>
+                <section class="aui-grid aui-margin-t-10 KM3">
+                    <div class="aui-row">
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/考前准备.png" alt="">
+                            <div class="aui-grid-label">考前准备</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/合格标准.png" alt="">
+                            <div class="aui-grid-label">合格标准</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/经验技巧.png" alt="">
+                            <div class="aui-grid-label">经验技巧</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/考试秘籍.png" alt="">
+                            <div class="aui-grid-label">考试秘籍</div>
+                        </a>
+                        <a href="/zxzk?km=2" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/自学直考.png" alt="">
+                            <div class="aui-grid-label">自学直考</div>
+                        </a>
+                    </div>
+                </section>
+                <section class="aui-grid">
+                    <div class="aui-row">
+                        <a href="/k3cz" class="aui-col-xs-3 aui-padded-t-0">
+                            <img class="mnks_icon" src="images/include/灯光操作.png" alt="">
+                            <div class="aui-grid-label">灯光操作</div>
+                        </a>
+                        <a href="/k3cz" class="aui-col-xs-3 aui-padded-t-0">
+                            <img class="mnks_icon" src="images/include/语音模拟.png" alt="">
+                            <div class="aui-grid-label">语音模拟</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3 aui-padded-t-0">
+                            <img class="mnks_icon" src="images/include/知识讲解.png" alt="">
+                            <div class="aui-grid-label">知识讲解</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3 aui-padded-t-0">
+                            <img class="mnks_icon" src="images/include/科三口诀.png" alt="">
+                            <div class="aui-grid-label">科三口诀</div>
+                        </a>
+                    </div>
+                </section>
+                <ul class="aui-list aui-media-list aui-margin-t-10 video">
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            科目三学车视频
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-row aui-row-padded">
+                                <div class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">倒车入库</div>
+                                </div>
+                                <div class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">坡道定点停车与起步</div>
+                                </div>
+                                <div class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">侧方停车</div>
+                                </div>
+                                <div class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">曲线行驶</div>
+                                </div>
+                                <div class="aui-col-xs-6">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">直角转弯</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide" id="slide_KM4">
+                <section class="aui-grid">
+                    <div class="lianxi aui-row">
+                        <a href="###" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/随机练习.png" alt="">
+                            <div class="aui-grid-label">随机练习</div>
+                        </a>
+                        <a href="###" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/难题练习.png" alt="">
+                            <div class="aui-grid-label">难题练习</div>
+                        </a>
+                        <a href="###" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/专项练习.png" alt="">
+                            <div class="aui-grid-label">专项练习</div>
+                        </a>
+                        <a href="" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/章节练习.png" alt="">
+                            <div class="aui-grid-label">章节练习</div>
+                        </a>
+                        <a href="/iconshorthand" class="aui-col-xs-3">
+                            <img class="mnks_icon" src="images/include/图标速记.png" alt="">
+                            <div class="aui-grid-label">图标速记</div>
+                        </a>
+                    </div>
+                </section>
+
+                <!--两大块-->
+                <ul class="aui-list aui-media-list aui-row aui-margin-t-10">
+                    <a href="###" class="aui-list-item aui-col-xs-6 aui-padded-t-10 aui-padded-b-10">
+                        <div class="aui-media-list-item-inner aui-border-r">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title"><font color="#ffa340" size="4">顺序练习</font></div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    题目：1/1331
+                                </div>
+                            </div>
+                            <div class="aui-list-item-media" style="width: 3rem;">
+                                <img src="/images/include/mnks_shunxu.png">
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="###" class="aui-list-item aui-col-xs-6 aui-padded-t-10 aui-padded-b-10">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title"><font color="#268079" size="4">模拟考试</font></div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    时间：45MIN
+                                </div>
+                            </div>
+                            <div class="aui-list-item-media" style="width: 3rem;">
+                                <img src="/images/include/mnks_mn.png">
+                            </div>
+                        </div>
+                    </a>
+                </ul>
+                <ul class="aui-list aui-media-list aui-row aui-text-center aui-margin-t-10">
+                    <a href="###" class="aui-list-item aui-col-xs-6">
+                        <div class="aui-list-item-inner aui-border-r">
+                            <div class="aui-list-item-title"><img class="mnks_icon_min_inline" src="images/include/专家课程.png" alt="">专家课程</div>
+                        </div>
+                    </a>
+                    <a href="/dtjq" class="aui-list-item aui-col-xs-6">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-title"><img class="mnks_icon_min_inline" src="images/include/km1答题技巧.png" alt="">答题技巧</div>
+                        </div>
+                    </a>
+                    <a href="" class="aui-list-item aui-col-xs-6">
+                        <div class="aui-list-item-inner aui-border-r">
+                            <div class="aui-list-item-title"><img class="mnks_icon_min_inline" src="images/include/科一考规.png" alt="">科一考规</div>
+                        </div>
+                    </a>
+                    <a href="" class="aui-list-item aui-col-xs-6">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-title"><img class="mnks_icon_min_inline" src="images/include/交通法规.png" alt="">交通法规</div>
+                        </div>
+                    </a>
+                </ul>
+                <section class="chexing aui-grid aui-margin-t-10">
+                    <div class="aui-row">
+                        <a href="javascript:void(0)" class="aui-col-xs-3 chexing_bj">
+                            <font color="#fe7ec0" class="aui-iconfont iconfont">&#xe6b3;</font>
+                            <div class="aui-grid-label">小车</div>
+                        </a>
+                        <a href="javascript:void(0)" class="aui-col-xs-3">
+                            <font color="#3ddaf2" class="aui-iconfont iconfont">&#xe6b7;</font>
+                            <div class="aui-grid-label">货车</div>
+                        </a>
+                        <a href="javascript:void(0)" class="aui-col-xs-3">
+                            <font color="#70bc46" class="aui-iconfont iconfont">&#xe6b8;</font>
+                            <div class="aui-grid-label">客车</div>
+                        </a>
+                        <a href="javascript:void(0)" class="aui-col-xs-3">
+                            <font color="#fead5e" class="aui-iconfont iconfont">&#xe6b6;</font>
+                            <div class="aui-grid-label">摩托车</div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div class="swiper-slide" id="slide_KM5">
+                <div class="swiper-container" id="swiper_KM5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/l1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="images/l2.png" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination pagination-KM5"></div>
+                </div>
+                <div class="aui-card-list">
+                    <div class="aui-card-list-header aui-padded-b-0">
+                        <div><img class="mnks_icon_min" src="images/include/领证须知.png" alt="">领证须知</div>
+                    </div>
+                    <section class="aui-grid">
+                        <div class="aui-row">
+                            <div class="aui-col-xs-3">
+                                <!--<font color="#82cd4f" class="aui-iconfont iconfont">&#xe6cf;</font>-->
+                                <img class="mnks_icon" src="images/include/哪里领.png" alt="">
+                                <div class="aui-grid-label">哪里领</div>
+                            </div>
+                            <div class="aui-col-xs-3">
+                                <!--<font color="#2fa6f2" class="aui-iconfont iconfont">&#xe67a;</font>-->
+                                <img class="mnks_icon" src="images/include/驾照年审.png" alt="">
+                                <div class="aui-grid-label">驾照年审</div>
+                            </div>
+                            <div class="aui-col-xs-3">
+                                <!--<font color="#00c4d6" class="aui-iconfont iconfont">&#xe698;</font>-->
+                                <img class="mnks_icon" src="images/include/驾照挂失.png" alt="">
+                                <div class="aui-grid-label">驾照挂失</div>
+                            </div>
+                            <div class="aui-col-xs-3">
+                                <!--<font color="#7d7eff" class="aui-iconfont iconfont">&#xe6cd;</font>-->
+                                <img class="mnks_icon" src="images/include/换驾照.png" alt="">
+                                <div class="aui-grid-label">换驾照</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="aui-card-list">
+                    <div class="aui-card-list-header aui-padded-b-0"><div><img class="mnks_icon_min" src="images/include/新手面试.png" alt="">新手上路</div></div>
+                    <section class="aui-grid">
+                        <div class="aui-row">
+                            <div class="aui-col-xs-3">
+                                <!--<font color="#7d7eff" class="aui-iconfont iconfont">&#xe679;</font>-->
+                                <img class="mnks_icon" src="images/include/上路前.png" alt="">
+                                <div class="aui-grid-label">上路前</div>
+                            </div>
+                            <div class="aui-col-xs-3">
+                                <!--<font color="#00c4d6" class="aui-iconfont iconfont">&#xe67c;</font>-->
+                                <img class="mnks_icon" src="images/include/开车.png" alt="">
+                                <div class="aui-grid-label">开车须知</div>
+                            </div>
+                            <div class="aui-col-xs-3">
+                                <!--<font color="#82cd4f" class="aui-iconfont iconfont">&#xe67b;</font>-->
+                                <img class="mnks_icon" src="images/include/停车.png" alt="">
+                                <div class="aui-grid-label">停车须知</div>
+                            </div>
+                            <div class="aui-col-xs-3">
+                                <!--<font color="#2fa6f2" class="aui-iconfont iconfont">&#xe69c;</font>-->
+                                <img class="mnks_icon" src="images/include/技巧.png" alt="">
+                                <div class="aui-grid-label">驾驶技巧</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <ul class="aui-list aui-media-list aui-margin-t-10 video">
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            安全教育视频
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-row aui-row-padded">
+                                <div class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">倒车入库</div>
+                                </div>
+                                <div class="aui-col-xs-6 aui-margin-b-5">
+                                    <div class="video_img">
+                                        <img src="images/include/ke2.jpg">
+                                        <font class="iconfont"></font><div class="video_time">03:22</div>
+                                    </div>
+                                    <div class="aui-list-item-title">坡道定点停车与起步</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/picture_browser.js"></script>
+<div id="fixed_app">
+    <a href="http://ukxueche.com/app"><img src="/images/include/download2.png" alt="下载优快学车"></a>
+    <div class="close" onclick="close_fixed_app()">×</div>
+</div>
+<script type="text/javascript">
+    //应用推广
+    function close_fixed_app() {
+        $('#fixed_app').fadeOut();
+        /*若用户关闭推广，移除所有*/
+        $('#fixed_app').remove();
+    }
+    gesture();
+    //应用推广end
+</script>
+<% include footPublic %>
+</body>
+<!--<script>
+    $('#slide_KM1,#slide_KM4').height($(window).height()-$('footer').height()-$('header').height()-45);
+</script>-->
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+    },function(ret){
+        mySwiper.slideTo(ret.index-1, 200, false);
+    });
+</script>
+<script>
+    var mySwiper = new Swiper('#swiper', {
+        pagination : '.pagination',
+        autoHeight: true,
+        onSlideChangeEnd:function (swiper) {
+            $(".screening .aui-tab-item").eq(swiper.activeIndex).addClass('aui-active').siblings().removeClass('aui-active');
+        }
+    });
+    var swiper_KM2= new Swiper('#swiper_KM2',{
+        pagination : '.pagination-KM2',
+        nested:true,
+        resistanceRatio: 0
+    });
+    var swiper_KM3= new Swiper('#swiper_KM3',{
+        pagination : '.pagination-KM3',
+        nested:true,
+        resistanceRatio: 0
+    });
+    var swiper_KM5= new Swiper('#swiper_KM5',{
+        pagination : '.pagination-KM5',
+        nested:true,
+        resistanceRatio: 0
+    });
+
+    /*科目一*/
+    $('#slide_KM1 .chexing .aui-col-xs-3').click(function () {
+        $('#slide_KM1 .chexing .aui-col-xs-3').removeClass('chexing_bj');
+        var msg= $(this).addClass('chexing_bj').children("div:last").text();
+        console.log(msg);
+        $.toast( "已切换至" + msg);
+    })
+
+    /*科目四*/
+    $('#slide_KM4 .chexing .aui-col-xs-3').click(function () {
+        $('#slide_KM4 .chexing .aui-col-xs-3').removeClass('chexing_bj');
+        var msg= $(this).addClass('chexing_bj').children("div:last").text();
+        console.log(msg);
+        $.toast( "已切换至" + msg);
+    })
+</script>
+
+</html>

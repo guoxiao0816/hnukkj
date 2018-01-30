@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list .aui-list-item-label{width: 35%}
+        .aui-list .aui-list-item-media{width: 33%;}
+        .aui-list .aui-list-item-inner{width: 67%;}
+        .aui-list .aui-list-item-text{font-size: 0.6rem;}
+    </style>
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-content">
+    <div class="photo">
+        <img src="http://www.ukxueche.com/style/images/include/yjbm_banner.png" alt="" style="vertical-align: middle;">
+    </div>
+    <div class="weui-cells weui-cells_form aui-margin-t-10">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label"><font color="red">*</font> 手机号码：</label></div>
+            <div class="weui-cell__bd">
+                <input type="number" placeholder="请输入您的手机号码" id="sjhm" name="sjhm">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell__hd">
+                <label class="weui-label"><font color="red">*</font> 验 证 码：</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input type="text" placeholder="请输入收到的验证码" id="sum" name="sum">
+            </div>
+            <div class="weui-cell__ft">
+                <button class="weui-vcode-btn" id="weui-vcode-btn" onclick="getCode()">获取验证码</button>
+            </div>
+        </div>
+        <div class="weui-cell aui-border-b">
+            <div class="weui-cell__hd"><label for="" class="weui-label"><font color="red">*</font> 您的姓名：</label></div>
+            <div class="weui-cell__bd">
+                <input type="text" placeholder="请输入您的名字" id="xm" name="xm">
+            </div>
+        </div>
+    </div>
+    <div class="aui-margin-r-10 aui-margin-l-10">
+        <div class="aui-btn aui-btn-info aui-btn-block aui-margin-t-10" onclick="saveSubmit()" id="a">提交</div>
+    </div>
+    <p class="aui-text-center aui-margin-t-5">驾校人员会尽快和您取得联系</p>
+    <p class="aui-text-center aui-text-info">请保持通讯畅通</p>
+</div>
+<% include footPublic.ejs %>
+</body>
+</html>

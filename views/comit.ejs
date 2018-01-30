@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <link rel="stylesheet" href="/stylesheets/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="/stylesheets/jquery.emoji.css">
+    <link rel="stylesheet" href="/stylesheets/svgani.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_98q8joz6tyyqr529.css">
+    <style>
+        input[type="search"] {
+            min-height: auto;
+        }
+        img{ width: auto;}
+        .commit .top a{display: inherit;width: 100%;}
+
+        /*社区发帖专栏，溢出已隐藏*/
+        .label_con p{
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .best_answer {
+            vertical-align: initial;
+            padding: 0.05rem;
+            line-height: 0.5;
+            border: 1px solid #f58311;
+            font-size: 10px;
+            border-radius: 5px;
+        }
+        .iconfont{font-size: 14px;}
+        .gallery .lazy{opacity: 0;height: 100px; width: 100%;position: relative;}
+        .gallery .imgdpd{height: 100px;cursor: pointer; opacity: 1;width: 95%!important;margin: 0.125rem; position: absolute;top: 0;left: 0; background-repeat: no-repeat; background-position: center center; background-size: cover;}
+    </style>
+</head>
+<!--兼容html标签-->
+<body class="commit">
+<% include head %>
+<div class="screening" style="overflow: hidden;">
+    <div id="topNav" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide active"><span>热门</span></div>
+            <div class="swiper-slide"><span>最新</span></div>
+            <div class="swiper-slide"><span>学车问答</span></div>
+            <div class="swiper-slide"><span>科目一</span></div>
+            <div class="swiper-slide"><span>科目二</span></div>
+            <div class="swiper-slide"><span>科目三</span></div>
+            <div class="swiper-slide"><span>科目四</span></div>
+            <div class="swiper-slide"><span>晒驾照</span></div>
+            <div class="swiper-slide"><span>考前许愿</span></div>
+            <div class="swiper-slide"><span>校花校草</span></div>
+            <div class="swiper-slide"><span>学车趣事</span></div>
+        </div>
+    </div>
+    <div class="more_model iconfont aui-text-center">
+        &#xe602;
+    </div>
+</div>
+
+    <div class="aui-content" style="padding-top: 4.5rem;">
+        <!-- body 顶部加上如下代码 -->
+        <div class="weui-pull-to-refresh__layer" style="height: 40px;">
+            <div class='weui-pull-to-refresh__arrow'></div>
+            <div class='weui-pull-to-refresh__preloader'></div>
+            <div class="down"></div>
+            <div class="up"></div>
+            <div class="refresh"></div>
+        </div>
+    <div class="swiper-container" id="commit_banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="http://files.ukxueche.com/banner/4101/k2dcrk.png" alt=""></div>
+            <div class="swiper-slide"><img src="http://files.ukxueche.com/banner/4101/k2ksjq.png" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="sssss">
+        <div class="swiper-hot aui-margin-t-10">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="/zxhd/106.html">
+                        <img src="http://files.ukxueche.com/activity/4101/106_sm.png">
+                        科一学车日记
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/zxhd/105.html">
+                        <img src="http://files.ukxueche.com/activity/4101/105_sm.png">
+                        带你练车
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/zxhd/104.html">
+                        <img src="http://files.ukxueche.com/activity/4101/gdhd_sm.png">
+                        科三经验分享
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/zxhd/103.html">
+                        <img src="http://files.ukxueche.com/activity/4101/cgjx_sm.png">
+                        科四晒成绩
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/zxhd/103.html">
+                        <img src="http://files.ukxueche.com/activity/4101/cgjx_sm.png">
+                        驾考趣事
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/zxhd/103.html">
+                        <img src="http://files.ukxueche.com/activity/4101/cgjx_sm.png">
+                        女神驾到
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/zxhd/103.html">
+                        <img src="http://files.ukxueche.com/activity/4101/cgjx_sm.png">
+                        专家帮选车
+                    </a>
+                </div>
+        </div>
+    </div>
+    </div>
+        <div class="ssss">
+            <div class="aui-card-list">
+                <a href="/yhlb" class="aui-card-list-header aui-card-list-user aui-border-b">
+                    <div class="aui-card-list-user-avatar">
+                        <img src="http://saturn-image.kakamobi.com/saturn-image/2015/12/17/10/1c9773205bcd43d799c99b90b8f29171_100X100.png" class="aui-img-round">
+                    </div>
+                    <div class="aui-card-list-user-name">
+                        <div>科目二模块模板</div>
+                    </div>
+                    <div class="aui-card-list-user-info">成员<font color="#ffb502">120</font>&nbsp;&nbsp;&nbsp;&nbsp;话题<font color="#ffb502">120</font></div>
+                    <ul class="model_user">
+                        <li>
+                            <img class="aui-img-round" src="http://wx.qlogo.cn/mmopen/ibbWGSd4EAeb2PshUcfKIGSsXg9AQcf4T5glVlmRsJPzgZGEyYuRiaiac8UaYWCsXj2vC92FCiaMwiaW3chyYdhyaxP8bv0htfecg/96" alt="">
+                            <img class="aui-img-round" src="http://wx.qlogo.cn/mmopen/ibbWGSd4EAeb2PshUcfKIGSsXg9AQcf4T5glVlmRsJPzgZGEyYuRiaiac8UaYWCsXj2vC92FCiaMwiaW3chyYdhyaxP8bv0htfecg/96" alt="">
+                            <img class="aui-img-round" src="http://wx.qlogo.cn/mmopen/ibbWGSd4EAeb2PshUcfKIGSsXg9AQcf4T5glVlmRsJPzgZGEyYuRiaiac8UaYWCsXj2vC92FCiaMwiaW3chyYdhyaxP8bv0htfecg/96" alt="">
+                        </li>
+                    </ul>
+                </a>
+                <div class="aui-card-list-content-padded">
+                    <div class="aui-list-item">倒车入库车技交流</div>
+                    <div class="topiclabel aui-margin-t-5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="/comitmodule">科目三</a></div>
+                            <div class="swiper-slide"><a href="/comitmodule">郑州市</a></div>
+                            <div class="swiper-slide"><a href="/comitmodule">啊</a></div>
+                            <div class="swiper-slide"><a href="/comitmodule">科三经验分享</a></div>
+                            <div class="swiper-slide"><a href="/comitmodule">郑州市</a></div>
+                            <div class="swiper-slide"><a href="/comitmodule">播种驾校</a></div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="aui-list top">
+                    <!--热门话题详情-->
+                    <li class="aui-list-item">
+                        <a href="/htxq">
+                            <div class="aui-list-item-label-icon">
+                                <font color="#03a9f4" size="6" class="iconfont">&#xe6f2;</font>
+                            </div>
+                            <div class="aui-list-item-inner aui-ellipsis-1">
+                                活动清凉一夏
+                            </div>
+                        </a>
+                    </li>
+                    <li class="aui-list-item">
+                        <a href="/htxq">
+                            <div class="aui-list-item-label-icon">
+                                <font color="#03a9f4" size="6" class="iconfont">&#xe6f2;</font>
+                            </div>
+                            <div class="aui-list-item-inner aui-ellipsis-1">
+                                活动清凉一夏
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--问答详情专用-->
+        <div class="aui-tab" id="tab">
+            <div class="aui-tab-item aui-active">待解决</div>
+            <div class="aui-tab-item">已解决</div>
+            <div class="aui-tab-item">精华知识</div>
+        </div>
+
+      <!--  <div class="aui-tab" id="tab2">
+            <div class="aui-tab-item aui-active">最新回复</div>
+            <div class="aui-tab-item">最新发布</div>
+            <div class="aui-tab-item">精华话题</div>
+        </div>-->
+
+        <ul class="aui-list aui-media-list commit_list">
+            <li class="aui-list-item aui-margin-t-10">
+                <div class="aui-media-list-item-inner">
+                    <a href="/usercomit" class="aui-list-item-media">
+                        <img src="images/liulangnan.png" class="aui-img-round" style="width:1.5rem">
+                    </a>
+                    <div class="aui-list-item-inner">
+                        <a href="/htxq">
+                            <div class="aui-list-item-header">
+                                <div class="aui-card-list-title">
+                                    路人甲 <font class="iconfont" color="#d4237a">&#xe65b;</font><font class="iconfont" color="#1296db">&#xe633;</font><font class="iconfont" color="#03a9f4"></font>
+                                </div>
+                            </div>
+                            <p>54分钟前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自 郑州市</p>
+                            <div class="aui-row aui-row-padded aui-margin-t-5" style="margin-left: 0;">
+                                <h4 class="aui-margin-b-5">科目三已过，电脑显示我没考</h4>
+                                <div class="label_con aui-margin-b-5">
+                                    <p>明天就要考科目三了，我是特意来许愿的老天、大神、典典都保佑吧保佑我这次能顺利过关，我在这里提前先谢谢各路大神了，拜托</p>
+                                </div>
+                                <div class="gallery">
+                                    <div class="aui-col-xs-4">
+                                        <img class="lazy" data-original="http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/dace7025d0bc473a8a25452704b0dbef.jpeg!list.3">
+                                        <div class="imgdpd" style="background-image: url(http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/dace7025d0bc473a8a25452704b0dbef.jpeg!list.3);"></div>
+                                    </div>
+                                    <div class="aui-col-xs-4">
+                                        <img class="lazy" data-original="http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/26c04728bfac497ea38210fa732d0f99.jpeg!list.3">
+                                        <div class="imgdpd" style="background-image: url(http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/26c04728bfac497ea38210fa732d0f99.jpeg!list.3);"></div>
+                                    </div>
+                                    <div class="aui-col-xs-4">
+                                        <img class="lazy" src="images/Class.jpg">
+                                        <div class="imgdpd" style=" background-image: url(images/Class.jpg);"></div>
+                                    </div>
+                                    <div class="aui-col-xs-4">
+                                        <img class="lazy" src="images/banner1.png">
+                                        <div class="imgdpd" style="background-image: url(images/banner1.png);"></div>
+                                    </div>
+                                    <div class="aui-col-xs-4">
+                                        <img class="lazy" src="images/xianyu.jpg">
+                                        <div class="imgdpd" style="background-image: url(images/xianyu.jpg);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="topiclabel aui-margin-t-5">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="/comitmodule">科目三</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">郑州市</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">啊</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">科三经验分享</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">郑州市</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">播种驾校</a></div>
+                            </div>
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"></div>
+                            <div class="aui-info-item">
+                                <span class="iconfont">&#xe695; 1</span>
+                                <span class="iconfont icon-zan1 aui-margin-l-10"><span>1111</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!--如果有问答模块走这个模块-->
+        <ul class="aui-list aui-media-list commit_list">
+            <li class="aui-list-item aui-margin-t-10">
+                <div class="aui-media-list-item-inner">
+                    <a href="/usercomit" class="aui-list-item-media">
+                        <img src="images/liulangnan.png" class="aui-img-round" style="width:1.5rem">
+                    </a>
+                    <div class="aui-list-item-inner">
+                        <a href="/htxq">
+                            <div class="aui-list-item-header">
+                                <div class="aui-card-list-title middle_user">
+                                    路人甲 <span class="comitlv">20</span>
+                                </div>
+                            </div>
+                            <p>54分钟前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自 郑州市</p>
+                            <div class="aui-row aui-row-padded aui-margin-t-5" style="margin-left: 0;">
+                                <h4 class="aui-margin-b-5">
+                                    <span class="aui-label aui-label-info" style="vertical-align: initial;padding:0.25rem;line-height: 0.5;">问</span>
+                                    <span class="aui-label aui-label-warning" style="vertical-align: initial;padding:0.25rem;line-height: 0.5;">答</span>
+                                    科目三已过，电脑显示我没考</h4>
+                                <div class="label_con aui-margin-b-5">
+                                    <p>明天就要考科目三了，我是特意来许愿的老天、大神、典典都保佑吧保佑我这次能顺利过关，我在这里提前先谢谢各路大神了，拜托</p>
+                                </div>
+                                <div class="gallery">
+                                    <div class="aui-col-xs-4">
+                                        <img class="lazy" data-original="http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/dace7025d0bc473a8a25452704b0dbef.jpeg!list.3">
+                                        <div class="imgdpd" style="background-image: url(http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/dace7025d0bc473a8a25452704b0dbef.jpeg!list.3);"></div>
+                                    </div>
+                                    <div class="aui-col-xs-4">
+                                        <img class="lazy" data-original="http://files.ukxueche.com/community/20170916/1505556544958-20151101021600_XvhSR.thumb.224_0.jpg">
+                                        <div class="imgdpd" style="background-image: url(http://files.ukxueche.com/community/20170916/1505556544958-20151101021600_XvhSR.thumb.224_0.jpg);"></div>
+                                    </div>
+                                    <div class="aui-col-xs-4">
+                                        <img class="lazy" src="http://files.ukxueche.com/community/20170920/1505899602081-6e2a0ea7-4565-43dc-8a1c-9b9a0495b869.jpeg">
+                                        <div class="imgdpd" style="background-image: url(http://files.ukxueche.com/community/20170920/1505899602081-6e2a0ea7-4565-43dc-8a1c-9b9a0495b869.jpeg);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!--如果有最佳答案直接展现-->
+                        <div class="aui-list-item-title aui-border-t aui-font-size-12">
+                            <div class="aui-hr aui-margin-t-5 aui-margin-b-10"></div>
+                            <span class="best_answer aui-text-warning">最佳答案</span>
+                            明天就要考科目三了，我是特意来许愿的老天、大神、典典都保佑吧保佑我这次能顺利过关，我在这里提前先谢谢各路大神了，拜托
+                        </div>
+                        <!--如果没有不显示此区域-->
+
+                        <div class="topiclabel aui-margin-t-5">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="/comitmodule">科目三</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">郑州市</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">啊</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">科三经验分享</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">郑州市</a></div>
+                                <div class="swiper-slide"><a href="/comitmodule">播种驾校</a></div>
+                            </div>
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"></div>
+                            <div class="aui-info-item">
+                                <span>12个回答</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    <!--<ul>
+        <li>客服优优
+        <a href="tencent://message/?uin=1953378846&amp;Site=%qq&amp;Menu=yes" target="_self" style="outline: 0px; color: rgb(51, 51, 51); text-decoration: none; cursor: pointer; word-wrap: break-word;">
+            <img alt="点击这里给我发消息" src="http://files.ukxueche.com/ueditor/jsp/upload/image/20160924/1474717343081011699.gif">
+        </a></li>
+        <li>客服乐乐
+        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2678175372&amp;site=qq&amp;menu=yes" target="_blank" style="outline: 0px; color: rgb(51, 51, 51); text-decoration: none; cursor: pointer; word-wrap: break-word;">
+            <img alt="在线咨询" src="http://files.ukxueche.com/ueditor/jsp/upload/image/20170318/1489831764824027002.gif">
+        </a></li>
+        <li>一键加群
+        <a href="http://shang.qq.com/wpa/qunwpa?idkey=8ceb831a877e5febb41f758d671423ccb2a259a7f16fae8687bfeacbd39d59c7" target="_blank" style="outline: 0px; color: rgb(51, 51, 51); line-height: 22.4px; font-family: 'Microsoft Yahei', 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, tahoma, arial, 'WenQuanYi Micro Hei', Verdana, sans-serif, 宋体; font-size: 14px; text-decoration: none; cursor: pointer; word-wrap: break-word; background-color: rgb(246, 246, 246);">
+            <img title="郑州考驾照-优快学车" alt="郑州考驾照-优快学车" src="http://files.ukxueche.com/ueditor/jsp/upload/image/20170318/1489831764849069997.png">
+        </a></li>
+    </ul>-->
+
+    <div class="weui-loadmore">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+        <!--<div class="weui-loadmore weui-loadmore_line">
+            <span class="weui-loadmore__tips">暂无数据</span>
+        </div>-->
+</div>
+
+<div class="aui-card-list lable_box">
+    <div style="height:77%;overflow-y: auto;">
+        <div class="aui-card-list-header aui-border-b aui-padded-r-0">
+            <div class="aui-font-size-16">已订阅标签</div>
+            <div class="sort">
+                <div>排序/删除</div>
+                <i class="aui-iconfont iconfont">&#xe6a2;</i>
+            </div>
+        </div>
+        <div class="aui-card-list-content-padded subscribed">
+            <div class="aui-row aui-row-padded aui-text-center">
+                <div class="aui-col-xs-4" onclick="subClick(0)">热门</div>
+                <div class="aui-col-xs-4" onclick="subClick(1)">最新</div>
+                <div class="aui-col-xs-4" onclick="subClick(2)">科目一</div>
+                <div class="aui-col-xs-4" onclick="subClick(3)">科目二</div>
+                <div class="aui-col-xs-4" onclick="subClick(4)">科目三</div>
+                <div class="aui-col-xs-4" onclick="subClick(5)">科目四</div>
+                <div class="aui-col-xs-4" onclick="subClick(6)">晒驾照</div>
+                <div class="aui-col-xs-4" onclick="subClick(7)">考前许愿</div>
+                <div class="aui-col-xs-4" onclick="subClick(8)">校花校草</div>
+                <div class="aui-col-xs-4" onclick="subClick(9)">学车趣事</div>
+            </div>
+        </div>
+        <div class="aui-card-list-header aui-border-b aui-padded-r-0 aui">
+            <div class="aui-font-size-16">推荐标签</div>
+        </div>
+        <div class="aui-card-list-content-padded subscribed">
+            <div class="aui-row aui-row-padded aui-text-center">
+                <div class="aui-col-xs-4">帮选车</div>
+                <div class="aui-col-xs-4">提车作业</div>
+                <div class="aui-col-xs-4">狼族自驾游</div>
+                <div class="aui-col-xs-4">教练之家</div>
+            </div>
+        </div>
+        <div class="searchMore" style="border-radius: 5rem;height: 1.7rem;line-height: 1.7rem;text-align: center; border:1px solid #bbb;background: #fff;margin: 1rem 0.5rem">
+            <a href="/searchTag"><font class="iconfont"></font>搜索您感兴趣的任意标签</a>
+            <a href=""></a>
+        </div>
+    </div>
+</div>
+    <div class="l-wrapper" style="display: none;">
+        <svg viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="circle" class="g-circles g-circles--v3">
+                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
+                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
+                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
+                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
+                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
+                <circle id="7" cx="60" cy="110" r="10"></circle>
+                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
+                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
+                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
+                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
+                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
+                <circle id="1" cx="60" cy="10" r="10"></circle>
+            </g>
+        </svg>
+    </div>
+
+<script src="/javascripts/picture_browser.js"></script>
+<div id="fixed_app">
+    <a href="http://ukxueche.com/app"><img src="/images/include/download4.png" alt="下载优快学车"></a>
+    <div class="close" onclick="close_fixed_app()">×</div>
+</div>
+<script type="text/javascript">
+    //应用推广
+    function close_fixed_app() {
+        $('#fixed_app').fadeOut();
+        /*若用户关闭推广，移除所有*/
+        $('#fixed_app').remove();
+    }
+    gesture();
+    //应用推广end
+</script>
+<% include footPublic %>
+</body>
+<!--<script src="/javascripts/jquery.mCustomScrollbar.min.js"></script>-->
+<script src="/javascripts/jquery.mousewheel-3.0.6.min.js"></script>
+<script src="/javascripts/jquery.emoji.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+<script src="/javascripts/picture_browser.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+
+    var tab2 = new auiTab({
+        element:document.getElementById("tab2"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+<script>
+    var swiper_KM2 = new Swiper('#commit_banner', {
+        pagination: '.swiper-pagination',
+        resistanceRatio: 0
+    });
+
+    $(".swiper-hot").swiper({
+        slidesPerView: 3.5,
+        paginationClickable: true,
+        spaceBetween: 10,
+        freeModeMomentum: false,
+        freeMode: true,
+        pagination: '.swiper-pagination1'
+    });
+</script>
+<!--<script>
+    htmlobj = $.ajax({url: "stylesheets/test_input.txt", async: false});
+    for (var i = 0; i < 5; i++) {
+        $(".commit_list").append(htmlobj.responseText);
+    }
+//    console.log(htmlobj.responseText);
+</script>-->
+<!--延迟加载-->
+<script type="text/javascript">
+    $(function () {
+        $("img.lazy").lazyload();
+    });
+</script>
+<!--图片浏览器-->
+<script type="text/javascript">
+    $Picture_browser(".gallery .aui-col-xs-4");
+</script>
+<!--weui 加载-->
+<script>
+    /*滑动加载*/
+    var loading = false;
+    $(document.body).infinite(100).on("infinite", function () {
+        if (loading) return;
+        loading = true;
+        setTimeout(function () {
+            for (var i = 0; i < 3; i++) {
+                $('.commit_list').append(htmlobj.responseText);
+                loading = false;
+            }
+        }, 1500);
+    });
+</script>
+<script>
+    /*下拉刷新*/
+    $(function () {
+        huadong();
+
+    })
+   /* window.onscroll = function () {
+        var windowHeight = $(window).height();
+        var documentHeight = $(document).height();
+        var scroll_top = $(document).scrollTop();
+
+        console.log(windowHeight);
+        console.log(documentHeight);
+        console.log(scroll_top);
+        if(/!*scroll_top >= windowHeight-500 || *!/scroll_top >= 100){
+             $('.aui-content').unbind();
+             $('.aui-content').removeClass('weui-pull-to-refresh');
+             $('.aui-content').css('margin-top','-50px');
+        }else {
+            $('.aui-content').on("pull-to-refresh", function() {});
+        }
+    }*/
+
+    function huadong() {
+        $('.aui-content').pullToRefresh();
+        $('.aui-content').on("pull-to-refresh", function() {
+            setTimeout(function () {
+                $('.aui-content').pullToRefreshDone();
+            }, 1500);
+        });
+    }
+
+</script>
+<script type="text/javascript">
+    /*滑动导航~*/
+    var mySwiper = new Swiper('#topNav', {
+        freeMode: true,
+        freeModeMomentumRatio: 0.5,
+        slidesPerView: 'auto'
+    });
+    swiperWidth = mySwiper.container[0].clientWidth
+    maxTranslate = mySwiper.maxTranslate();
+    maxWidth = -maxTranslate + swiperWidth / 2
+    $(".swiper-container").on('touchstart', function (e) {
+        e.preventDefault()
+    })
+    mySwiper.on('tap', function (swiper, e) {
+        e.preventDefault()
+        slide = swiper.slides[swiper.clickedIndex]
+        slideLeft = slide.offsetLeft
+        slideWidth = slide.clientWidth
+        slideCenter = slideLeft + slideWidth / 2
+        console.log(swiper.clickedIndex);
+        // 被点击slide的中心点
+        mySwiper.setWrapperTransition(300)
+        if (slideCenter < swiperWidth / 2) {
+            mySwiper.setWrapperTranslate(0)
+        } else if (slideCenter > maxWidth) {
+            mySwiper.setWrapperTranslate(maxTranslate)
+        } else {
+            nowTlanslate = slideCenter - swiperWidth / 2
+            mySwiper.setWrapperTranslate(-nowTlanslate)
+        }
+        $("#topNav  .active").removeClass('active')
+        $("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+    })
+    /*滑动导航~*/
+    function subClick(eq) {
+        slide = mySwiper.slides[eq]
+        slideLeft = slide.offsetLeft
+        slideWidth = slide.clientWidth
+        slideCenter = slideLeft + slideWidth / 2
+        // 被点击slide的中心点
+        mySwiper.setWrapperTransition(300)
+        if (slideCenter < swiperWidth / 2) {
+            mySwiper.setWrapperTranslate(0)
+        } else if (slideCenter > maxWidth) {
+            mySwiper.setWrapperTranslate(maxTranslate)
+        } else {
+            nowTlanslate = slideCenter - swiperWidth / 2
+            mySwiper.setWrapperTranslate(-nowTlanslate)
+        }
+        $("#topNav  .active").removeClass('active')
+        $("#topNav .swiper-slide").eq(eq).addClass('active');
+        $('.lable_box').hide();
+    }
+</script>
+<script>
+    var swiper_topiclabel = new Swiper('.topiclabel', {
+        freeMode: true,
+        freeModeMomentumRatio: 0.5,
+        slidesPerView: 'auto'
+    });
+
+</script>
+<script>
+    $(function () {
+        /*下弹菜单*/
+        $(".more_model, .sort i").click(function () {
+            $('.lable_box').toggle();
+        });
+        $('.more_model').on('click',function () {
+            $('.lable_box').toggle();
+        });
+    })
+</script>
+</html>

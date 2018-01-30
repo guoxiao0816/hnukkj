@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list.aui-list-in .aui-list-item-inner:after{height: 0;}
+        .aui-list-item-title{font-size:0.7rem !important; color: #757575 !important;}
+    </style>
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-content" >
+    <ul class="aui-list aui-card-list aui-list-in">
+        <div class="aui-card-list-header aui-border-b">驾校信息</div>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">驾校名称</div>
+                <div class="aui-list-item-right">鸿通驾校(永安街校区)</div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">培训班型</div>
+                <div class="aui-list-item-right">VIP快速班</div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">培训科目</div>
+                <div class="aui-list-item-right">科目二</div>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-card-list aui-list-in">
+        <div class="aui-card-list-header aui-margin-t-10 aui-border-b">学员信息</div>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">姓名</div>
+                <div class="aui-list-item-right">路人甲</div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">手机号码</div>
+                <div class="aui-list-item-right">13888888888</div>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-card-list aui-list-in">
+        <div class="aui-card-list-header aui-margin-t-10 aui-border-b">订单信息</div>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">学时单价</div>
+                <div class="aui-list-item-right">￥100.0</div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">学时数量</div>
+                <div class="aui-list-item-right">
+                    <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right" type="count" id="demo">
+                        <div class="aui-bar-btn-item">
+                            <i class="aui-iconfont aui-icon-minus"></i>
+                        </div>
+                        <div class="aui-bar-btn-item">
+                            <input type="number" class="aui-input aui-text-center" value="0" id="count">
+                        </div>
+                        <div class="aui-bar-btn-item">
+                            <i class="aui-iconfont aui-icon-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">学时单价</div>
+                <div class="aui-list-item-right">暂无可用</div>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-media-list aui-card-list aui-list-in">
+        <div class="aui-card-list-header aui-margin-t-10 aui-border-b">支付方式</div>
+        <label class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title"><font style="vertical-align: middle;font-size: 22px;" color="#03a9f4" class="aui-iconfont iconfont">&#xe662;</font> 支付宝</div>
+                    <div class="aui-list-item-right"><input type="radio" class="aui-checkbox" name="zffs"></div>
+                </div>
+            </div>
+        </label>
+        <label class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title"><font style="vertical-align: middle;font-size: 22px;" color="#1dbe20" class="aui-iconfont iconfont">&#xe661;</font> 微信</div>
+                    <div class="aui-list-item-right"><input type="radio" class="aui-checkbox" name="zffs"></div>
+                </div>
+            </div>
+        </label>
+    </ul>
+</div>
+<div class="aui-bar aui-bar-tab aui-font-size-16" style="line-height: 2.5rem;">
+    <div class="aui-col-xs-9 aui-bar-tab-item aui-text-left aui-padded-l-15">
+        合计：<font color="#03a9f4" id="num">￥0.0</font>
+    </div>
+    <div class="aui-col-xs-3 aui-bar-tab-item aui-bg-info aui-text-white"> 确认报名</div>
+</div>
+<% include nav.ejs %>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var bar = document.querySelectorAll(".aui-bar-btn");
+    if(bar){
+        for(var i=0; i<bar.length;i++){
+            var d = bar[i];
+            var tab = new auiTab({
+                element:bar[i],
+                repeatClick:true
+            },function(ret){
+                if(ret.dom.parentNode.getAttribute("type") && ret.dom.parentNode.getAttribute("type")=="count"){
+                    var count = parseInt(document.getElementById("count").value);
+                    if(ret.index==2)return;
+                    if(ret.index==1 && count >=1){
+                        document.getElementById("count").value = count-1;
+                        document.getElementById("num").innerHTML="¥"+(100*(count-1));
+                    }
+                    if(ret.index==3){
+                        document.getElementById("count").value = count+1;
+                        document.getElementById("num").innerHTML="¥"+(100*(count+1));
+                    }
+                }
+            });
+
+        }
+    }
+</script>
+</html>

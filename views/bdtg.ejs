@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        @font-face {font-family: 'hdjxingshub682f61ce15dc4';
+            src: url('fonts/zzjz/5948743ff629d80aa0d2f6a2.gif?r=46314176293');
+            src: url('fonts/zzjz/5948743ff629d80aa0d2f6a2.gif?r=46314176293?#iefix') format('embedded-opentype'),
+            url('fonts/zzjz/5948743ff629d80aa0d2f6a2.bmp?r=46314176293') format('woff'),
+            url('fonts/zzjz/5948743ff629d80aa0d2f6a2.jpg?r=46314176293') format('truetype'),
+            url('#hdjxingshu') format('svg');
+        }
+        .cssb682f61ce15dc4{font-family: 'hdjxingshub682f61ce15dc4';}
+        @font-face {font-family: 'HappyZcoolb782d66e515dc4';
+            src: url('fonts/zzjz/594c8c51f629d81270e06efb.gif?r=46582481981');
+            src: url('fonts/zzjz/594c8c51f629d81270e06efb.gif?r=46582481981?#iefix') format('embedded-opentype'),
+            url('fonts/zzjz/594c8c51f629d81270e06efb.bmp?r=46582481981') format('woff'),
+            url('fonts/zzjz/594c8c51f629d81270e06efb.jpg?r=46582481981') format('truetype'),
+            url('#HappyZcool') format('svg');
+        }
+        .cssb782d66e515dc4{font-family: 'HappyZcoolb782d66e515dc4';}
+        img{width: 100%;vertical-align: middle;}
+        .bdtg {background: #fff;}
+        .bdtg .aui-content{padding-top: 0;}
+        .bdtg .bdtg_ban{border-bottom: 8px solid #ffcc00;}
+
+        .zzjz_title .aui-media-list .aui-list-item{display: flex;}
+        .youshi .iconfont{width: 26px;height: 22px;background: #00a0e9;border-radius: 0.3rem;color: #fff;text-align: center;line-height: 22px;font-size: 0.7rem;}
+        .youshi .aui-list-item-inner{min-height: 0;padding-top: 0.3rem;padding-bottom: 0.3rem;}
+        .youshi .aui-list-item{background: #f8f8f8;min-height: 1rem;}
+        .aui-list .aui-list-item:after,.aui-list:after,.aui-list:before{height: 0;}
+        .bg_1,.bg_2{padding-bottom: 1rem !important;padding-top: 1rem !important;}
+        .bg_1{background: #fff;}
+        .bg_2{background: #f8f8f8;}
+        .aui-btn{padding:0.3rem 0rem;border-radius: 10rem !important;font-size: 1rem;font-weight: bold;display: inline-block;}
+        .zzjz_title .aui-media-list-item-inner{margin: 0 auto;position: relative;z-index: 6;padding-left: 0.75rem;}
+        .bg_1 .zzjz_title .aui-media-list-item-inner{background: #fff;}
+        .bg_2 .zzjz_title .aui-media-list-item-inner{background: #f8f8f8;}
+        .zzjz_title{position: relative;margin-bottom: 0.75rem;}
+        .zzjz_title .aui-list .aui-list-item{background: none;}
+        .zzjz_title .aui-list .aui-list-item-text{color: #303030}
+        .zzjz_title .line{position: absolute;top: 50%;z-index: 0;height: 1px;background: #363636;width: 100%;}
+        .zzjz_title .aui-list-item-title{font-weight: bold;font-size: 1.2rem !important;}
+        .form1 li{border: 1px solid #e5e5e5;border-radius: 3px;margin-top: 0.6rem !important;}
+        .zuai{background: #fff;}
+        .zuai .aui-list-item-text{font-size: 0.5rem;}
+        .zuai .aui-col-xs-4{background: #f6f6f6;padding: 0;}
+        .zuai .aui-col-xs-4 .tiaojian{color: #033454;padding: 0.7rem 0;text-align: left;padding-left: .4rem;}
+        .zuai .aui-col-xs-4 .tiaojian li{list-style: inside;line-height: .9rem;height: .9rem;overflow: hidden;font-size: .5rem!important;}
+        .zuai .aui-col-xs-4 .tiaojian li:last-child{font-weight: bold;}
+        .dongtai .aui-list-item-text{font-size: 0.5rem;}
+        .you .aui-col-xs-6{background: #f6f6f6;padding: 0;}
+        .you .aui-col-xs-6 .tiaojian{color: #000000;padding: 1.2rem 0;padding-left: .3rem;}
+        .you .aui-col-xs-6 .tiaojian li{line-height: .9rem;height: .9rem;overflow: hidden;}
+
+        .local_title{font-size: 1.2rem;line-height: 1}
+        .local_title div:nth-child(2){position: relative;border-bottom: 1px solid #eeeeee;line-height: 1;color: #182a42;display: inline-block;font-size: 0.7rem;}
+        .local_title div:nth-child(2):after{position: absolute;height: 3px;background: #f85c1a;width: 40%;content: '';bottom: -2px;left: 30%;}
+        .local_title small{font-size:70%;}
+        .zzjz_school .aui-row{line-height: 3;margin-top: 1rem;}
+        .zzjz_school .aui-row .aui-col-xs-3{margin: 0.25rem 0;border-top: 1px solid #eff0f1;border-bottom: 1px solid #eff0f1;color: #969797}
+        .zzjz_school .aui-row .aui-col-xs-3:nth-child(odd){background: #eff0f1}
+        .zzjz_school .aui-row .aui-col-xs-3:nth-child(4),.zzjz_school .aui-row .aui-col-xs-3:nth-child(8){border-right: 1px solid #eff0f1;}
+        .zzjz_school .aui-row .aui-col-xs-3:nth-child(even){background: #feffff; }
+        .zzjz_school .aui-row .aui-col-xs-3:last-child{color: #f85c1a;}
+        .Class{margin: 0 0.75rem;}
+        .Class .swiper-slide{background: #fff;}
+        .Class .swiper-slide .con{padding:1rem 0.6rem;border: 1px solid #c9c9c9;border-top: none;}
+        .Class .swiper-slide img{vertical-align: middle;}
+        .Class .swiper-slide div span{width:37px;height: 37px;text-align: center;display: inline-block;vertical-align: middle;}
+        .Class .swiper-slide div span:nth-child(1){background: #19a8ff;font-size:1.2rem;color: #fff;}
+        .Class .swiper-slide div span:nth-child(2){background: #ffd916;font-size: 1rem;line-height: 1.2;margin-left: 2px;}
+        .Class .swiper-slide div span:nth-child(2) small{font-size:30%;display: block;color: #273244;}
+        #koubei .swiper-slide{padding: 0 3rem;}
+        #koubei .swiper-slide h2{line-height: 1;margin: 0.8rem 0;}
+        #koubei .swiper-slide img{width: 60%;border: 10px solid #d3d3d3;border-radius: 50%;}
+        #koubei .swiper-slide div{color: #777777;margin-top: 0.5rem;text-align: justify;}
+        .swiper-button-next, .swiper-button-prev{top: 18%}
+        .swiper-button-prev{left: 49px}
+        .swiper-button-next{right: 49px}
+        .nums span{border: 1px solid #19a8ff;width:.8rem;display: inline-block;font-weight: bold;color: #19a8ff;}
+        .koubei_h3 h3{color: #4f4e4e;}
+        #footer{ background: #19a8ff; color: #fff!important;}
+        #footer a{color: #fff;}
+        .bdtg_footer{margin-top: 2rem; padding-bottom: .5rem; color: #000000;}
+        .aui-list .aui-list-item i.aui-iconfont{font-size: 0.9rem;}
+        .download{position:relative;}
+        .download a{width: 31%;height:7%;display: inline-block;position:absolute;right: 6.5%;bottom: 20.6%;}
+        .download a:nth-child(3){bottom: 29.2%;}
+        .aui-popup{min-width: 5rem;}
+        .form1 select,.form1 .aui-list-item-label-icon{color: #7f7f7f !important;}
+    </style>
+    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/104070/19607/596572fbf629e6108ca56833.css' rel='stylesheet' type='text/css' />
+</head>
+<body class="bdtg">
+    <div class="aui-content">
+        <div class="bdtg_ban"><img src="images/include/bdtg_banner.jpg" onclick="lqyh()"></div>
+        <div class="bg_1">
+            <div class="zzjz_title">
+                <ul class="aui-list aui-media-list">
+                    <li class="aui-list-item aui-list-item-middle aui-padded-l-10">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media" style="width: 3rem;">
+                                <img src="images/include/bdtg_title1.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">拿证无阻碍</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    所有问题轻松解决
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="line"></div>
+            </div>
+            <section class="aui-grid aui-margin-b-5 zuai">
+                <table class="aui-row" style=" border-spacing:5px 10px;border-collapse:inherit">
+                    <tr>
+                        <td class="aui-col-xs-4">
+                            <img src="images/include/bdtg_img1.png" alt="" style="width: 100%;">
+                            <ul class="aui-list tiaojian">
+                                <li class="aui-font-size-12">暂住证等半年？</li>
+                                <li class="aui-font-size-12">只需暂住证凭条</li>
+                                <li class="aui-font-size-12">3 -7天即可下条</li>
+                            </ul>
+                        </td>
+                        <td class="aui-col-xs-4">
+                            <img src="images/include/bdtg_img2.png" alt="" style="width: 100%;">
+                            <ul class="aui-list tiaojian">
+                                <li class="aui-font-size-12">驾校离家远?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                                <li class="aui-font-size-12">百所校区覆盖全城</li>
+                                <li class="aui-font-size-12">自建考场就近练车</li>
+                            </ul>
+                        </td>
+                        <td class="aui-col-xs-4">
+                            <img src="images/include/bdtg_img3.png" alt="" style="width: 100%;">
+                            <ul class="aui-list tiaojian">
+                                <li class="aui-font-size-12">收费较高不透明？</li>
+                                <li class="aui-font-size-12">品牌驾校抄底价&nbsp;&nbsp;</li>
+                                <li class="aui-font-size-12">一次性收费制度&nbsp;</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <div><img src="images/include/bdtg_img4.png" alt=""></div>
+        </div>
+        <div class="bg_1">
+            <div class="zzjz_title">
+                <ul class="aui-list aui-media-list">
+                    <li class="aui-list-item aui-list-item-middle aui-padded-l-10">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media" style="width: 3rem;">
+                                <img src="images/include/zzjz_title1.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">测一测39天急速拿证</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    免费测试，更短记录等你挑战
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="line"></div>
+            </div>
+            <ul class="aui-list aui-form-list aui-padded-l-15 aui-padded-r-15 form1">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label-icon">
+                            <i class="aui-iconfont iconfont">&#xe69f;</i>
+                        </div>
+                        <div class="aui-list-item-input">
+                            <select>
+                                <option>您每周的学车天数</option>
+                                <option>45天</option>
+                                <option>55天</option>
+                                <option>60天</option>
+                            </select>
+                        </div>
+                        <div class="aui-list-item-label-icon">
+                            <i class="aui-iconfont iconfont">&#xe602;</i>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label-icon">
+                            <i class="aui-iconfont iconfont">&#xe66c;</i>
+                        </div>
+                        <div class="aui-list-item-input">
+                            <select>
+                                <option>您想要报考的驾照类型</option>
+                                <option>C1</option>
+                                <option>C2</option>
+                                <option>A1</option>
+                            </select>
+                        </div>
+                        <div class="aui-list-item-label-icon">
+                            <i class="aui-iconfont iconfont">&#xe602;</i>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label-icon">
+                            <i class="aui-iconfont iconfont">&#xe702;</i>
+                        </div>
+                        <div class="aui-list-item-input">
+                            <input type="number" placeholder="填写手机号接收计算天数">
+                        </div>
+                    </div>
+                </li>
+                <div onclick="suan1()" class="aui-btn aui-btn-block aui-btn-info" style="margin-top: 1.5rem;">立即算一算</div>
+            </ul>
+        </div>
+
+        <div class="bg_1" style="padding-bottom: 0!important;;">
+            <div class="zzjz_title">
+                <ul class="aui-list aui-media-list">
+                    <li class="aui-list-item aui-list-item-middle aui-padded-l-10">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media" style="width: 3rem;">
+                                <img src="images/include/zzjz_title2.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">优学车优保障</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    优快学车全程保障
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="line"></div>
+            </div>
+            <section class="aui-grid aui-margin-b-15 you">
+                <table class="aui-row" style=" border-spacing:.8rem;border-collapse:inherit">
+                    <tr>
+                        <td class="aui-col-xs-6">
+                            <img src="images/include/you_img1.png" alt="" style="width: 100%;">
+                            <ul class="aui-list tiaojian">
+                                <li class="aui-font-size-12">品牌驾校</li>
+                                <li class="aui-font-size-12">百校联盟遍布全城</li>
+                                <li class="aui-font-size-12">与距离较真</li>
+                                <li class="aui-font-size-12">只为您学车出行更方便</li>
+                            </ul>
+                        </td>
+                        <td class="aui-col-xs-6">
+                            <img src="images/include/you_img2.png" alt="" style="width: 100%;">
+                            <ul class="aui-list tiaojian">
+                                <li class="aui-font-size-12">价格透明，底价报名</li>
+                                <li class="aui-font-size-12">优快学车全程监督</li>
+                                <li class="aui-font-size-12">打击一切隐性消费</li>
+                                <li class="aui-font-size-12">只为您学车更顺心</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="aui-col-xs-6">
+                            <img src="images/include/you_img3.png" alt="" style="width: 100%;">
+                            <ul class="aui-list tiaojian">
+                                <li class="aui-font-size-12">学员一键下载APP并注册</li>
+                                <li class="aui-font-size-12">甄选模拟真题免费领取</li>
+                                <li class="aui-font-size-12">省时省力</li>
+                                <li class="aui-font-size-12">只为您考试更省心</li>
+                            </ul>
+                        </td>
+                        <td class="aui-col-xs-6">
+                            <img src="images/include/you_img4.png" alt="" style="width: 100%;">
+                            <ul class="aui-list tiaojian">
+                                <li class="aui-font-size-12">24小时即时维权</li>
+                                <li class="aui-font-size-12">2小时内问题处理</li>
+                                <li class="aui-font-size-12">全程服务保障学考一路绿灯</li>
+                                <li class="aui-font-size-12">只为您学车更放心</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+        <div class="bg_1" style="padding-top: 0!important;">
+            <div class="zzjz_title">
+                <ul class="aui-list aui-media-list">
+                    <li class="aui-list-item aui-list-item-middle aui-padded-l-10">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media" style="width: 3rem;">
+                                <img src="images/include/zzjz_title6.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">口碑看得见</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    您的满意才是我们的功勋章
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="line"></div>
+            </div>
+            <div class="aui-text-center">
+                <div class="swiper-container" id="koubei">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ">
+                            <img src="http://www.ukxueche.com/public/images/index-ykkb3.jpg" style="">
+                            <h2>李磊<br><small>上班一族 / WorkingPerson </small></h2>
+                            <div>同事介绍我在优快学车平台报名鸿通驾校，由于报名时恰好赶上活动，优惠不少，很担心驾考期间会出现隐藏收费，直到拿到驾照也没有收取任何费用。</div>
+                            <h2 class="cssb682f61ce15dc4 aui-margin-t-15 aui-margin-b-15">“驾考期间没有出现隐藏收费”</h2>
+                        </div>
+                        <div class="swiper-slide aui-text-center">
+                            <img src="http://www.ukxueche.com/public/images/index-ykkb4.jpg" style="">
+                            <h2>刘惠美<br><small>在校学生 / Students </small></h2>
+                            <div>在考驾照的时候，我的接受能力比较差，但我的教练很有耐心，总是不厌其烦的一遍遍指导，因此我才能顺利考取驾照，很感谢那么负责那么可爱的教练。</div>
+                            <h2 class="cssbd9726e5919686 aui-margin-t-15">“教练认真负责”</h2>
+                        </div>
+                        <div class="swiper-slide aui-text-center">
+                            <img src="http://www.ukxueche.com/public/images/index-ykkb2.jpg" style="">
+                            <h2>王小寒<br><small>职场白领 / White-collar </small></h2>
+                            <div>我是8月初报的，在学车过程中，我的学车顾问服务特别好，出现的一些驾考问题都会及时帮我解决。感觉学车有了很大的保障，真的非常开心。</div>
+                            <h2 class="cssbd9726e5919686 aui-margin-t-15">“教练专业，平台服务周到”</h2>
+                        </div>
+                        <div class="swiper-slide aui-text-center">
+                            <img src="http://www.ukxueche.com/public/images/index-ykkb1.jpg" style="">
+                            <h2>静静<br><small>家庭主妇 / Housewife </small></h2>
+                            <div>优快学车网上报名比实际报名优惠了很多，性价比比较高。驾校很正规，场地很大都是自建考场，在考场练车，在考场考试，所以拿证特别快，遇见优快很幸运</div>
+                            <h2 class="cssbd9726e5919686 aui-margin-t-15">“驾考期间没有任何隐性收费”</h2>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <h3 class="nums aui-margin-t-10 koubei_h3">已帮助 <span>2</span><span>8</span><span>6</span><span>4</span><span>9</span><span>3</span> 人成功拿到驾照</h3>
+            </div>
+        </div>
+
+        <div class="demos-content-padded bdtg_footer">
+            <div class="weui-footer">
+                <p class="weui-footer__text">公司地址：郑州市金水区文化路北环路瀚海北金B座</p>
+                <p class="weui-footer__text">Copyright ©豫ICP备16035087号-1</p>
+                <p class="weui-footer__text">河南优快科技有限公司</p>
+            </div>
+        </div>
+    </div>
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <a class="aui-bar-tab-item" href="http://p.qiao.baidu.com/im/index?ucid=22212751&siteid=9973293&bid=5fb9679100253422670f47e2">
+            <i class="aui-iconfont iconfont">&#xe696;</i>
+            <i class="aui-iconfont iconfont">&#xe6a3;</i>
+            <div class="aui-bar-tab-label">一键咨询</div>
+        </a>
+        <a class="aui-bar-tab-item" href="javascript:;" onclick="lqyh()">
+            <i class="aui-iconfont iconfont">&#xe6c5;</i>
+            <i class="aui-iconfont iconfont">&#xe6a4;</i>
+            <div class="aui-bar-tab-label">领取优惠</div>
+        </a>
+        <a class="aui-bar-tab-item" href="tel:0371-58508808">
+            <i class="aui-iconfont iconfont">&#xe6a5;</i>
+            <i class="aui-iconfont iconfont">&#xe608;</i>
+            <div class="aui-bar-tab-label">抢先报名</div>
+        </a>
+    </footer>
+    <div class="lqyh" id="lqyh">
+        <div class="lqyh_head">
+            小手一抖  优惠到手<br>
+            <div><small style="font-size: 60%;">最高优惠1000元</small></div>
+        </div>
+        <div class="lqyu_con layer_con aui-text-center">
+            <img src="/images/include/lqyh.jpg" alt="" style="width: 85%;margin-bottom: 1rem;">
+            <ul class="aui-list aui-form-list">
+
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label-icon">
+                            <font color="#e3e3e3" size="4" class="iconfont">&#xe614;</font>
+                        </div>
+                        <div class="aui-list-item-input">
+                            <input type="text" placeholder="请输入您的名字">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="aui-list-item aui-margin-t-10">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label-icon">
+                            <font color="#e3e3e3" size="4" class="iconfont">&#xe702;</font>
+                        </div>
+                        <div class="aui-list-item-input">
+                            <input type="number" placeholder="输入您的手机号码">
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="aui-btn aui-btn-danger aui-btn-block" onclick="closeLayer()"><a href="###" style="color: #fff;">报名获取优惠</a></div>
+        </div>
+        <div class="iconfont close" onclick="closeLayer()">&#xe6a7;</div>
+    </div>
+    <div class="lqyh" id="lqyh2">
+        <img src="/images/include/lqyh3.png" style="position: relative;">
+        <div style="width: 38%;height: 40px;background: #000; position: absolute; top: 57%; left: 22%;opacity: 0;" onclick="closeLayer()"></div>
+        <div class="iconfont close" onclick="closeLayer()">&#xe6a7;</div>
+    </div>
+    <script>
+        //    aui控件声明
+        apiready = function(){
+            api.parseTapmode();
+        }
+        var tab = new auiTab({
+            element : document.getElementById("tab")
+            // callback:function(o,dom){
+            //     console.log(o);
+            // }
+        }, function(ret) {
+            //console.log(ret)
+        });
+        //    弹出框对象
+        var layer;
+        layui.use('layer', function(){
+            layer = layui.layer;
+        })
+        //领取优惠方法
+        function lqyh() {
+            layer.open({
+                type: 1,
+                title:false,
+                content: $('#lqyh2'),
+                shadeClose:true,
+                closeBtn:0,
+                area: '80%'
+            });
+        }
+        function lqyh2() {
+            layer.open({
+                type: 1,
+                title:false,
+                content: $('#lqyh2'),
+                shadeClose:true,
+                closeBtn:0,
+                area: '80%'
+            });
+        }
+        //    关闭网站所有弹出框
+        function closeLayer() {
+            layer.closeAll();
+        }
+        //点击底部tabs虚实效果
+        $("#footer .aui-bar-tab-item").click(function(){
+            $(this).addClass('aui-active').siblings().removeClass('aui-active');
+        });
+    </script>
+
+    <!--以下是弹出层界面-->
+    <div class="lqyh" id="suan1">
+        <div class="">
+            <img src="images/include/suan.jpg" alt="">
+        </div>
+        <div class="layer_con suan aui-text-center">
+            <div class="aui-font-size-18 datas">
+                您大概需要
+                <font color="#ff5d44">50天</font>
+                拿到驾照
+            </div>
+            <img src="images/include/laugh.jpg" alt="" style="width:50%;">
+            <section class="aui-grid">
+                <div class="aui-row">
+                    <script type="text/javascript">
+                        var qzone={
+                            url:location.href,   //分享的网址
+                            desc:'优快学车是郑州驾校联盟网上平台,以科技改变学车体验,用服务感动学员,灵活学车时间，就近分配驾校，最低报名价格，驾考学员信赖的一站式互联网驾考服务平台,官网电话：0371-58508808',            //默认分享理由(可选)
+                            summary:'我在优快学车网测试了我最快拿驾照的时间，你也快来试试吧！',         //分享摘要(可选)
+                            title:'优快学车',           //分享标题(可选)
+                            site:'',            //分享来源 如：腾讯网(可选)
+                            pics:''             //分享图片的路径(可选)
+                        };
+                        var q=[];
+                        for(var i in qzone){
+                            q.push(i + '=' + encodeURIComponent(qzone[i]||''));
+                        }
+                        document.write(['<a class="aui-col-xs-4" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',q.join('&'),'"><font size="7" color="#fdc348" class="iconfont">&#xe6aa;</font><div class="aui-grid-label">Q-zone</div></a>'].join(''));
+                    </script>
+                    <script type="text/javascript">
+                        (function(){
+                            var p = {
+                                url:location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
+                                desc:'', /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
+                                title:'优快学车', /*分享标题(可选)*/
+                                summary:'优快学车郑州驾校联盟网上平台,以科技改变学车体验,用服务感动学员,灵活学车时间，就近分配驾校，最低报名价格。', /*分享摘要(可选)*/
+                                pics:'', /*分享图片(可选)*/
+                                flash: '', /*视频地址(可选)*/
+                                site:'', /*分享来源(可选) 如：QQ分享*/
+                            };
+                            var s = [];
+                            for(var i in p){
+                                s.push(i + '=' + encodeURIComponent(p[i]||''));
+                            }
+                            document.write(['<a class="aui-col-xs-4" href="http://connect.qq.com/widget/shareqq/index.html?',s.join('&'),'"><font size="7" color="#4aacf1" class="iconfont">&#xe6a8;</font><div class="aui-grid-label">QQ</div></a>'].join(''));
+                        })();
+                    </script>
+                    <script type="text/javascript">
+                        (function(){
+                            var weibo = {
+                                count:'',           //表示是否显示当前页面被分享数量(1显示)(可选，允许为空)
+                                url:location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
+                                appkey:'',
+                                title:'优快学车',
+                                pic:'//qr.api.cli.im/qr?data=http%253A%252F%252F192.168.1.103%253A8400%252Fzzjz&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=4b64fe972779e9adf3d34a22b518934e',
+                                ralateUid:'',
+                                language:''
+                            };
+                            var s = [];
+                            for(var i in weibo){
+                                s.push(i + '=' + encodeURIComponent(weibo[i]||''));
+                            }
+                            document.write(['<a class="aui-col-xs-4" href="http://service.weibo.com/share/share.php?',s.join('&'),'"><font size="7" color="#f4805a" class="iconfont">&#xe6a9;</font><div class="aui-grid-label">微博</div></a>'].join(''));
+                        })();
+                    </script>
+                </div>
+            </section>
+        </div>
+        <div class="iconfont close" onclick="closeLayer()">&#xe6a7;</div>
+    </div>
+    <div class="lqyh" id="suan2">
+        <div class="">
+            <img src="images/include/ku.jpg" alt="">
+        </div>
+        <div class="layer_con suan aui-text-center">
+            <div class="aui-font-size-18 datas">
+                您大概需要
+                <font color="#ff5d44">50天</font>
+                拿到驾照
+            </div>
+            <img src="images/include/laugh.jpg" alt="" style="width:50%;">
+            <section class="aui-grid">
+                <div class="aui-row">
+                    <script type="text/javascript">
+                        var qzone={
+                            url:location.href,   //分享的网址
+                            desc:'',            //默认分享理由(可选)
+                            summary:'',         //分享摘要(可选)
+                            title:'',           //分享标题(可选)
+                            site:'',            //分享来源 如：腾讯网(可选)
+                            pics:''             //分享图片的路径(可选)
+                        };
+                        var q=[];
+                        for(var i in qzone){
+                            q.push(i + '=' + encodeURIComponent(qzone[i]||''));
+                        }
+                        document.write(['<a class="aui-col-xs-4" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',q.join('&'),'"><font size="7" color="#fdc348" class="iconfont">&#xe6aa;</font><div class="aui-grid-label">Q-zone</div></a>'].join(''));
+                    </script>
+                    <script type="text/javascript">
+                        (function(){
+                            var p = {
+                                url:location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
+                                desc:'', /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
+                                title:'', /*分享标题(可选)*/
+                                summary:'', /*分享摘要(可选)*/
+                                pics:'', /*分享图片(可选)*/
+                                flash: '', /*视频地址(可选)*/
+                                site:'', /*分享来源(可选) 如：QQ分享*/
+                            };
+                            var s = [];
+                            for(var i in p){
+                                s.push(i + '=' + encodeURIComponent(p[i]||''));
+                            }
+                            document.write(['<a class="aui-col-xs-4" href="http://connect.qq.com/widget/shareqq/index.html?',s.join('&'),'"><font size="7" color="#4aacf1" class="iconfont">&#xe6a8;</font><div class="aui-grid-label">QQ</div></a>'].join(''));
+                        })();
+                    </script>
+                    <script type="text/javascript">
+                        (function(){
+                            var weibo = {
+                                count:'',           //表示是否显示当前页面被分享数量(1显示)(可选，允许为空)
+                                url:location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
+                                appkey:'',
+                                title:'',
+                                pic:'',
+                                ralateUid:'',
+                                language:''
+                            };
+                            var s = [];
+                            for(var i in weibo){
+                                s.push(i + '=' + encodeURIComponent(weibo[i]||''));
+                            }
+                            document.write(['<a class="aui-col-xs-4" href="http://service.weibo.com/share/share.php?',s.join('&'),'"><font size="7" color="#f4805a" class="iconfont">&#xe6a9;</font><div class="aui-grid-label">微博</div></a>'].join(''));
+                        })();
+                    </script>
+                </div>
+            </section>
+        </div>
+        <div class="iconfont close" onclick="closeLayer()">&#xe6a7;</div>
+    </div>
+</body>
+<script>
+//    口碑看得见效果
+    var koubei = new Swiper('#koubei',{
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+        loop:true
+    })
+//    班型任你挑效果
+    var swiper = new Swiper('.Class',{
+        effect : 'coverflow',
+        slidesPerView: 1.5,
+        centeredSlides: true,
+        coverflow: {
+            rotate: 0,
+            stretch: 60,
+            depth: 160,
+            modifier: 1,
+            slideShadows : false
+        },
+        onProgress: function(swiper){
+            for (var i = 0; i < swiper.slides.length; i++){
+                var slide = swiper.slides[i],d = slide.progress;
+                es = slide.style;
+                es.opacity = 1 - Math.min(Math.abs(d / 2), 1);
+            }
+        }
+    });
+    //立即算一算按钮  50天以内
+    function suan1() {
+        layer.open({
+            type: 1,
+            title:false,
+            content: $('#suan1'),
+            shadeClose:true,
+            closeBtn:0,
+            area: '80%'
+        });
+    }
+    //立即算一算按钮  50天以外
+    function suan2() {
+        layer.open({
+            type: 1,
+            title:false,
+            content: $('#suan2'),
+            shadeClose:true,
+            closeBtn:0,
+            area: '80%'
+        });
+    }
+</script>
+</html>

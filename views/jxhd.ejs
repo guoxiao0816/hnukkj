@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+
+    <% include headPublic %>
+</head>
+<style>
+    img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .UKlogo {
+        width: 11rem;
+        display: inline-block !important;
+        text-align: left;
+    }
+
+    .UKlogo img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    /*容器居中*/
+    .centertext {
+        display: flex;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    #jxhd .txtcolor {
+        color: #333 !important;
+        text-align: justify;
+    }
+
+    #pcbar{display: none;}
+
+    #jxhd .txtbold {
+        font-weight: bold;
+    }
+
+    #jxhd{
+        line-height: 2;
+    }
+    #jxhd .aui-list-item-text{text-align: justify; padding-right: .75rem!important;}
+    #jxhd_footer{
+        line-height: 1.5;
+    }
+    #jxhd_footer .aui-col-xs-6.aui-bar-tab-item {
+        height: 3rem
+    }
+    @media screen and (max-width: 700px) {
+        .aui-content img[src^="http://files.ukxueche.com"] {
+            width: 100% !important;
+        }
+        .aui-content a img[src^="http://files.ukxueche.com"] {
+            width: auto !important;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .pcimg{width: auto;}
+    }
+
+    @media screen and (min-width:1200px) {
+        html{font-family: "微软雅黑";}
+        #jxhd_footer{width: 1200px;margin: 0 auto;}
+        #jxhd{width: 1200px;margin: 0 auto;}
+        .swiper-slide img{width: 100%;height: 600px;}
+        #mobile{display: none;}
+        #pcbar {display: block;}
+    }
+
+</style>
+<body id="jxhd" style="background-color: #fff;">
+<header class="aui-bar aui-bar-nav aui-bar-light">
+    <a class="aui-pull-left UKlogo" href="javascript:void(0);">
+        <img src="images/include/UKlogo.png" alt="">
+    </a>
+    <div class="aui-pull-right">
+        <span class="aui-iconfont aui-icon-search"></span>
+        <span class="aui-iconfont aui-icon-menu aui-margin-l-10" aui-popup-for="top-right"></span>
+    </div>
+</header>
+<div class="aui-content">
+    <div class="swiper-container" id="mobile">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="###"><img class="pcbanner" src="images/include/zzjz_banner.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="###"><img class="pcbanner" src="images/include/zzjz_banner.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="###"><img class="pcbanner" src="images/include/zzjz_banner.jpg" alt=""></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-container" id="pcbar">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="###"><img src="images/banner1.png" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="###"><img src="images/banner2.png" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="###"><img src="images/banner3.png" alt=""></a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!--<div class="banner-btn banner_up iconfont">&#xe607;</div>
+        <div class="banner-btn banner_down iconfont">&#xe609;</div>-->
+    </div>
+    <ul class="">
+        <div class="aui-padded-b-10 aui-font-size-18" style=" padding: .7rem ;text-align: center;font-weight: bold;line-height: 1.5">
+            【奔跑吧，同学】底价报名品牌驾校，<br>
+            45天拿证，师生凭证件还能再享优惠
+            <div class="aui-card-list-header centertext" style="color: #666655;font-weight: normal;">
+                <div style="font-size: 12px;">来源 :<a href="###" class="aui-text-info aui-margin-r-15 aui-padded-l-5">优快学车</a><span>活动时间：7月3-8月1日 </span>
+                </div>
+            </div>
+        </div>
+        <li class="aui-list-header aui-font-size-18"
+            style="background-color: #fff;text-align: center;position: relative;font-weight: bold;">
+            <div style="width: 20%;height: 1px;background-color: #13a0e8;position: absolute;top:50%;left: 1rem"></div>
+            活动详情必看重点
+            <div style="width: 20%;height: 1px;background-color: #13a0e8;position: absolute;top:50%;right: 1rem"></div>
+        </li>
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="aui-list-item-text" style="padding: .75rem;font-weight: bold;">
+                <div class="aui-font-size-16 txtcolor">同学，与45天拿证同等重要的事 是：领取报名优惠福利（最高1000元） <a
+                            class="aui-btn aui-btn-info" style="line-height: 1" href="##">领取优惠>></a></div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15" style="font-weight: bold;">
+                <div class="txtcolor">每每暑假你都会遇到这样的尴尬境遇：</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">你的同学去自驾游，体验畅游在各大风景区的酷爽感觉！</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">而你只能乖乖去上补习班，为什么？</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">你的表哥回乡下度假，开车在乡间小道上兜风徜徉！</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">而你只能去无聊透顶的夏令营，为什么？</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">.......</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">没计划？被安排？18岁了还这样？到底为什么？</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">因为你没驾照...</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">家里有车不会开，同学聚会不会开，自驾游不会开，活该被安排</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">作为被生活鞭挞到现在的小编，含泪忠告各位同学：</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"> 大学忙（谈）学（恋）业（爱）没时间，社会忙工作加班到吐，所以，暑假考驾照绝对是一生最有性价比的几件事之一；</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15" style="font-weight: bold;">
+                <div class="txtcolor">那么问题来了，怎么才能又快又省钱又顺心的考个驾照？</div>
+            </div>
+        </div>
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="aui-list-item-text" style="padding: .75rem;padding-left: 1rem; font-weight: bold;">
+                <div class="aui-font-size-16 txtcolor" style="position: relative">
+                    <div style="width: 10px;height: 10px;background: #13a0e8;position: absolute;top: 33%; left: -.25rem;"></div>
+                    【找对平台-优快学车全程服务承诺】
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1.上千道模拟真题免费赠送，随练随考，一考必过；每每暑假你都会遇到这样的尴尬境遇：</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2.不让练车？隐性收费？辱骂学生？不让约考？怎么办?24小时即时维权，2小时内限时问题处理。（公信公开，只为保障您的合法权益）</div>
+            </div>
+        </div>
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="aui-list-item-text" style="padding: .75rem;padding-left: 1rem; font-weight: bold;">
+                <div class="aui-font-size-16 txtcolor" style="position: relative">
+                    <div style="width: 10px;height: 10px;background: #13a0e8;position: absolute;top: 33%; left: -.25rem;"></div>
+                    【找对节奏-快速拿证，您需要这样做】
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1.获取优快学车平台团购码，去心仪驾校报名，凭码才能享受现价优惠哦；</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2.下载优快学车APP，免费注册领取模拟真题，聪明的你一天复习足够应对科一科四；</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3.听教练的，学车少翘课，45天拿证稳稳的！</div>
+            </div>
+        </div>
+
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="aui-list-item-text" style="padding: .75rem;padding-left: 1rem; font-weight: bold;">
+                <div class="aui-font-size-16 txtcolor" style="position: relative;padding-right: 0;">
+                    <div style="width: 10px;height: 10px;background: #13a0e8;position: absolute;top: 33%; left: -.25rem;"></div>
+                    <span style="word-spacing:1rem;">【找对优惠-说这么多，老师学生怎么优惠?】</span>
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">老师、学生凭有效证件（工作证/学生证/准考证）即可享受200元报名优惠。</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">作为学霸的你，一个公式就能看懂</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="" style="color: #dc3b49;">师生价=市场价-优快直降价-师生优惠 <a class="aui-btn aui-btn-info" style="line-height: 1" href="###">立即领取>></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="aui-list-item-text" style="padding: .75rem;padding-left: 1rem; font-weight: bold;">
+                <div class="aui-font-size-16 txtcolor" style="position: relative;padding-right: 0;">
+                    <div style="width: 10px;height: 10px;background: #13a0e8;position: absolute;top: 33%; left: -.25rem;"></div>
+                    【找对驾校-时间短，开学前能拿到驾照？】
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1.百所品牌驾校，就近练车，节约路上时间，怎能不快!</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2.合作驾校都有自建考场，过关率90%以上，怎能不快!</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"> 3.金牌教练，专业教学，约考迅速，怎能不快!</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4.优快学车全程保障收费透明，无吃拿卡要，学着省心、顺心，怎能不快！</div>
+            </div>
+        </div>
+        <!--立即咨询-->
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="aui-list-item-text" style="padding: .75rem;padding-left: 1rem; font-weight: bold;">
+                <div class="aui-font-size-16 txtcolor" style="position: relative;padding-right: 0;">
+                    <div style="width: 10px;height: 10px;background: #13a0e8;position: absolute;top: 33%; left: -.25rem;"></div>
+                    【找对问题-没有暂住证也能考驾照？】
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">当然能考，请咨询专业人员给您解答 <a class="aui-btn aui-btn-info" style="line-height: 1"
+                                                          href="tel:0371-58508808">立即咨询>></a></div>
+            </div>
+        </div>
+
+    </ul>
+
+    <!--百所好驾校-->
+    <ul class="jiaxiaolist" style="padding: 0.6rem 0.4rem;">
+        <li class="aui-list-header aui-font-size-18"
+            style="background-color: #fff;text-align: center;position: relative;font-weight: bold;">
+            <div style="width: 20%;height: 1px;background-color: #13a0e8;position: absolute;top:50%;left: 1rem;"></div>
+            百所好驾校 随你心意挑
+            <div style="width: 20%;height: 1px;background-color: #13a0e8;position: absolute;top:50%;right: 1rem"></div>
+        </li>
+
+        <!--中原区-->
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【中原区：西四环、地铁1号线】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">中原驾校</span>：中原路与西三环交叉口向北50米路东）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势:</span>老牌驾校、校区遍布市区，自建考场、过关率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交:</span>可乘坐288路、30路、B33路、游1路</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4000元 (原价4600，优快学车直降600元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3800元 (优快学车直降600元，老师学生再减200元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2600元(原价3000，优快学车直降400元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2400元 (优快学车直降400元，老师学生再减200元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+        <!--二七区-->
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【二七区：南三环、长江路、兴华街】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">鸿通驾校</span>：京广路与南三环交叉口向南200米路西）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势:</span>场地多、自建考场，车接车送，优惠力度大</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交:</span>可乘坐B10路、B3路、906路</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3999元 (原价4880，优快学车直降881元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2299元(原价2500，优快学车直降201元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2199元(优快学车直降201元，老师学生再减100元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">小包班：60天拿证，10-12人/车，优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1980元(优快学车主推暑期经济班型，名额有限)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--二七区-->
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【二七区：亚星盛世家园、五号街坊】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">鸿通驾校</span>：长江路与兴华南街交叉口向南200米路西）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势：</span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交：</span>179路、3路、283路、57路、49路、256路</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3999元（原价4880，优快学车直降881元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2299元(原价2500，优快学车直降201元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2199元(优快学车直降201元，老师学生再减100元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">小包班：60天拿证，10-12人/车，优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1980元(优快学车主推暑期经济班型，名额有限)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--二七区-->
+        <div class="aui-in-b-15 aui" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【二七区：陇海路、大学路】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">鸿通驾校</span>：交通路与永安街交叉口向东300米路南）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势：</span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交：</span>1路、277路、216路、46路、B5路</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3999元（原价4880，优快学车直降881元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2299元(原价2500，优快学车直降201元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2199元(优快学车直降201元，老师学生再减100元)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">小包班：60天拿证，10-12人/车，优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1980元(优快学车主推暑期经济班型，名额有限)</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--金水区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【金水区：南阳路、农业大学】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">全顺驾校</span>：南阳路农业路南50米路西）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>遍布市区、自建考场，校区周围四通八达</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>可乘坐8路、27路、78路、79路、178路、904路、
+                    B11路、B20路、B2路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4100元（原价4800，优快学车直降700元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，10-12人/车，免费补考、免费交通、可代办暂住证，优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--金水区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【金水区：大石桥 人民公园 杂技馆】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">中原驾校</span>：金水路铭功路交叉口杂技馆）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>自建考场 通过率高 周边四通八达</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>8路;34路;41路;52路;63路;63路区间;70路;78路;79路;91路;100路;104路;178路;205路;211路;302路;904路大站快车;916路;919路;b11路;b20路;y808路;y811路;y821路;y866路;游16路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4000元（原价4600，优快学车直降600元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3800元（优快学车直降600元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，10-12人/车，免费补考、免费交通、可代办暂住证，优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2600元（原价3000，优快学车直降400元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2400元（优快学车直降400元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--金水区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【金水区：汉飞国际 水果市场 沙口路】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">中原驾校</span>：沙口路二环支路）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>自建考场 通过率高 周边四通八达</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>23、130、30、83、83
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4000元（原价4600，优快学车直降600元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3800元（优快学车直降600元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、
+                    免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2600元（原价3000，优快学车直降400元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2400元（优快学车直降400元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--高新区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【高新区：信息工程大学、电力技术学院】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">中原驾校</span>：科学大道北三环）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>自建考场 通过率高 周边四通八达</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>B66、B35、B12、B67、45
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4000元（原价4600，优快学车直降600元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3800元（优快学车直降600元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2600元（原价3000，优快学车直降400元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2400元（优快学车直降400元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--中原区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【中原区：美术学院 地铁1号线】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">中原驾校</span>：郑上路与西四环交叉口向北1公里路东）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>地铁1号线、233路、44路、108路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4000元（原价4600，优快学车直降600元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3800元（优快学车直降600元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2600元（原价3000，优快学车直降400元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2400元（优快学车直降400元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--管城区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【管城区：陇海路、大学路】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">鸿通驾校</span>：紫荆山路与东大街交叉口西50米路南博爱街）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>地铁2号线、52路、35路、60路、85路、62路、962路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4199元（原价4888，优快学车直降689元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">本地2299元（原价2800，优快学车直降501元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">外地2899元（原价3500，优快学车直降601元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--马寨工业园区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【马寨工业园区：郑州鹤立中等专科学院】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">鸿通驾校</span>：马寨澍青医学院西门北50米路西）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>113路、226路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3999元（原价4880，优快学车直降881元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2299元（原价2500，优快学车直降201元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2199元（优快学车直降201元，老师学生再减100元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">小包班：60天拿证，10-12人/车，优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1980元（优快学车主推暑期经济班型，名额有限）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--中原区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【中原区：锦艺国际轻纺城、西四环】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">鸿泰驾校</span>：郑上路与西四环交叉口五菱4s店南200米）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>99路、177路、11路、322路、12路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3999元（原价4880，优快学车直降881元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2299元（原价2500，优快学车直降201元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2199元（优快学车直降201元，老师学生再减100元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">小包班：60天拿证，10-12人/车，优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1980元（优快学车主推暑期经济班型，名额有限）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--郑东新区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【郑东新区：紫荆小区 货站街】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">光大驾校</span>：黄河南路与宏图街西北角 ）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>13路、80路、329路、b17路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4000元（原价4600，优快学车直降600元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">3800元（优快学车直降600元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2600元（原价3000，优快学车直降400元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2400元（优快学车直降400元，老师学生再减200元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--金水区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【金水区：新都汇 铁道警察学院】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">全顺驾校</span>：农业路天明路西150米路北）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高 </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>22路、B2路、41路、B11路、B20路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">本地1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">外地2499元（原价2700，优快学车直降199元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--二七区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【二七区：航空管理学院、郑州市财贸学院】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">百顺驾校</span>：行云路与华中路东30米路北）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>283路、176路、3路、B21路、B1路、B298
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">本地1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">外地2499元（原价2700，优快学车直降199元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--高新区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【高新区：郑州大学、郑州市财贸学院】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">中原四通驾校</span>：冬青街腊梅路南150米路西）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>地铁1号线、B28、181、182、322、B12
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">本地1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">外地2499元（原价2700，优快学车直降199元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--惠济区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【惠济区：普罗旺世、郑州大学体育学院】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">博大驾校</span>：宏达路长兴路南100米路东）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>70路、159路、22路、28路、178路、159路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">本地1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">外地2499元（原价2700，优快学车直降199元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--惠济区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【惠济区：北大学城】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">英才驾校英才街校区</span>：文化路英才街西200米路南）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>6路、79路、156路、196路、197路、723路、962路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">本地1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">外地2499元（原价2700，优快学车直降199元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--金水区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【金水区：建文新世界、天下城】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">英才驾校同乐路校区</span>：黄河南街同乐路西50米路南）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>6路、79路、156路、196路、197路、723路、962路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">本地1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">外地2499元（原价2700，优快学车直降199元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--金水区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【金水区：海马公园、奥兰花园】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">英才驾校东风南路校区</span>：东风南路商都路东北角）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>品牌驾校 自建考场 通过率高</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>60路、85路、123路、129路、160路、165路、319路、570路、600路、916路
+                </div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5 aui-padded-r-15">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">本地1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">外地2499元（原价2700，优快学车直降199元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--郑东新区-->
+        <div class="aui-in-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【郑东新区：东大学城、龙子湖】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">汇通驾校</span>：金水区龙子湖高校河南职业技术学院）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>龙子湖高校园区、自建考场，环境优美</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>可乘坐114路、115路、43路</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">vip快班：45天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2980元（原价4600，优快学车直降700元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1;" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+
+        <!--郑东新区-->
+        <div class="aui-margin-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【郑东新区：龙子湖高校园区】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">英才驾校平安大道校区</span>：平安大道文苑路东50米路南）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>龙子湖高校园区、自建考场，环境优美</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>166路</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">大包班：50天拿证，8-10人/车，免费补考、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">2980元（原价4600，优快学车直降700元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1;" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+        <!--经开区-->
+        <div class="aui-in-b-15" style="border: none; margin-bottom: 1.5rem!important;">
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-btn aui-btn-info" style="margin: .75rem;font-weight: bold; min-width: 85%">
+                    <div class="aui-font-size-16 ">【经开区：金沙湖观邸、富士康】</div>
+                </div>
+            </div>
+            <div class="centertext" style="width: 100%;">
+                <div class="aui-padded-b-15">（<span class="txtbold">富达驾校</span>：第八大街与经南五路交叉口）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">优势: </span>遍布市区、自建考场，校区周围四通八达</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor"><span class="txtbold">公交: </span>可乘坐B17路、188路</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260"> vip快班：45天拿证，4-6人/车，免费补考、免费模拟、免费交通、优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">4100元（原价4800，优快学车直降700元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15 aui-margin-t-5">
+                <div style="color: #F76260">大包班：50天拿证，10-12人/车，免费补考、免费交通、可代办暂住证，优快学车全程保障</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">1980元（原价2300，优快学车直降320元）</div>
+            </div>
+            <div class="aui-list-item-text aui-padded-l-15">
+                <div class="txtcolor">现在报名领取优快学车团购优惠</div>
+            </div>
+            <div class="centertext aui-margin-t-10" style="width: 100%;text-align: center">
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1;" href="tel:0371-58508808">一键咨询>></a></div>
+                <div style="width: 40%"><a class="aui-btn aui-btn-info" style="line-height: 1;" href="tel:0371-58508808">电话报名>></a></div>
+            </div>
+        </div>
+    </ul>
+
+    <!--优快学车全程见真章-->
+    <ul class="" style="padding: 0.6rem 0.4rem;">
+        <li class="aui-list-header aui-font-size-18 aui-margin-b-10"
+            style="background-color: #fff;text-align: center;position: relative;font-weight: bold;">
+            <div style="width: 20%;height: 1px;background-color: #13a0e8;position: absolute;top:50%;left: 1rem;"></div>
+            优快学车全程见真章
+            <div style="width: 20%;height: 1px;background-color: #13a0e8;position: absolute;top:50%;right: 1rem"></div>
+        </li>
+        <div class="aui-list-item-text aui-padded-l-15 aui-padded-r-15">
+            <div class="txtcolor"> 1.实力见真章：品牌驾校，百校联盟，遍布全城，与距离较真，只为您学车出行更方便；</div>
+            <img class="aui-margin-b-10 aui-margin-t-10" src="images/include/jxhd.png" alt="">
+        </div>
+        <div class="aui-list-item-text aui-padded-l-15">
+            <div class="txtcolor"> 2.价格见真章：价格透明，底价报名，优快学车全程监督，打击一切隐性消费，只为您学车更顺心；</div>
+            <img class="aui-margin-b-10 aui-margin-t-10" src="images/include/jxhd_1.png" alt="">
+        </div>
+        <div class="aui-list-item-text aui-padded-l-15">
+            <div class="txtcolor">3.服务见真章：学员一键下载APP并注册，甄选模拟真题免费领取，省时省力，只为您考试更省心；</div>
+            <img class="aui-margin-b-10 aui-margin-t-10" src="images/include/jxhd_2.jpg" alt="">
+        </div>
+        <div class="aui-list-item-text aui-padded-l-15">
+            <div class="txtcolor">4.保障见真章：24小时即时维权，2小时内问题处理，全程服务保障，学考一路绿灯，只为您学车更放心；</div>
+            <img class="aui-margin-b-10 aui-margin-t-10" src="images/include/jxhd_3.png" alt="">
+        </div>
+    </ul>
+    <div>
+        <span style="font-size: 16px; line-height: 27px; text-indent: 32px; letter-spacing: 0px; font-family: 微软雅黑, 'Microsoft YaHei'; word-wrap: break-word;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话报名：</span>
+        <span style="font-size: 16px; font-family: 微软雅黑, 'Microsoft YaHei'; margin: 0px; padding: 0px; color: rgb(255, 0, 0); text-indent: 32px; letter-spacing: 0px; word-wrap: break-word;">0371-58508808</span><br>
+        <span style="font-family: 微软雅黑, 'Microsoft YaHei'; font-size: 16px; margin: 0px; padding: 0px; letter-spacing: 0px; word-wrap: break-word; box-sizing: border-box;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客服优优</span>
+        <a href="tencent://message/?uin=1953378846&amp;Site=%E5%9C%A8%E7%BA%BF%E5%92%A8%E8%AF%A2&amp;Menu=yes" target="_self" style="outline: 0px; color: rgb(51, 51, 51); text-decoration: none; cursor: pointer; word-wrap: break-word;"><img class="pcimg" alt="点击这里给我发消息" src="http://files.ukxueche.com/ueditor/jsp/upload/image/20160924/1474717343081011699.gif"></a>
+        <span style="font-size: 16px; margin: 0px; padding: 0px; letter-spacing: 0px; line-height: 42px; text-indent: 28px; font-family: 'Microsoft YaHei', 'Segoe UI'; word-wrap: break-word;">&nbsp; &nbsp;&nbsp;&nbsp;客服乐乐<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2678175372&amp;site=qq&amp;menu=yes" target="_blank" style="outline: 0px; color: rgb(51, 51, 51); text-decoration: none; cursor: pointer; word-wrap: break-word;"><img class="pcimg" alt="在线咨询" src="http://files.ukxueche.com/ueditor/jsp/upload/image/20170318/1489831764824027002.gif"></a></span>
+    </div>
+</div>
+<div class="aui-bar aui-bar-tab hidden-lg" id="jxhd_footer">
+    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3198775872&amp;site=qq&amp;menu=yes"
+       class="aui-col-xs-3 aui-bar-tab-item aui-padded-t-5">
+        <i class="aui-iconfont aui-icon-comment aui-text-info"></i>
+        <div class="aui-bar-tab-label">免费咨询</div>
+    </a>
+    <a href="tel:0371-58508808" class="aui-col-xs-3 aui-bar-tab-item aui-padded-t-5">
+        <i class="aui-iconfont aui-icon-phone aui-text-info"></i>
+        <div class="aui-bar-tab-label">无暂住证报名</div>
+    </a>
+    <a href="/yjbm" class="aui-col-xs-6 aui-bar-tab-item aui-bg-info aui-text-white"
+       style="font-size: 18px;line-height: 3rem;height: 3rem;">
+        立即报名
+    </a>
+</div>
+<!--<% include footPublic %>-->
+</body>
+<script>
+    $(function () {
+        $(".swiper-container").swiper({
+            loop: true,
+            pagination: '.swiper-pagination',
+            autoplay: 4000,
+            autoplayDisableOnInteraction: false
+        });
+    });
+</script>
+</html>

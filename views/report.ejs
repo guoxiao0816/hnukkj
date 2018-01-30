@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        html,body{background-color: #fff;height: 100%;width: 100%;}
+        .aui-content{height: 100%;padding-bottom: 0;}
+        .textarea{height: 200px; width: 94%;margin: 5% .75rem;overflow-y: auto;text-align: justify;  }
+    </style>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title ">
+        举报中心
+    </div>
+    <a class="aui-pull-right aui-btn aui-font-size-14">提交</a>
+</header>
+<div class="aui-content">
+    <ul class="aui-list aui-select-list">
+        <li class="aui-list-header" style="background-color: #fff;">请选择举报类型</li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <label><input class="aui-radio" type="radio" name="radio" checked> 政治、敏感内容</label>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <label><input class="aui-radio" disabled type="radio" name="radio"> 政治、敏感内容</label>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <label><input class="aui-radio" type="radio" name="radio"> 政治、敏感内容</label>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <label><input class="aui-radio" type="radio" name="radio"> 政治、敏感内容</label>
+            </div>
+        </li>
+    </ul>
+    <textarea class="textarea" placeholder="请输入举报内容"></textarea>
+</div>
+</body>
+<script></script>
+</html>

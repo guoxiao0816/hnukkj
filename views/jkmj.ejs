@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list{width: 100%;}
+        .aui-list .aui-list-item-inner{width: 67%;}
+        .aui-list .aui-list-item-media{width: 33%;}
+        .aui-list .aui-list-item-media img{height: 100%;}
+        .aui-list .aui-list-item-text{display:-webkit-box;}
+        .aui-ellipsis-2{max-height: 36px;overflow: hidden;}
+
+
+        button, .aui-btn{padding:0.1rem 0.25rem;color: #fff;font-size: 0.6rem;}
+        .aui-info,.aui-list .aui-list-item-text{font-size: 0.6rem;}
+        .aui-info *{vertical-align:top;}
+        .jkmj .iconfont{font-size: 1.4rem !important;line-height: 1;}
+        #tab{position: fixed; width: 100%; top:54px; z-index: 8;}
+        #tab_top{ padding-top: 4.7rem;}
+
+    </style>
+    <script src="//at.alicdn.com/t/font_nhrss69kvqiu23xr.js"></script>
+</head>
+<body>
+<% include head.ejs%>
+<div class="aui-content" id="tab_top">
+    <div class="aui-tab aui-border-b" id="tab">
+        <div class="aui-tab-item aui-active recom aui-border-r">科目一</div>
+        <div class="aui-tab-item nearby aui-border-r">科目二</div>
+        <div class="aui-tab-item sequenc aui-border-r">科目三</div>
+        <div class=" aui-tab-item recom aui-border-r">科目四</div>
+        <div class=" aui-tab-item recom aui-border-r">拿证</div>
+    </div>
+    <!--<ul class="aui-list aui-media-list aui-margin-t-10">
+        <li class="aui-list-item">
+            <a href="/xcspList">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1 aui-font-size-14">
+                                <svg class="icon aui-text-right" aria-hidden="true" style="width: 1rem;height: 1rem;vertical-align: top;">
+                                    <use xlink:href="#icon-film-strip"></use>
+                                </svg>
+                                学车视频
+                            </div>
+                            <div class="aui-list-item-right">5个视频文件</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <div class="xcsp aui-text-center">
+            <div class="aui-row">
+                <a href="/video" class="aui-col-xs-6">
+                    <img src="images/include/ykkb.jpg" alt="">
+                    <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                    <p>侧方停车</p>
+                </a>
+                <a href="/video" class="aui-col-xs-6">
+                    <img src="images/include/ykkb.jpg" alt="">
+                    <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                    <p>侧方停车</p>
+                </a>
+                <a href="/video" class="aui-col-xs-6">
+                    <img src="images/include/ykkb.jpg" alt="">
+                    <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                    <p>侧方停车</p>
+                </a>
+                <a href="/video" class="aui-col-xs-6">
+                    <img src="images/include/ykkb.jpg" alt="">
+                    <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                    <p>侧方停车</p>
+                </a>
+            </div>
+        </div>
+    </ul>-->
+    <ul class="aui-list aui-media-list aui-margin-t-10">
+        <!--<li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title aui-ellipsis-1 aui-font-size-14">
+                            <svg class="icon aui-text-right" aria-hidden="true" style="width: 1rem;height: 1rem;vertical-align: top;">
+                                <use xlink:href="#icon-love-letter-"></use>
+                            </svg>
+                            考试技巧
+                        </div>
+                        <div class="aui-list-item-right">15个考试技巧</div>
+                    </div>
+                </div>
+            </div>
+        </li>-->
+        <li class="aui-list-item">
+            <a href="/artical">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/ykkb.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1">限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始</div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-2">
+                            小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"><i class="iconfont">&#xe61e;</i><span>2016-09-07</span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="/artical">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/ykkb.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1">限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始</div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-2">
+                            小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"><i class="iconfont">&#xe61e;</i><span>2016-09-07</span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="/artical">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/ykkb.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1">限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始</div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-2">
+                            小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"><i class="iconfont">&#xe61e;</i><span>2016-09-07</span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="/artical">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/ykkb.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1">限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始</div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-2">
+                            小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"><i class="iconfont">&#xe61e;</i><span>2016-09-07</span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="/artical">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/ykkb.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1">限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始</div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-2">
+                            小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"><i class="iconfont">&#xe61e;</i><span>2016-09-07</span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="/artical">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/ykkb.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1">限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始</div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-2">
+                            小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"><i class="iconfont">&#xe61e;</i><span>2016-09-07</span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="/artical">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/ykkb.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1">限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始</div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-2">
+                            小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"><i class="iconfont">&#xe61e;</i><span>2016-09-07</span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="/artical">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/ykkb.jpg">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-ellipsis-1">限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始限时抢购活动开始</div>
+                        </div>
+                        <div class="aui-list-item-text aui-ellipsis-2">
+                            小伙伴们0元报名，免费学车，考完科目一满意再缴费，9月15至9月30日报名
+                        </div>
+                        <div class="aui-info aui-margin-t-5" style="padding:0">
+                            <div class="aui-info-item"><i class="iconfont">&#xe61e;</i><span>2016-09-07</span></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div id="page" class="aui-text-center aui-margin-t-5"></div>
+</div>
+<% include footPublic %>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+<script>
+    laypage({
+        cont: 'page',
+        pages: 18, //可以叫服务端把总页数放在某一个隐藏域，再获取。假设我们获取到的是18
+        curr: function(){ //通过url获取当前页，也可以同上（pages）方式获取
+            var page = location.search.match(/page=(\d+)/);
+            return page ? page[1] : 1;
+        }(),
+        jump: function(e, first){ //触发分页后的回调
+            if(!first){ //一定要加此判断，否则初始时会无限刷新
+                location.href = '?page='+e.curr;
+            }
+        }
+    });
+</script>
+</html>

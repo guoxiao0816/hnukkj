@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+
+</head>
+<body>
+<!--<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%= title %></a>
+    </div>
+</header>-->
+<div class="aui-content" style="padding: 0;">
+    <ul class="aui-list aui-list-in">
+        <li class="aui-list-header aui-bg-default aui-text-center aui-padded-t-15 aui-font-size-16 aui-text-info">
+            获取经验攻略
+        </li>
+        <!--外栏标题-->
+        <li class="aui-grid headline">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    任务
+                </div>
+                <div class="aui-col-xs-2">
+                    获取经验
+                </div>
+                <div class="aui-col-xs-3">
+                    周期
+                </div>
+                <div class="aui-col-xs-4">
+                    说明
+                </div>
+            </div>
+        </li>
+
+        <!--主要分区-->
+        <li class="aui-grid aui-bg-default">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    每天登录
+                </div>
+                <div class="aui-col-xs-2">
+                    20
+                </div>
+                <div class="aui-col-xs-3">
+                    每天1次
+                </div>
+                <div class="aui-col-xs-4">
+                    每天登陆即可自动发放经验值到账户
+                </div>
+            </div>
+        </li>
+        <li class="aui-grid" style="background-color: #f0f0f0;">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    在社区发帖
+                </div>
+                <div class="aui-col-xs-2">
+                    10
+                </div>
+                <div class="aui-col-xs-3">
+                    每天4次
+                </div>
+                <div class="aui-col-xs-4">
+                    在优快社区发帖、晒图或发表问答即可获取相应经验
+                </div>
+            </div>
+        </li>
+
+        <!--主要分区-->
+        <li class="aui-grid aui-bg-default">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    回复帖子
+                </div>
+                <div class="aui-col-xs-2">
+                    5
+                </div>
+                <div class="aui-col-xs-3">
+                    每天8次
+                </div>
+                <div class="aui-col-xs-4">
+                    回复任意帖子获得5经验值，每日封顶40经验
+                </div>
+            </div>
+        </li>
+        <li class="aui-grid" style="background-color: #f0f0f0;">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    发布的帖子被回复
+                </div>
+                <div class="aui-col-xs-2">
+                    2
+                </div>
+                <div class="aui-col-xs-3">
+                    每天20次
+                </div>
+                <div class="aui-col-xs-4">
+                    发布的帖子被别人回复，奖励2经验，每日封顶40经验
+                </div>
+            </div>
+        </li>
+
+        <!--主要分区-->
+        <li class="aui-grid aui-bg-default">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    点赞
+                </div>
+                <div class="aui-col-xs-2">
+                    2
+                </div>
+                <div class="aui-col-xs-3">
+                    每天20次
+                </div>
+                <div class="aui-col-xs-4">
+                    为他人点赞奖励2经验，每日封顶40经验
+                </div>
+            </div>
+        </li>
+        <li class="aui-grid" style="background-color: #f0f0f0;">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    浏览文章、帖子
+                </div>
+                <div class="aui-col-xs-2">
+                    2
+                </div>
+                <div class="aui-col-xs-3">
+                    每天20次
+                </div>
+                <div class="aui-col-xs-4">
+                    浏览精华帖、置顶帖及其他帖子奖励2经验，每日封顶40经验
+                </div>
+            </div>
+        </li>
+
+        <!--主要分区-->
+        <li class="aui-grid aui-bg-default">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    分享帖子
+                </div>
+                <div class="aui-col-xs-2">
+                    10
+                </div>
+                <div class="aui-col-xs-3">
+                    每天4次
+                </div>
+                <div class="aui-col-xs-4">
+                    分享帖子到任意社交平台即可获得10经验，每日封顶40经验
+                </div>
+            </div>
+        </li>
+        <li class="aui-grid" style="background-color: #f0f0f0;">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    完善个人资料
+                </div>
+                <div class="aui-col-xs-2">
+                    40
+                </div>
+                <div class="aui-col-xs-3">
+                    1次
+                </div>
+                <div class="aui-col-xs-4">
+                    此经验一个账号只能获得一次，不累计
+                </div>
+            </div>
+        </li>
+
+        <!--主要分区-->
+        <li class="aui-grid aui-bg-default">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    加精
+                </div>
+                <div class="aui-col-xs-2">
+                    50
+                </div>
+                <div class="aui-col-xs-3">
+                    每天1次
+                </div>
+                <div class="aui-col-xs-4">
+                    帖子内容优质、符合规范，被管理员加精， 奖励50经验，一日一次
+                </div>
+            </div>
+        </li>
+        <li class="aui-grid" style="background-color: #f0f0f0;">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    置顶
+                </div>
+                <div class="aui-col-xs-2">
+                    50
+                </div>
+                <div class="aui-col-xs-3">
+                    每天1次
+                </div>
+                <div class="aui-col-xs-4">
+                    帖子内容优质、符合规范，被管理员置顶， 奖励50经验，一日一次
+                </div>
+            </div>
+        </li>
+
+        <!--主要分区-->
+        <li class="aui-grid aui-bg-default">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    最佳答案
+                </div>
+                <div class="aui-col-xs-2">
+                    20
+                </div>
+                <div class="aui-col-xs-3">
+                    每天5次
+                </div>
+                <div class="aui-col-xs-4">
+                    参与知识问答，被楼主采纳推荐为最佳答案的奖励20经验，每日上限100经验
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-header aui-bg-default aui-text-center aui-margin-t-5 aui-font-size-16 aui-text-info aui-padded-b-15">
+            <span>关于经验的作弊与处罚</span>
+        </li>
+
+        <!--什么是作弊-->
+        <li class="aui-bg-default aui-padded-l-10 aui-padded-r-10">
+            <span class="">一、什么是作弊？</span>
+            <p>
+                <span class="aui-padded-b-5" style="display: inline-block;">作弊是指通过不正当途径获取经验地行为，包含但不限于:</span><br>
+                1、同一人使用多个优快账号相互提问并采纳（自问自答）刷经验；<br>
+                2、与他人配合（两人或更多）通过相互提问并采纳进行刷经验；<br>
+                3、发布无意义灌水话题或大量重复话题刷经验；<br>
+                4、利用作弊软件或规则漏洞获取不正当利益。
+            </p>
+        </li>
+
+        <!--作弊的处罚-->
+        <li class="aui-bg-default aui-padded-l-10 aui-padded-r-10 aui-padded-b-15 aui-padded-t-15">
+            <span class="aui-margin-b-5">二、作弊的处罚</span>
+            <p>
+                1、所有通过非正当行为获得的经验，将被全部扣除。情节严重者最高可被处以降级等处理；<br>
+                2、作弊行为一经确认，根据情节严重程度，涉及作弊的优快账号将被有期限封禁或永久封禁；<br>
+                3、涉及作弊行为的所有帖子将被删除。
+            </p>
+        </li>
+    </ul>
+</div>
+</body>
+<style>
+    .aui-grid [class*=aui-col-] {
+        padding: 10px 0;
+    }
+
+    .aui-grid .aui-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aui-grid .aui-row [class*=aui-col-xs-] {
+        color: #666666;
+        font-size: .6rem;
+    }
+
+    .aui-grid .aui-row [class*=aui-col-xs-4] {
+        padding: 10px;
+    }
+
+    .aui-grid .aui-row [class*=aui-col-xs-3] {
+        padding: 10px;
+    }
+
+    .headline .aui-row [class*=aui-col-xs-] {
+        background-color: #03a9f4;
+        color: #fff;
+    }
+</style>
+</html>

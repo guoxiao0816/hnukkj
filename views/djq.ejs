@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-content">
+    <ul class="aui-list aui-card-list">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title"><font color="#03a9f4"><i class="iconfont">&#xe663;</i> 随时退</font> <font color="#03a9f4"><i class="iconfont">&#xe663;</i> 过期随时退</font></div>
+                <div class="aui-list-item-right"><i class="iconfont">&#xe663;</i>已使用7379</div>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-media-list aui-card-list aui-list-in">
+        <div class="aui-card-list-header aui-margin-t-10 aui-border-b">优快学车顾问<div class="aui-list-item-right">
+                <small class="aui-text-default">做您的贴心小管家</small>
+            </div></div>
+        <li class="aui-list-item aui-list-item-middle">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">吉祥驾校（信息学院校区）</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                        <small><i class="iconfont">&#xe664;</i>金水区北三环信息学院路向南200米路南</small>
+                    </div>
+                </div>
+                <a href="tel:037158508808" class="aui-list-item-right aui-col-xs-2 aui-border-l aui-padded-l-15">
+                    <i class="aui-iconfont aui-icon-phone aui-text-info"></i>
+                    <div>咨询</div>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-card-list aui-list-in">
+        <div class="aui-card-list-header aui-margin-t-10 aui-border-b">购买须知</div>
+        <div class="aui-card-list-header aui-padded-b-0">
+            <font color="#ffc107"><i class="iconfont">&#xe663;</i> 有效期</font>
+        </div>
+        <div class="aui-card-list-content-padded aui-padded-t-0 aui-padded-b-0">
+            2017.4.29（周末通用）
+        </div>
+        <div class="aui-card-list-header aui-padded-b-0">
+            <font color="#ffc107"><i class="iconfont">&#xe623;</i> 使用时间</font>
+        </div>
+        <div class="aui-card-list-content-padded aui-padded-t-0 aui-padded-b-0">
+            8:00到18:00
+        </div>
+        <div class="aui-card-list-header aui-padded-b-0">
+            <font color="#ffc107"><i class="iconfont">&#xe611;</i> 使用规则</font>
+        </div>
+        <div class="aui-card-list-content-padded aui-padded-t-0">
+            无需预约，此代金券只限VIP视使用
+        </div>
+    </ul>
+</div>
+<div class="aui-bar aui-bar-tab aui-font-size-16" style="line-height: 2.5rem;">
+    <div class="aui-col-xs-9 aui-bar-tab-item aui-text-left aui-padded-l-15">
+        <small>合计：</small><font color="#03a9f4" id="num">￥720元</font>&nbsp;&nbsp;&nbsp;<small>原价：980元</small>
+    </div>
+    <a href="/ljqg" class="aui-col-xs-3 aui-bar-tab-item aui-bg-warning aui-text-white">立即抢购</a>
+</div>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var bar = document.querySelectorAll(".aui-bar-btn");
+    if(bar){
+        for(var i=0; i<bar.length;i++){
+            var d = bar[i];
+            var tab = new auiTab({
+                element:bar[i],
+                repeatClick:true
+            },function(ret){
+                if(ret.dom.parentNode.getAttribute("type") && ret.dom.parentNode.getAttribute("type")=="count"){
+                    var count = parseInt(document.getElementById("count").value);
+                    if(ret.index==2)return;
+                    if(ret.index==1 && count >=1){
+                        document.getElementById("count").value = count-1;
+                        document.getElementById("num").innerHTML="¥"+(100*(count-1));
+                    }
+                    if(ret.index==3){
+                        document.getElementById("count").value = count+1;
+                        document.getElementById("num").innerHTML="¥"+(100*(count+1));
+                    }
+                }
+            });
+
+        }
+    }
+</script>
+</html>

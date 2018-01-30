@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="../public/stylesheets/weui.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/jquery-weui.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/aui.2.0.css">
+    <link rel="stylesheet" href="../public/stylesheets/aui-slide.css">
+    <link rel="stylesheet" href="../public/stylesheets/index.css">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="../public/stylesheets/photoswipe.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../public/javascripts/jquery-3.1.1.min.js"></script>
+    <script src="../public/javascripts/jquery-weui.min.js"></script>
+    <script src="../public/javascripts/aui-slide.js"></script>
+    <script src="../public/javascripts/api.js"></script>
+    <script src="../public/javascripts/My97DatePicker/WdatePicker.js"></script>
+    <script src="../public/javascripts/aui-tab.js"></script>
+    <script src="../public/javascripts/aui-popup.js"></script>
+    <script src="../public/javascripts/aui-scroll.js"></script>
+    <script src="../public/javascripts/Swiper-3.3.1.js"></script>
+    <script type="text/javascript" src="../public/javascripts/layui/layui.js"></script>
+
+    <script type="text/javascript" src="../public/work_log.js"></script>
+    <style>
+        .yksug{
+            position: relative;
+            top: 56px;
+            left: 0;
+            display: none;
+            width: 202px;max-height: 500px;border: 1px solid #ccc ;
+            overflow-y: auto;
+            box-shadow: 1px 1px 3px #ededed;
+            -webkit-box-shadow: 1px 1px 3px #ededed;
+            -moz-box-shadow: 1px 1px 3px #ededed;
+            -o-box-shadow: 1px 1px 3px #ededed;
+        }
+        .yksug ul li{
+            list-style: none;
+        }
+        .yksug ul li:hover{
+            list-style: none;
+            background-color: #cccccc;
+        }
+        html,body{
+            width: 100%;
+            height: 3000px;
+        }
+        /*滚动条优化*/
+        /*谷歌、safari、qq浏览器、360浏览器滚动条样式  webkit 内核*/
+
+        /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+        ::-webkit-scrollbar
+        {
+            width: 10px;
+            height: 10px;
+           /* background-color: #F5F5F5;*/
+            /*overflow: auto;*/
+        }
+        /*定义滚动条轨道 内阴影+圆角*/
+        ::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #e6e6e6;
+        }
+        /*定义滑块 内阴影+圆角*/
+        ::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #e6e6e6;
+        }
+        /*滑块效果*/
+        ::-webkit-scrollbar-thumb:hover
+         {
+             border-radius: 5px;
+             -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+             background: rgba(0,0,0,0.4);
+         }
+
+        /*IE滚动条颜色*/
+        html {
+            scrollbar-face-color:#bfbfbf;/*滚动条颜色*/
+            scrollbar-highlight-color:#000;
+            scrollbar-3dlight-color:#000;
+            scrollbar-darkshadow-color:#000;
+            scrollbar-Shadow-color:#adadad;/*滑块边色*/
+            scrollbar-arrow-color:rgba(0,0,0,0.4);/*箭头颜色*/
+            scrollbar-track-color:#eeeeee;/*背景颜色*/
+        }
+        input{ border: 1px solid #000;}
+
+    </style>
+</head>
+<body>
+    <div>
+        <p class="bg-primary">清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存
+            清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存
+            清除页面css缓存清除页面css缓存清除页面css缓存
+            清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存
+            清除页面css缓存清除页面css缓存清除页面css缓存清除页面css缓存
+        </p>
+        <p class="bg-success">清除页面css缓存</p>
+        <p class="bg-info">清除页面css缓存</p>
+        <p class="bg-warning">清除页面css缓存</p>
+        <button class="btn btn-default" type="submit">发送</button>
+        <a class="btn btn-default" href="#" role="button">发送</a>
+    </div>
+
+    <p class="bg-info" style="line-height:32px"><input type="text" class="form-control" placeholder="郭晓"
+                                                       style="width:100px;display:inline-block">
+        您好！你已经成功获取优快学车会员专用码
+        <input type="text" class="form-control" placeholder="UK20170606051" style="width:120px;display:inline-block">
+        。凭此码从<input type="text" onchange="dxrqs(this)"
+                    id="cl-begin-sj"
+                    name="dxrqs"
+                    class="form-control"
+                    style="width:150px;display:inline-block">
+        至<input type="text" onchange="dxrqs(this)" id="cl-begin-sj" name="dxrqs" class="form-control"
+                style="width:150px;display:inline-block">报名可享受
+        <input type="text" class="form-control" placeholder="新成驾校(某某校区)" style="width:100px;display:inline-block">
+        <input type="text" class="form-control" placeholder="C1" style="width:100px;display:inline-block">
+        <input type="text" class="form-control" placeholder="VIP快班" style="width:100px;display:inline-block">
+        <input type="text" class="form-control" placeholder="2500" style="width:100px;display:inline-block">元！优快顾问-
+        <input type="text" placeholder="郭晓" class="form-control" style="width:100px;display:inline-block">
+        :<input type="text" class="form-control" placeholder="18749076110" style="width:100px;display:inline-block">。
+        <textarea class="form-control input-sm valid" name="bz" style="grow: true;">此人存心想报，正在犹豫中</textarea>
+        报名地址：<input name="dxbmdz" onchange="dxbmdz(this)" value="东风路与南阳路交叉口向西300米路北" class="form-control"
+                    style="width:300px;display:inline-block">
+    </p>
+
+    开始，结束日期：<!-- $dp.$ 相当于 document.getElementById 函数. -->
+
+    <input id="sdate" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,onpicked:pickedFunc,maxDate:'#F{$dp.$D(\'edate\')}'})" />
+    -
+    <input id="edate" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\'sdate\')}',startDate:'#F{$dp.$D(\'sdate\',{d:+1})}'})"/><br><br>
+
+</body>
+<script type="text/javascript">
+    function saveRecode(){
+        hideEdit();
+    }
+    function pickedFunc() {
+        console.log($dp.cal.getP('y'));
+        alert($(this).val());
+
+    }
+
+
+    function showEdit(){
+        $("#editBox").css("display","block");
+        $("#showBtn").css("display","none");
+    }
+    function hideEdit(){
+        $("#editBox").css("display","none");
+        $("#showBtn").css("display","block");
+    }
+</script>
+<script>
+    // 计算页面的实际高度，iframe自适应会用到
+    function calcPageHeight(doc) {
+        var cHeight = Math.max(doc.body.clientHeight,
+            doc.documentElement.clientHeight);
+        var sHeight = Math.max(doc.body.scrollHeight,
+            doc.documentElement.scrollHeight);
+        var height = Math.max(cHeight, sHeight);
+        return height;
+    }
+    window.onload = function() {
+        var height = calcPageHeight(document);
+        parent.document.getElementById('queryListIfrm').style.height = height+ 'px';
+    };
+</script>
+</html>

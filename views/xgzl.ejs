@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+
+    <style>
+        #img_input{position: absolute;left: 0;height: 100%;top: 0;opacity: 0;}
+        #img_data{width: 44px;height: 44px;}
+    </style>
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-content" style="padding-top: 3rem;">
+    <ul class="aui-list">
+        <li class="aui-list-item" style="height: 2.2rem;">
+            <a class="aui-list-item-inner aui-list-item-arrow" style="height: 2.2rem;">
+                <div class="aui-list-item-title">头像</div>
+                <div class="aui-list-item-right" style="height: 2.2rem;">
+                    <img src="images/include/1.png" id="img_data" class="aui-img-round" alt="" style="height: 100%;">
+                </div>
+                <input type="file" value="image" id="img_input" />
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="/niceName" class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">昵称</div>
+                <div class="aui-list-item-right">
+                    路人甲
+                </div>
+            </a>
+        </li>
+        <li class="aui-list-item" onclick="sex()">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">性别</div>
+                <div class="aui-list-item-right">
+                    男
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <a href="/qianming" class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">签名</div>
+                <div class="aui-list-item-right">
+                    菩提本无树，心无明镜台
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<ul class="aui-list aui-select-list" id="zffs" style="display: none;">
+    <li class="aui-list-item">
+        <div class="aui-list-item-inner">
+            <label><input class="aui-radio aui-margin-r-15 sex" type="radio" value="1" name="checkbox" checked>男</label>
+        </div>
+    </li>
+    <li class="aui-list-item">
+        <div class="aui-list-item-inner">
+            <label><input class="aui-radio aui-margin-r-15 sex" type="radio" value="0" name="checkbox"> 女</label>
+        </div>
+    </li>
+</ul>
+<canvas id="canvas"></canvas>
+<% include footPublic %>
+</body>
+<script>
+    function sex() {
+        layer.open({
+            type: 1,
+            title :false,
+            content: $('#zffs'),
+            closeBtn:0,
+            offset: '40%',
+            scrollbar:false,
+            shadeClose:true,
+            area:['100px','100px']
+        });
+    }
+</script>
+<script>
+    $(".sex").click(function () {
+        console.log($(this).val());
+        layer.closeAll();
+    })
+</script>
+    <script type="text/javascript">
+        var inputs = document.getElementById("img_input");
+        canvas = document.createElement("canvas"),
+        context = canvas.getContext("2d");
+        inputs.addEventListener('change', readFile, true);
+
+    // 创建新图片
+        function readFile() {
+            var file = this.files[0];
+            if (!/image\/\w+/.test(file.type)) {
+                alert("image only please.");
+                return false;
+            }
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function(event) {
+                var img = new Image();
+//                var img = document.getElementById("img_data"),
+//                    width = 300, //image resize
+//                    quality = 0.8, //image quality
+//                    canvas = document.createElement("canvas"),
+//                    drawer = canvas.getContext("2d");
+//                canvas.width = width;
+//                canvas.height = width;
+//                drawer.drawImage(img, 0, 0, canvas.width, canvas.height);
+//                imgsrc = canvas.toDataURL("image/jpeg", quality);
+//                $("#img_data").attr('src',imgsrc)
+//                alert(imgsrc);
+                img.src = event.target.result;
+                img.addEventListener("load", function() {
+                    // 绘制图片到canvas上
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    context.drawImage(img, 0, 0);
+                    getBase64(canvas, function(dataUrl) {
+                        // 展示base64位的图片
+                        $("#img_data").attr('src',dataUrl)
+                    });
+                }, false);
+            }
+        }
+    // 获取canvas的base64图片的dataURL（图片格式为image/jpeg）
+    function getBase64(canvas, callback) {
+        var dataURL = canvas.toDataURL("image/jpeg",0.8);
+        console.log(dataURL);
+        if(typeof callback !== undefined) {
+            callback(dataURL);
+        }
+    }
+</script>
+</html>

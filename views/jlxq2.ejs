@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_150593_w4bq81effb9be29.css">
+    <style type="text/css">
+        .title .title_bg {
+            width: 100%;
+            height: 144px;
+            position: relative;
+            background: url("../images/include/banner2.png") no-repeat center;
+            background-size: 100% 100%;
+        }
+
+        .jl_head {
+            width: 100%;
+            height: 60px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        .jl_head img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            position: absolute;
+            left: 37.333%;
+            top: 28%;
+            z-index: 5;
+            border: 8px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .jl_pingjia .aui-col-xs-3 {
+            border-right: 1px solid #DFDFDF;
+            margin: 1rem 0;
+            padding: 0;
+        }
+
+        .jl_pingjia .aui-col-xs-3:last-child {
+            border: none;
+        }
+
+        .jl_pingjia .aui-col-xs-3 .aui-grid-label {
+            color: #757575;
+        }
+
+        .aui-list .aui-list-item:last-child:after {
+            height: 1px;
+        }
+
+        .mytable a {
+            width: 100%;
+        }
+
+        .mytable .aui-list-item-inner {
+            display: block;
+            width: 100%;
+            background-color: #fff;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .swiper-photo {
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        .aui-list-item_after .aui-list-item:after {
+            content: normal;
+        }
+
+        .aui-list-item_after .aui-list-item:first-child {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .jljs_box {
+            font-size: 12px;
+            text-align: justify;
+            padding: .5rem 0;
+            max-height: 80px;
+            overflow: hidden;
+            color: #757575;
+            text-overflow: ellipsis;
+        }
+
+        .jljs_menu {
+            padding-top: 8px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .aui-list-item-media {
+            width: 2.5rem !important;
+        }
+
+        .aui-list-item-media img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+        }
+
+        .aui-text-warning {
+            color: #ff9500 !important;
+        }
+    </style>
+</head>
+<body>
+<!--<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%= title %></a>
+    </div>
+</header>-->
+<div class="aui-content" style="padding-top: 0;">
+    <!--教练以及驾校信息-->
+    <div class="title">
+        <div class="aui-list aui-media-list ">
+            <div class="title_bg"></div>
+            <div class="jl_head">
+                <a href=""><img src="http://files.ukxueche.com/photo/driver/4970_1501661517190.png" alt=""></a>
+                <h4 style="text-align: center;padding-top: 2rem;color: #333;font-size: .9rem;">郭教练</h4>
+            </div>
+            <section class="aui-grid">
+                <div class="aui-row jl_pingjia">
+                    <div class="aui-col-xs-3">
+                        <h4 style="text-align: center;color: #333;font-size: .9rem;">C1</h4>
+                        <div class="aui-grid-label">培训类型</div>
+                    </div>
+
+                    <div class="aui-col-xs-3">
+                        <h4 style="text-align: center;color: #333;font-size: .9rem;">3年</h4>
+                        <div class="aui-grid-label">教练教龄</div>
+                    </div>
+
+                    <div class="aui-col-xs-3">
+                        <h4 style="text-align: center;color: #333;font-size: .9rem;">275</h4>
+                        <div class="aui-grid-label">教过人数</div>
+                    </div>
+                    <div class="aui-col-xs-3">
+                        <h4 style="text-align: center;color: #333;font-size: .9rem;">87%</h4>
+                        <div class="aui-grid-label">好评度</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <ul class="aui-list">
+            <a href="/jxxq" class="aui-border-b">
+                <li class="aui-list-item aui-list-item-arrow ">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title aui-font-size-14"><font class="iconfont" color="#757575"
+                                                                                style="margin: 3px;">&#xe6b5;</font>鸿通驾校<span
+                                    style="color:#757575;font-size: .7rem">（京广路校区）</span></div>
+                    </div>
+                </li>
+            </a>
+            <a href="###">
+                <li class="aui-list-item aui-list-item-arrow">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title aui-ellipsis-1 aui-col-xs-9 aui-font-size-14"><font
+                                    class="aui-iconfont aui-icon-location" style="margin: 3px;"></font>河南省郑州市中原区科学大道红松路交叉口东南角
+                        </div>
+                        <!--<div class="aui-list-item-right distance">定位中...</div>-->
+                        <div class="aui-list-item-right distance">58km</div>
+                    </div>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+    <!--班型信息-->
+    <ul class="aui-list aui-margin-t-15 mytable">
+        <li class="aui-list-item"><a href="javascript:void(0)" onclick="bxxq(4101011001001,212)" title="普通班_公交驾校">
+                <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">普通班 &nbsp;<small class="c-666">C1</small>
+                        </div>
+                    </div>
+                    <div class="h3"><span class="aui-text-warning"><strong>¥2200.00</strong></span>
+                        <small class="aui-margin-l-10 c-999">
+                            <del>市场价格：¥2200.00</del>
+                        </small>
+                    </div>
+                    <div class="aui-font-size-12 c-666">
+                        <div class="aui-pull-left"><font size="2" color="#ff960b" class="iconfont">&#xe658;</font> 经济实惠</div>
+                        <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ff5757"
+                                                                        class="iconfont"></font> 全程媒体监督
+                        </div>
+                        <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ee7c7d"
+                                                                        class="iconfont"></font> 急速拿证
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+        <li class="aui-list-item"><a href="javascript:void(0)" onclick="bxxq(4101011001001,211)" title="大型货车_公交驾校">
+                <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">大型货车 &nbsp;<small class="c-666">B2</small>
+                        </div>
+                    </div>
+                    <div class="h3"><span class="aui-text-warning"><strong>¥7410.00</strong></span>
+                        <small class="aui-margin-l-10 c-999">
+                            <del>市场价格：¥7410.00</del>
+                        </small>
+                    </div>
+                    <div class="aui-font-size-12 c-666">
+                        <div class="aui-pull-left"><font size="2" color="#f5b168" class="iconfont"></font> 全程一费制</div>
+                        <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#78bc29"
+                                                                        class="iconfont"></font> 优质服务
+                        </div>
+                        <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ff5757"
+                                                                        class="iconfont"></font> 全程媒体监督
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+        <li class="aui-list-item"><a href="javascript:void(0)" onclick="bxxq(4101011001001,210)" title="大型客车_公交驾校">
+                <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">大型客车 &nbsp;<small class="c-666">A1</small>
+                        </div>
+                    </div>
+                    <div class="h3"><span class="aui-text-warning"><strong>¥7510.00</strong></span>
+                        <small class="aui-margin-l-10 c-999">
+                            <del>市场价格：¥7510.00</del>
+                        </small>
+                    </div>
+                    <div class="aui-font-size-12 c-666">
+                        <div class="aui-pull-left"><font size="2" color="#f5b168" class="iconfont"></font> 全程一费制</div>
+                        <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#2e9dd9"
+                                                                        class="iconfont"></font> 通过率超90%
+                        </div>
+                        <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#78bc29"
+                                                                        class="iconfont"></font> 优质服务
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+        <li class="aui-list-item" style="display: none;"><a href="javascript:void(0)" onclick="bxxq(4101011001001,213)"
+                                                            title="VIP班_公交驾校">
+                <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">VIP班 &nbsp;<small class="c-666">C1</small>
+                        </div>
+                    </div>
+                    <div class="h3"><span class="aui-text-warning"><strong>¥4500.00</strong></span>
+                        <small class="aui-margin-l-10 c-999">
+                            <del>市场价格：¥4500.00</del>
+                        </small>
+                    </div>
+                    <div class="aui-font-size-12 c-666">
+                        <div class="aui-pull-left"><font size="2" color="#f5b168" class="iconfont"></font> 全程一费制</div>
+                        <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ee7c7d"
+                                                                        class="iconfont"></font> 急速拿证
+                        </div>
+                        <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ff5757"
+                                                                        class="iconfont"></font> 全程媒体监督
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <div class="more_class aui-text-center aui-font-size-14">
+            <div class="aui-list-item-inner"><a href="javascript:void(0)"
+                                                class="aui-text-default look_services">查看所有班型</a>(1)
+            </div>
+        </div>
+    </ul>
+
+    <!--教学环境-->
+    <div class="aui-list aui-margin-t-15">
+        <li class="aui-list-item aui-list-item-arrow">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title aui-ellipsis-1 aui-col-xs-9 aui-font-size-14">教学环境</div>
+                <div class="aui-list-item-right">12张照片</div>
+            </div>
+        </li>
+        <div class="swiper-photo swiper-container-horizontal swiper-container-free-mode" id="Gallery"
+             style="height: 5rem;overflow: hidden">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide-active"
+                     style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/1.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide swiper-slide-next" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/2.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/5.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/6.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/7.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/8.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/9.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/10.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/11.jpg" alt="公交驾校">
+                </div>
+
+                <div class="swiper-slide" style="width: 100px; margin-right: 10px;">
+                    <img src="http://files.ukxueche.com/school/4101/4101011001002/pic/12.jpg" alt="公交驾校">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--教练介绍-->
+    <div class="aui-list aui-margin-t-15 aui-list-item_after">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title aui-ellipsis-1 aui-col-xs-9 aui-font-size-14">教练介绍</div>
+            </div>
+        </div>
+        <div class="aui-list-item aui-bg-default" style="display: block">
+            <div class="aui-list-item-inner">
+                <div class="jljs_box">
+                    很多学员在没有考试之前都很怕科目三考试，但是通过的学员却觉得其实科目三并没有想象中的那么难。那么，如何完美顺利的通过科目三考试呢？很多学员在没有考试之前都很怕科目三考试，但是通过的学员却觉得其实科目三并没有想象中的那么难。那么，如何完美顺利的通过科目三考试呢？很多学员在没有考试之前都很怕科目三考试，但是通过的学员却觉得其实科目三并没有想象中的那么难。那么，如何完美顺利的通过科目三考试呢？很多学员在没有考试之前都很怕科目三考试，但是通过的学员却觉得其实科目三并没有想象中的那么难。那么，如何完美顺利的通过科目三考试呢？
+                </div>
+            </div>
+        </div>
+        <div class="jljs_menu" onclick="jljs_block()"><span class="aui-iconfont aui-icon-down"></span></div>
+    </div>
+
+    <!--学员评价-->
+    <div class="aui-list aui-margin-t-15">
+        <li class="aui-list-item aui-list-item-arrow">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title aui-ellipsis-1 aui-col-xs-9 aui-font-size-14">学员评价</div>
+                <div class="aui-list-item-right">1518条评价</div>
+            </div>
+        </li>
+    </div>
+    <!--评价列表-->
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <a href="/usercomit"><img src="http://files.ukxueche.com/photo/driver/6179_1501741441824.png"></a>
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">666</div>
+                        <div class="aui-list-item-right" style="color: #999999;">2017-08-02</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                      <span>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                        </span>
+                    </div>
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        很好很不错，牛逼啊！
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <a href="/usercomit"><img src="http://files.ukxueche.com/photo/driver/6179_1501741441824.png"></a>
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">带有媒体的列表二</div>
+                        <div class="aui-list-item-right" style="color: #999999;">2017-08-02</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                      <span>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                        </span>
+                    </div>
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        很好很不错，牛逼啊！
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <a href="/usercomit"><img src="http://files.ukxueche.com/photo/driver/6179_1501741441824.png"></a>
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">带有媒体的列表二</div>
+                        <div class="aui-list-item-right" style="color: #999999;">2017-08-02</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                      <span>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11"></i>
+                        </span>
+                    </div>
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        很好很不错，牛逼啊！
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <a href="/usercomit"><img src="http://files.ukxueche.com/photo/driver/6179_1501741441824.png"></a>
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">带有媒体的列表二</div>
+                        <div class="aui-list-item-right" style="color: #999999;">2017-08-02</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                      <span>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11"></i>
+                        </span>
+                    </div>
+                    <div class="aui-list-item-text">
+                        很好很不错，牛逼啊！很好很不错，牛逼啊！很好很不错，牛逼啊！很好很不错，牛逼啊！很好很不错，牛逼啊！很好很不错，牛逼啊！
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <a href="/jlpj">
+        <div class="aui-btn aui-btn-block aui-margin-b-15 aui-bg-default">查看全部评价 ></div>
+    </a>
+
+</div>
+<footer class="aui-bar aui-bar-tab" id="footer">
+    <div class="aui-bar-tab-item">
+        <a href="/yysj" class="aui-btn aui-btn-info" style="width: 80%;font-size: .9rem;border-radius:20px;">我要约车</a>
+    </div>
+</footer>
+<div id="allmap" style="display: none;"></div>
+</body>
+<script type="text/javascript">
+    //html5 定位功能
+    $(function () {
+        var pointA = new BMap.Point(localStorage.quanshunPointLng, localStorage.quanshunPointlat);  // 为驾校坐标创建点坐标A
+        //判断是否支持html定位功能
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(translatePoint);
+        }
+        else {
+            alert("该浏览器不支持获取地理位置。")
+        }
+        function translatePoint(position) {
+            var currentLat = position.coords.latitude;
+            var currentLon = position.coords.longitude;
+            var gpsPoint = new BMap.Point(currentLon, currentLat);
+            BMap.Convertor.translate(gpsPoint, 0, initMap); //转换坐标
+        }
+
+        // 百度地图API功能
+        function initMap(point) {
+            //初始化地图
+            var map = new BMap.Map("allmap");
+            var pointB = new BMap.Point(point.lng, point.lat); //用户坐标
+            $(".distance").text((map.getDistance(pointA, pointB)).toFixed(0) + "米");//获取两点距离,保留小数点后两位
+
+        }
+    });
+
+    /*处理班型*/
+    $(".mytable").each(
+        function () {
+            $(this).remove(".more_class");
+            var $lis = $(this).find(".aui-list-item");
+            var len = $lis.length;
+            var $more = $('<div class="more_class aui-text-center aui-font-size-14"><div class="aui-list-item-inner"><a href="javascript:void(0)" class="aui-text-default look_services">查看所有班型</a>('
+                + (len - 3) + ')</div></div>');
+            var $gt6 = $(this).find("li:gt(2)");
+            if ($lis.length > 3) {
+                $gt6.css('display', 'none');
+                $(".more_class", this).remove();
+                $(this).append($more);
+            }
+            $more.click(function () {
+                var $more_tit = $more.find('.look_services');
+                if ($more_tit.html() == '查看所有班型') {
+                    $more_tit.html('隐藏班型');
+                } else {
+                    $more_tit.html('查看所有班型');
+                }
+                $gt6.slideToggle();
+            });
+        });
+    /*教学环境轮播图*/
+    $(".swiper-photo").swiper({
+        slidesPerView: 3.5,
+        spaceBetween: 10,
+        freeModeMomentum: false,
+        freeMode: true,
+        preventClicksPropagation: true,
+        preventClicks: true
+    });
+
+    /*图片浏览器*/
+    $("#Gallery .swiper-slide").click(function (e) {
+        e.preventDefault()
+        var imgs = [];
+        var indexs = $(this).index();
+        $("img", $(this).parent()).each(function () {
+            imgs.push($(this).attr('src'));
+        });
+        pb1 = $.photoBrowser({
+            items: imgs,
+            initIndex: indexs
+        });
+        pb1.open();
+    });
+
+        if( $('.jljs_box').css('height') < "80px"){
+            $('.jljs_menu').hide();
+        }
+        function jljs_block() {
+            var $height = $('.jljs_box').css('height');
+            if ($height == '80px') {
+                $('.jljs_box').css({"height": "auto","max-height":"none"});
+                $('.jljs_menu .aui-iconfont').removeClass("aui-icon-down").addClass("aui-icon-top");
+            } else {
+                $('.jljs_box').css({"height": "80","max-height":"none"});
+                $('.jljs_menu .aui-iconfont').removeClass("aui-icon-top").addClass("aui-icon-down");
+            }
+        }
+    //处理图片懒加载
+    layui.use('flow', function () {
+        var flow = layui.flow;
+        flow.lazyimg();
+    });
+</script>
+<script type="text/javascript">
+    function jsonpCallback(result) {
+        console.log(result);
+    }
+    jsonpCallback();
+    var url = "";
+    var script = document.createElement('script');
+    script.setAttribute('src', url)
+    document.getElementsByTagName('head')[0].appendChild(script)
+</script>
+
+</html>

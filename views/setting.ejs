@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <!--<style>
+        .aui-list .aui-list-item-label{width:33%;}
+        .aui-list .aui-list-item-media{width: 2rem;}
+    </style>-->
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-content">
+    <ul class="aui-list">
+        <a class="aui-list-item" href="/xgmm">
+            <div class="aui-list-item-label-icon">
+                <font color="#62c041" class="aui-iconfont iconfont">&#xe6cc;</font>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                修改密码
+            </div>
+        </a>
+        <a class="aui-list-item" href="/share">
+            <div class="aui-list-item-label-icon">
+                <font color="#01a7f8" class="aui-iconfont iconfont">&#xe64b;</font>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                分享好友
+            </div>
+        </a>
+        <a class="aui-list-item" href="/fwxy">
+            <div class="aui-list-item-label-icon">
+                <font color="#fc705e" class="aui-iconfont iconfont">&#xe619;</font>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                用户协议
+            </div>
+        </a>
+        <a class="aui-list-item" href="/app">
+            <div class="aui-list-item-label-icon">
+                <font color="#62c041" class="aui-iconfont iconfont">&#xe61a;</font>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                app下载
+            </div>
+        </a>
+    </ul>
+</div>
+<% include footPublic %>
+</body>
+</html>

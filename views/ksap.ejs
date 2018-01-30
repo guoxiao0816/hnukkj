@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+</head>
+<body>
+<!--<% include head.ejs%>-->
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+
+<!--<div class="aui-content" id="Not_open">-->
+    <!--<div class="weui-loadmore weui-loadmore_line" style="border:none;">-->
+        <!--<img src="images/include/error_img.png" alt="" style="width: 40%;margin-top: 5rem;margin-bottom: 1rem">-->
+        <!--<span class="weui-loadmore__tips">小快正在努力开发中，敬请期待~</span></div>-->
+    <!--<script>-->
+        <!--window.onload = function () {-->
+            <!--var Not_open = document.getElementById("Not_open");-->
+            <!--var screen_height = window.screen.height;-->
+            <!--var header_height = document.getElementsByClassName("aui-bar")[0].offsetHeight;-->
+            <!--Not_open.style.background = "#fff";-->
+            <!--Not_open.style.marginTop = header_height + "px";-->
+            <!--Not_open.style.height = screen_height - header_height + "px";-->
+        <!--};-->
+    <!--</script>-->
+<!--</div>-->
+<!--此script 单独调用-->
+<script type="text/javascript">
+//    add();
+    function add(){
+        var html ='<header class="aui-bar aui-bar-nav">' +
+            '<a class="aui-pull-left aui-btn " href="javascript:history.back();"><span class="aui-iconfont aui-icon-left"></span></a>' +
+            '<div class="aui-title"><a href="javascript:void(0)"><%= title%></a></div> '+
+            '</header>'+
+            "<div class='aui-content aui-margin-t-15'> " +
+            "<div class='weui-loadmore weui-loadmore_line' style='border:none;'>" +
+            " <img src='images/include/error_img.png' style='width: 40%;margin-top: 5rem;margin-bottom: 1rem'>" +
+            "<span class='weui-loadmore__tips aui-text-info'>暂无数据，请稍后再试~</span></div> " +
+            "</div>";
+        document.body.innerHTML = html;
+    }
+</script>
+<script type="text/javascript">
+    Not_open();
+    function Not_open() {
+        var html ='<header class="aui-bar aui-bar-nav">' +
+            '<a class="aui-pull-left aui-btn " href="javascript:history.back();"><span class="aui-iconfont aui-icon-left"></span></a>' +
+            '<div class="aui-title"><a href="javascript:void(0)"><%= title%></a></div> '+
+            '</header>'+
+            "<div class='aui-content' id='Not_open'> " +
+            "<div class='weui-loadmore weui-loadmore_line' style='border:none;'>" +
+            " <img src='images/include/error_img.png' style='width: 40%;margin-top: 5rem;margin-bottom: 1rem'>" +
+            "<span class='weui-loadmore__tips aui-text-info'>小快正在努力开发中，敬请期待~</span></div> " +
+            "</div>";
+        document.body.innerHTML = html;
+        window.onload = function () {
+            var Not_open = document.getElementById("Not_open");
+            var screen_height = window.screen.height;
+            var header_height = document.getElementsByClassName("aui-bar")[0].offsetHeight;
+            Not_open.style.background = "#fff";
+            Not_open.style.marginTop = header_height + "px";
+            Not_open.style.height = screen_height - header_height + "px";
+        };
+    }
+</script>
+</body>
+</html>

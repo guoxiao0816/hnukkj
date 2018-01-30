@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<div class="aui-tab screening aui-border-b" id="tab">
+    <div class="aui-tab-item aui-active nearby">附近<i class="iconfont aui-margin-l-5">&#xe602;</i></div>
+    <div class="aui-tab-item recom">培训场地<i class="iconfont aui-margin-l-5">&#xe602;</i></div>
+    <div class="aui-tab-item sequenc">智能排序<i class="iconfont aui-margin-l-5">&#xe602;</i></div>
+    <div class="aui-tab-item screen">筛选<i class="iconfont aui-margin-l-5">&#xe602;</i></div>
+</div>
+<div class="choose">
+    <ul class="aui-list choose-left aui-list-in">
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                附近
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                中原区
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                二七区
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                管城回族区
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                金水区
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                上街区
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                惠济区
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                中牟县
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                巩义市
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                新密市
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                新郑市
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="javascript:;" class="aui-list-item-inner">
+                登封市
+            </a>
+        </li>
+    </ul>
+    <ul class="aui-list aui-list-in choose-right choose-text">
+        <li class="aui-list-item choose-now">
+            <a href="###" class="aui-list-item-inner">
+                智能距离
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                1千米
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                2千米
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                3千米
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                全程
+            </a>
+        </li>
+    </ul>
+    <ul class="aui-list aui-list-in choose-right choose-text">
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                全部
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                凯旋门
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                碧沙岗
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                中原万达
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                冉屯路/五龙口
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                西苑国际
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                月季公园
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                王府井百货
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                帝湖
+            </a>
+        </li>
+    </ul>
+    <ul class="aui-list aui-list-in choose-right choose-text">
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                全部
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                二七广场
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                二七万达
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                长江中路沿线
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                升龙国际
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                火车站
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                橄榄城
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                马寨镇
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                康桥华城
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                郑铁体育中心
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                郑州大学
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                医学院
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                万象城
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                长途客运中站
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                鑫源新都汇
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                贾峪镇
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="choose">
+    <ul class="aui-list aui-list-in choose-text">
+        <li class="aui-list-item choose-now">
+            <a href="###" class="aui-list-item-inner">
+                全部
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="choose choose-text">
+    <ul class="aui-list aui-list-in">
+        <li class="aui-list-item choose-now">
+            <a href="###" class="aui-list-item-inner">
+                智能排序
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                好评优先
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                离我最近
+            </a>
+        </li>
+        <li class="aui-list-item">
+            <a href="###" class="aui-list-item-inner">
+                价格最低
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="choose choose-text shaixuan">
+    <div class="aui-margin-l-10 aui-margin-r-10">
+        <div class="aui-margin-b-15 aui-margin-t-15">培训车型</div>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">C1</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">C2</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-15">C5</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-15">B1</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-15">B2</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-15">A1</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-15">A2</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-15">A3</span>
+    </div>
+    <div class="aui-margin-l-10 aui-margin-r-10">
+        <div class="aui-margin-b-15 aui-margin-t-15">培训科目</div>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">科目一</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">科目二</span>
+    </div>
+    <div class="aui-margin-l-10 aui-margin-r-10">
+        <div class="aui-margin-b-15">车龄品牌</div>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">普桑</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">捷达</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">瑞奇</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">长安</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">起亚</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">东风雪铁龙</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">宝骏</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10">吉利</span>
+    </div>
+    <a href="###" class="aui-col-xs-6 aui-btn shaixuan-resize">重置</a>
+    <a href="###" class="aui-col-xs-6 aui-btn aui-btn-info shaixuan-submit">提交</a>
+</div>
+<div class="shadow"></div>
+<div class="aui-content" style="padding-top: 4rem;">
+    <ul class="aui-list aui-media-list">
+        <div class="aui-margin-t-15">
+            <li class="aui-list-item ">
+                <a href="/jxxq">
+                    <div class="aui-border-b aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">鸿泰驾校（永安街校区）</div>
+                            <div class="aui-list-item-right">普通白班</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <a href="/jlxq">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="images/liulangnan.png" class="aui-img-round">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">卢亚飞<i class="iconfont aui-margin-l-5 aui-margin-r-5 aui-text-info">&#xe604;</i></div>
+                            </div>
+                            <div class="aui-list-item-text aui-margin-t-5">
+                                <div class="aui-list-item-title aui-font-size-14">
+                                    <div class="aui-label aui-label-danger aui-label-outlined">C1</div>
+                                    <small class="aui-text-default">科目二 奇瑞 豫AC508学</small>
+                                </div>
+                                <div class="aui-list-item-right aui-text-danger">传统培训</div>
+                            </div>
+                            <div class="aui-list-item-text aui-margin-t-5">
+                            <span>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star"></i><small class="aui-text-default aui-margin-l-5">61人已学过</small>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="aui-list-item">
+                <a href="###">
+                    <div class="aui-list-item-inner aui-list-item-arrow aui-border-b">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-14"><font color="#03a9f4" class="aui-iconfont aui-icon-location"></font>二七区永安街23号</div>
+                            <div class="aui-list-item-right distance distance0">定位中...</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+        <div class="aui-margin-t-15">
+            <li class="aui-list-item ">
+                <a href="/jxxq">
+                    <div class="aui-border-b aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">鸿泰驾校（永安街校区）</div>
+                            <div class="aui-list-item-right">普通白班</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <a href="/jlxq">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="images/liulangnan.png" class="aui-img-round">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">卢亚飞<i class="iconfont aui-margin-l-5 aui-margin-r-5 aui-text-info">&#xe604;</i></div>
+                            </div>
+                            <div class="aui-list-item-text aui-margin-t-5">
+                                <div class="aui-list-item-title aui-font-size-14">
+                                    <div class="aui-label aui-label-danger aui-label-outlined">C1</div>
+                                    <small class="aui-text-default">科目二 奇瑞 豫AC508学</small>
+                                </div>
+                                <div class="aui-list-item-right aui-text-danger">传统培训</div>
+                            </div>
+                            <div class="aui-list-item-text aui-margin-t-5">
+                            <span>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star"></i><small class="aui-text-default aui-margin-l-5">61人已学过</small>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="aui-list-item">
+                <a href="###">
+                    <div class="aui-list-item-inner aui-list-item-arrow aui-border-b">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-14"><font color="#03a9f4" class="aui-iconfont aui-icon-location"></font>二七区永安街23号</div>
+                            <div class="aui-list-item-right distance distance1">定位中...</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+        <div class="aui-margin-t-15">
+            <li class="aui-list-item ">
+                <a href="/jxxq">
+                    <div class="aui-border-b aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">鸿泰驾校（永安街校区）</div>
+                            <div class="aui-list-item-right">普通白班</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <a href="/jlxq">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="images/liulangnan.png" class="aui-img-round">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">卢亚飞<i class="iconfont aui-margin-l-5 aui-margin-r-5 aui-text-info">&#xe604;</i></div>
+                            </div>
+                            <div class="aui-list-item-text aui-margin-t-5">
+                                <div class="aui-list-item-title aui-font-size-14">
+                                    <div class="aui-label aui-label-danger aui-label-outlined">C1</div>
+                                    <small class="aui-text-default">科目二 奇瑞 豫AC508学</small>
+                                </div>
+                                <div class="aui-list-item-right aui-text-danger">传统培训</div>
+                            </div>
+                            <div class="aui-list-item-text aui-margin-t-5">
+                            <span>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star"></i><small class="aui-text-default aui-margin-l-5">61人已学过</small>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="aui-list-item">
+                <a href="###">
+                    <div class="aui-list-item-inner aui-list-item-arrow aui-border-b">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-14"><font color="#03a9f4" class="aui-iconfont aui-icon-location"></font>二七区永安街23号</div>
+                            <div class="aui-list-item-right distance distance2">定位中...</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+        <div class="aui-margin-t-15">
+            <li class="aui-list-item ">
+                <a href="/jxxq">
+                    <div class="aui-border-b aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">鸿泰驾校（永安街校区）</div>
+                            <div class="aui-list-item-right">普通白班</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <a href="/jlxq">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="images/liulangnan.png" class="aui-img-round">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">卢亚飞<i class="iconfont aui-margin-l-5 aui-margin-r-5 aui-text-info">&#xe604;</i></div>
+                            </div>
+                            <div class="aui-list-item-text aui-margin-t-5">
+                                <div class="aui-list-item-title aui-font-size-14">
+                                    <div class="aui-label aui-label-danger aui-label-outlined">C1</div>
+                                    <small class="aui-text-default">科目二 奇瑞 豫AC508学</small>
+                                </div>
+                                <div class="aui-list-item-right aui-text-danger">传统培训</div>
+                            </div>
+                            <div class="aui-list-item-text aui-margin-t-5">
+                            <span>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star aui-text-warning"></i>
+                            <i class="aui-iconfont aui-icon-star"></i><small class="aui-text-default aui-margin-l-5">61人已学过</small>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="aui-list-item">
+                <a href="###">
+                    <div class="aui-list-item-inner aui-list-item-arrow aui-border-b">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-14"><font color="#03a9f4" class="aui-iconfont aui-icon-location"></font>二七区永安街23号</div>
+                            <div class="aui-list-item-right distance distance0">定位中...</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+    </ul>
+</div>
+<div id="allmap" style="display: none;"></div>
+<% include footPublic %>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+<script>
+    var i;
+    $(".screening div").click(function(){
+        i=$(this).index();
+        ifclass();
+    })
+    //    筛选下拉菜单选项选择效果
+    $(".shaixuan span").click(function(){
+        $(this).addClass("aui-btn-info").siblings("span").removeClass("aui-btn-info");
+    })
+    //    筛选下拉菜单提交按钮点击
+    $(".shaixuan-submit").click(function(){
+        ifclass();
+    })
+
+    //    筛选下拉菜单重置按钮点击
+    $(".shaixuan-resize").click(function(){
+        $(".shaixuan span").removeClass("aui-btn-info");
+    })
+
+    $(".choose-left li").click(function(){
+        var j=$(this).index();
+        $(this).addClass("now-list").siblings().removeClass("now-list");
+        $(".choose-right").eq(j).addClass("choose-right-show").siblings(".choose-right").removeClass("choose-right-show");
+    })
+    $(".choose-text li").click(function(){
+        var t=$(this).text();
+        $(this).addClass("choose-now").siblings("li").removeClass("choose-now");
+        $(".screening div").eq(i).text(t);
+        ifclass();
+    })
+    $(".shadow").click(function(){
+        ifclass();
+    })
+    function ifclass(){
+        if($(".choose").eq(i).hasClass("choose-show")){
+            $(".choose").eq(i).removeClass("choose-show")
+            $(".shadow").hide();
+        }else{
+            $(".choose").eq(i).addClass("choose-show").siblings(".choose").removeClass("choose-show");
+            $(".shadow").show();
+        }
+    }
+</script>
+<script type="text/javascript">
+    //html5 定位功能
+    $(function(){
+        var json_data = [[113.512858,34.813433],[113.672442,34.816865],[113.669783,34.812249]];    //驾校坐标
+        //HTML5 Web 存储
+        if(typeof(Storage)!=="undefined")
+        {
+            localStorage.quanshunPointLng=113.512858;
+            localStorage.quanshunPointlat=34.813433;
+        }
+        else
+        {
+            document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
+        }
+
+        //判断是否支持html定位功能
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(translatePoint);
+        }
+        else
+        {
+            alert("该浏览器不支持获取地理位置。")
+        }
+        function translatePoint(position){
+            var currentLat = position.coords.latitude;
+            var currentLon = position.coords.longitude;
+            var gpsPoint = new BMap.Point(currentLon, currentLat);
+            BMap.Convertor.translate(gpsPoint, 0, initMap); //转换坐标
+        }
+        function initMap(point){
+            //初始化地图
+            var map = new BMap.Map("allmap");
+            var pointB = new BMap.Point(point.lng,point.lat); //用户坐标
+            for(var i=0;i<json_data.length;i++){      //遍历驾校坐标数组
+                var pointA = new BMap.Point(json_data[i][0],json_data[i][1]);  // 为每个驾校坐标创建点坐标A
+                $(".distance"+i).text((map.getDistance(pointA,pointB)).toFixed(0)+"米");//获取两点距离,保留小数点后两位
+            }
+        }
+        // 百度地图API功能
+    });
+</script>
+</html>

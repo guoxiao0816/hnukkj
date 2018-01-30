@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <style>
+        /*   .aui-list .aui-list-item-media{width: 4rem;}
+           .choose-show{top: 2.2rem;}*/
+        .aui-list-item {
+            border-bottom: 1px solid #f4f4f4;
+        }
+    </style>
+</head>
+<body style="background: #FFFfff">
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title ">
+        Ta关注的人
+    </div>
+</header>
+<div class="aui-content-padded" style="padding-top: 2rem;padding-bottom: 2.5rem;">
+    <ul class="aui-list  aui-list-in">
+        <!--循环对象-->
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-info aui-list-item-title">
+                    <div class="aui-info-item">
+                        <img src="/images/include/bmlc-i6.png" style="width:1rem" class="aui-img-round"><span
+                                class="aui-margin-l-5">我是一朵花</span>
+                    </div>
+                </div>
+                <div class="aui-list-item-right"><a href="####">
+                        <div class="aui-text-info">去留言</div>
+                    </a></div>
+            </div>
+        </li>
+        <!--循环对象-->
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-info aui-list-item-title">
+                    <div class="aui-info-item">
+                        <img src="/images/comit1.jpg" style="width:1rem" class="aui-img-round"><span
+                                class="aui-margin-l-5">6666</span>
+                    </div>
+                </div>
+                <div class="aui-list-item-right"><a href="####">
+                        <div class="aui-text-info">去留言</div>
+                    </a></div>
+
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item aui-margin-t-10 aui-list-item-inner">
+            <div class="aui-font-size-14 aui-text-center">再拉就扯淡了~</div>
+        </li>
+    </ul>
+</div>
+
+<div class="shadow"></div>
+<% include footPublic %>
+</body>
+<script></script>
+</html>

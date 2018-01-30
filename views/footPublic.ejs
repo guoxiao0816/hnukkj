@@ -1,0 +1,117 @@
+<footer class="aui-bar aui-bar-tab" id="footer">
+    <a class="aui-bar-tab-item" href="http://shang.qq.com/wpa/qunwpa?idkey=4a9f5ca5bde18d26b1d917e8e71b7869c2e461c2eee73e9b1345c6ec6a692518">
+        <i class="aui-iconfont iconfont">&#xe6a1;</i>
+        <i class="aui-iconfont iconfont">&#xe669;</i>
+        <div class="aui-bar-tab-label">一键加群</div>
+    </a>
+    <a class="aui-bar-tab-item" href="javascript:;">
+        <i class="aui-iconfont iconfont">&#xe696;</i>
+        <i class="aui-iconfont iconfont">&#xe6a3;</i>
+        <div class="aui-bar-tab-label">在线咨询</div>
+    </a>
+    <a class="aui-bar-tab-item" href="javascript:;" onclick="lqyh()">
+        <i class="aui-iconfont iconfont">&#xe6c5;</i>
+        <i class="aui-iconfont iconfont">&#xe6a4;</i>
+        <div class="aui-bar-tab-label">领取优惠</div>
+    </a>
+    <a class="aui-bar-tab-item" href="tel:0371-58508808">
+        <i class="aui-iconfont iconfont">&#xe6a5;</i>
+        <i class="aui-iconfont iconfont">&#xe608;</i>
+        <div class="aui-bar-tab-label">电话咨询</div>
+    </a>
+</footer>
+<div class="lqyh" id="lqyh" style="width: 15rem">
+    <div class="lqyh_head">
+        小手一抖  优惠到手<br>
+        <div><small style="font-size: 60%;">最高优惠1000元</small></div>
+    </div>
+    <div class="lqyu_con layer_con aui-text-center">
+        <img src="/images/include/lqyh.jpg" alt="" style="width: 85%;margin-bottom: 1rem;">
+        <ul class="aui-list aui-form-list">
+
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label-icon">
+                        <font color="#e3e3e3" size="4" class="iconfont">&#xe614;</font>
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="请输入您的名字">
+                    </div>
+                </div>
+            </li>
+
+            <li class="aui-list-item aui-margin-t-10">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label-icon">
+                        <font color="#e3e3e3" size="4" class="iconfont">&#xe702;</font>
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="number" placeholder="输入您的手机号码">
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <div class="aui-btn aui-btn-danger aui-btn-block" onclick="closeLayer()">报名获取优惠</div>
+    </div>
+    <div class="iconfont close" onclick="closeLayer()">&#xe6a7;</div>
+</div>
+
+<div class="appdownload" id="appdownload" style="display: none; height: 17rem;width: 15rem; position: relative; background: url(/images/include/alert.png) center 1rem no-repeat;background-size:50%;">
+    <div style="width: 100%;">
+        <span onclick="closeLayer()" style="position: absolute;top:0.6rem;right:1rem; color: #666;font-size: 1.2rem;">×</span>
+       <h3 style="position: absolute;width: 100%; top: 9rem;text-align: center;font-size: 1rem;">网页君正在成长中</h3>
+        <h4 style="position: absolute;width: 100%; top: 11rem;text-align: center;font-size: .8rem;color: #666">先去App体验更棒的功能吧~</h4>
+        <a href="http://www.ukxueche.com/app" onclick="closeLayer()" style="position: absolute;display: inline-block;width: 10rem;line-height: 2rem;font-size: .8rem; text-align: center; top: 13rem;left: 2.5rem; margin: 0 auto;background-color: #03a9f4;border-radius: 5px;color: #fff;">立即下载</a>
+    </div>
+</div>
+<% include nav.ejs %>
+<script>
+//    aui控件声明
+    apiready = function(){
+        api.parseTapmode();
+    }
+var tab = new auiTab({
+    element : document.getElementById("tab"),
+    // callback:function(o,dom){
+    //     console.log(o);
+    // }
+}, function(ret) {
+    //console.log(ret)
+});
+//    弹出框对象
+    var layer;
+    layui.use('layer', function(){
+        layer = layui.layer;
+    })
+//领取优惠方法
+    function lqyh() {
+        layer.open({
+            type: 1,
+            title:false,
+            content: $('#lqyh'),
+            shadeClose:true,
+            closeBtn:0,
+            /*area: '80%'*/
+        });
+    }
+
+    function appdownload() {
+        layer.open({
+            type: 1,
+            title:false,
+            content: $('#appdownload'),
+            shadeClose:true,
+            closeBtn:0,
+            area: '80%'
+        })
+    }
+//    关闭网站所有弹出框
+    function closeLayer() {
+        layer.closeAll();
+    }
+//点击底部tabs虚实效果
+$("#footer .aui-bar-tab-item").click(function(){
+    $(this).addClass('aui-active').siblings().removeClass('aui-active');
+});
+</script>

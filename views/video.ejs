@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <!--<style>
+        .aui-content{padding-top: 2.2rem;}
+    </style>-->
+    <script src="//at.alicdn.com/t/font_nhrss69kvqiu23xr.js"></script>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+    <a class="aui-pull-right aui-btn">
+        <span class="aui-iconfont aui-icon-like aui-margin-l-10"></span>
+    </a>
+</header>
+<div class="aui-content">
+    <video id="video1" width="100%" controls="controls">
+        <source src="images/mov_bbb.mp4" type="video/mp4">
+    </video>
+</div>
+<% include footPublic %>
+</body>
+</html>

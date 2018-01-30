@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        #topic{background-color: #fff;}
+        #topic .aui-content-padded .aui-list-item{border: none;}
+        #topic .aui-content-padded .textarea{height: 5rem;}
+        .weui-cells:before{content: normal;}
+        .weui-cells:after{content: normal;}
+        .aui-grid [class*=aui-col-]{padding: .5rem 0;}
+        #bottom a{margin: 5px;}
+        .biaoqian{ display: inline-block;background-color: #F5FFFA; color: #03a9f4; padding: 0 8px;font-size: 12px;border-radius: 6px; border: 1px solid #03a9f4;}
+        .deletetag{ display: inline-block; color: #03a9f4; padding: 0 8px;padding-right: 15px; font-size: 12px;border-radius: 6px; border: 1px solid #03a9f4;
+            background: url("/images/include/cuohao.png") no-repeat 90% 50%;background-size: 8px;background-color: #F5FFFA;}
+        #biaoqian{display: inline-block;background-color: #FFFfff;padding: 0 5px;font-size: 12px;border-radius: 6px; border: 1px solid #333;}
+        .lazy{opacity: 0; width: 100%;height: 100%;position: relative;}
+        .gallery .badge{position: relative;top: 0;left: 58px;display: inline-block;}
+        .gallery .badge img{z-index: 12;width: 24px;height: 24px;}
+        #bottom{ position: fixed;bottom: 0;width: 100%; padding:10px 0; border-top:1px solid #dddddd; background: #FFFfff;}
+        .body_1{margin-bottom: 100px;}
+        #search{background: #f5f5f5; width: 100%;height: 54px;}
+        #Selected div:last-child{display: inline-block;background-color: #FFFfff; color: #333333;padding: 0 5px;font-size: 12px;border-radius: 6px; border: 1px solid #333;}
+        #Selected div,#remen .hottag{margin: 5px;}
+        #remen .hottag{display: inline-block;background-color: #FFFfff;padding: 0 5px;font-size: 12px;border-radius: 6px; border: 1px solid #333;}
+
+    </style>
+</head>
+<body id="topic">
+<div class="body_1">
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left aui-btn" href="javascript:history.back();">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">
+            发表话题
+        </div>
+        <button class="aui-pull-right aui-btn aui-font-size-14">发布</button>
+    </header>
+    <div class="aui-content-padded" style="padding-top: 2rem;">
+
+        <ul class="aui-list aui-form-list">
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="标题（可选）">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-input">
+                        <textarea class="textarea" placeholder="请输入话题内容"></textarea>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <section class="aui-grid aui-margin-b-15">
+            <div class="aui-row">
+                <div class="aui-col-xs-6">
+                    <div class="aui-badge">8</div>
+                    <input id="imageInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    <img src="/images/include/upImage.png" alt="">
+                </div>
+                <div class="aui-col-xs-6">
+                    <input id="videoInput" class="weui-uploader__input" type="file" accept="video/*" capture="camcorder">
+                    <img src="/images/include/upVideo.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!--视频上传预览区域-->
+        <div class="aui-list-item" style="display: block;padding-left:15px">
+            <video id="vssss" src="http://files.ukxueche.com/jkmj/123.mp4" poster="images/comit1.jpg" controls="controls" style="width: 45%;height: 100%;"></video>
+        </div>
+        <!--图片上传预览区域-->
+        <div class="weui-cells weui-cells_form" style="display: block;">
+            <div class="weui-cell">
+                <div class="weui-cell__bd" >
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files gallery" id="uploaderFiles">
+                                <li class="weui-uploader__file" style="background-image:url(/images/include/banner1.png)">
+                                    <div class="badge"><img src="/images/include/close.png" alt=""></div>
+                                    <img class="lazy" src="images/include/banner1.png">
+                                </li>
+
+                                <li class="weui-uploader__file" style="background-image:url(/images/include/banner1.png)">
+                                    <div class="badge"><img src="/images/include/close.png" alt=""></div>
+                                    <img class="lazy" src="images/include/banner1.png">
+                                </li>
+
+                                <li class="weui-uploader__file" style="background-image:url(/images/include/banner1.png)">
+                                    <div class="badge"><img src="/images/include/close.png" alt=""></div>
+                                    <img class="lazy" src="images/include/banner1.png">
+                                </li>
+
+                                <li class="weui-uploader__file" style="background-image:url(/images/include/banner1.png)">
+                                    <div class="badge"><img src="/images/include/close.png" alt=""></div>
+                                    <img class="lazy" src="images/include/banner1.png">
+                                </li>
+
+                                <li class="weui-uploader__file" style="background-image:url(/images/include/banner1.png)">
+                                    <img class="lazy" src="images/include/banner1.png">
+                                </li>
+
+                                <li class="weui-uploader__file" style="background-image:url(/images/include/banner1.png)">
+                                    <img class="lazy" src="images/include/banner1.png">
+                                </li>
+
+                                <li class="weui-uploader__file" style="background-image:url(/images/include/banner1.png)">
+                                    <img class="lazy" src="images/include/banner1.png">
+                                </li>
+
+                                <li class="weui-uploader__file" style="background-image:url(/images/include/banner1.png)">
+                                    <img class="lazy" src="images/include/banner1.png">
+                                </li>
+                             </ul>
+                            <!--传第九张的时候，把上传框删除-->
+                            <div class="weui-uploader__input-box" style="background: url(/images/include/upvideobg.jpg);">
+                                <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aui-list-item" id="bottom">
+        <!--biaoqian默认参数不能删除，必须有一个-->
+        <a class="biaoqian" href="###">科目二</a>
+        <!--添加的deletetag标签，可以添加，限制数量 4 个，-->
+        <a class="deletetag" href="###">郑州市</a>
+        <a class="deletetag" href="###">郑州市</a>
+        <a class="deletetag" href="###">郑州市</a>
+        <a class="deletetag" href="###">郑州市</a>
+
+        <a id="biaoqian" href="###">+选择标签</a>
+    </div>
+</div>
+<div class="body_2" style="display: none;">
+    <header class="aui-bar aui-bar-nav">
+        <button class="aui-pull-left aui-btn aui-font-size-14" onclick="aaa()">取消</button>
+        <div class="aui-title">
+            标签选择
+        </div>
+        <button class="aui-pull-right aui-btn aui-font-size-14" onclick="aaa()">完成</button>
+    </header>
+    <div class="aui-searchbar" id="search">
+        <div class="aui-searchbar-input aui-border-radius" onclick="doSearch()">
+            <i class="aui-iconfont aui-icon-search"></i>
+            <form action="javascript:search();">
+                <input type="search" placeholder="请输入搜索内容" id="search-input">
+            </form>
+        </div>
+        <div class="aui-searchbar-cancel" style="margin-right: 0;">取消</div>
+    </div>
+    <div class="aui-content-padded">
+        <div class="aui-card-list lable_box" style="display: block;">
+            <div style="height:77%;overflow-y: auto;">
+                <div class="aui-card-list-header aui-border-b aui-padded-r-0">
+                    <div class="aui-font-size-16">已选标签</div>
+                </div>
+                <div class="aui-card-list-content-padded">
+                    <div class="aui-row aui-row-padded" id="Selected">
+                        <!--biaoqian默认参数不能删除，必须有一个-->
+                        <div class="biaoqian">科目二</div>
+                        <div class="deletetag">热门</div>
+                        <div class="deletetag">提车作业</div>
+                        <div class="deletetag">美女</div>
+                        <!--最后一个div有样式不要动-->
+                        <div class="biaoqian" onclick="search()">+ 添加</div>
+                    </div>
+                </div>
+
+                <div class="subscribed">
+                    <div class="aui-card-list-header aui-border-b aui-padded-r-0 ">
+                        <div class="aui-font-size-16">热门标签</div>
+                    </div>
+                    <div class="aui-card-list-content-padded">
+                        <div class="aui-row aui-row-padded" id="remen">
+                            <div class="hottag">帮选车</div>
+                            <div class="hottag">提车作业</div>
+                            <div class="hottag">狼族自驾游</div>
+                            <div class="hottag">教练之家</div>
+                            <div class="hottag">教练之家</div>
+                            <div class="hottag">教练之家</div>
+                            <div class="hottag">教练之家</div>
+                            <div class="hottag">教练之家</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="searchbox">
+                    <ul class="aui-card-list">
+                        <li class="aui-list-item aui-bg-default">
+                            <div class="aui-list-item-inner aui-border-b" style="background: url(images/include/search.png) no-repeat 10px 50%;line-height: 40px;">
+                                <div style="padding-left: 40px">科目二
+                                    <div style="display: inline-block;float: right;margin-right: 10px;">
+                                        <img class="check_img" src="/images/include/add.png" alt="" style="vertical-align: middle;">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="aui-list-item aui-bg-default">
+                            <div class="aui-list-item-inner aui-border-b" style="background: url(images/include/search.png) no-repeat 10px 50%;line-height: 40px;">
+                                <div style="margin-left: 40px">科目二
+                                    <div style="display: inline-block;float: right;margin-right: 10px;">
+                                        <img class="check_img" src="/images/include/add2.png" alt="" style="vertical-align: middle;">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<!--照片浏览器-->
+<script src="/javascripts/picture_browser.js"></script>
+
+<!--视频上传预览-->
+<script>
+    $(function () {
+        aaa();
+        $('#videoinput').change(function () {
+            var file = this.files[0];
+//            alert(file);
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = function(){
+//                alert(reader.result);
+                $('#vssss').attr('src', reader.result)
+            }
+        })
+            $('#biaoqian').click(function () {
+                $('.body_1').fadeOut();
+                $('.body_2').fadeIn();
+                return false;
+            })
+
+        /* 如果不用懒加载，需要等待dom结束执行*/
+        $Picture_browser(".gallery .weui-uploader__file");
+        /* 点击删除当前元素*/
+        $('.deletetag').click(function () {
+            console.log(this);
+            $(this).remove();
+            return false;
+        })
+
+        $('#search .aui-searchbar-cancel').click(function () {
+            $('.body_2 .searchbox').hide();
+            $('.body_2 header').fadeIn();
+            $('#search').fadeOut();
+            $('.body_2 .subscribed').show();
+            $('#Selected .biaoqian:last').show();
+        })
+
+        $('.searchbox .check_img').click(function () {
+            var _img = $(this).attr("src");
+          /*  console.log(_img);*/
+            if (_img == "/images/include/add.png"){
+                $(this).attr("src", "/images/include/add2.png");
+            }else {
+                $(this).attr("src", "/images/include/add.png");
+            }
+        })
+    })
+    $('#search-input').blur('keyup', function(){alert('2')});
+
+    $('#search-input').focus('keyup', function(){alert('1')});
+
+
+    function aaa() {
+        $('.body_2').fadeOut();
+        $('.body_1').fadeIn();
+        $('.body_2 .searchbox').hide();
+    }
+    
+    function search() {
+        $('.body_2 header').fadeOut();
+        $('#search').fadeIn();
+        $('.body_2 .subscribed').hide();
+        $('#Selected .biaoqian:last').hide();
+        $('.body_2 .searchbox').show();
+        return false;
+    }
+    $('.badge').click(function () {
+        $(this).parent().remove();
+    })
+</script>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+</head>
+<body style="background: #fff;">
+<% include head %>
+<% include nav %>
+<div id="appDownload" style="margin-top: 2.7rem;">
+    <div class="floor1">
+        <div class="aui-text-center">
+            <ul>
+                <li class="aui-font-size-20 aui-padded-t-15"><img src="/images/include/app-download.png" alt=""></li>
+                <li class="aui-font-size-16 aui-margin-b-15"><font color="#fff">中国首家互联网体验式驾考服务平台</font></li>
+                <li class="aui-margin-t-25 aui-margin-b-15">
+                    <div class="aui-col-xs-2">&nbsp;</div>
+                    <div class="aui-col-xs-8"><img src="/images/include/app-download1.png" alt="优快学车APP下载"></div>
+                    <div class="aui-col-xs-2">&nbsp;</div>
+                </li>
+
+                <!--Android终端，直接从服务器下载App-->
+                <li class="aui-margin-t-25 isAndroid">
+                    <a href="http://61.136.101.137:9080/api.ukxueche/download/ukxueche.apk"
+                       class="aui-col-xs-6 aui-padded-l-15 aui-padded-r-15">
+                        <div class="aui-btn aui-btn-sm aui-btn-block"><span
+                                    class="aui-iconfont iconfont aui-col-xs-3 aui-font-size-18">&#xe61a;</span>学员端下载
+                        </div>
+                    </a>
+                    <a href="http://61.136.101.137:9080/api.ukxueche/download/ukxueche_jl.apk"
+                       class="aui-col-xs-6 aui-padded-l-15 aui-padded-r-15">
+                        <div class="aui-btn aui-btn-sm aui-btn-block"><span
+                                    class="aui-iconfont iconfont aui-col-xs-3 aui-font-size-18">&#xe61a;</span>教练端下载
+                        </div>
+                    </a>
+                    <a href="http://61.136.101.137:9080/api.ukxueche/download/ukxueche_business.apk"
+                       class="aui-col-xs-6 aui-margin-t-15 aui-padded-l-15 aui-padded-r-15">
+                        <div class="aui-btn aui-btn-sm aui-btn-block"><span
+                                    class="aui-iconfont iconfont aui-col-xs-3 aui-font-size-18">&#xe61a;</span>业务端下载
+                        </div>
+                    </a>
+                    <a href="http://61.136.101.137:9080/api.ukxueche/download/ukxueche_boss.apk"
+                       class="aui-col-xs-6 aui-margin-t-15 aui-padded-l-15 aui-padded-r-15">
+                        <div class="aui-btn aui-btn-sm aui-btn-block"><span
+                                    class="aui-iconfont iconfont aui-col-xs-3 aui-font-size-18">&#xe61a;</span>BOSS端下载
+                        </div>
+                    </a>
+                </li>
+
+                <!--ios 终端，通过AppStore下载-->
+                <li class="aui-margin-t-25 isiOS" style="display: list-item;">
+                    <a href="https://itunes.apple.com/cn/app/you-kuai-xue-che-xue-yuan-duan/id1135394919?mt=8"
+                       class="aui-col-xs-6 aui-padded-l-15 aui-padded-r-15">
+                        <div class="aui-btn aui-btn-sm aui-btn-block"><span
+                                    class="aui-iconfont iconfont aui-col-xs-3 aui-font-size-18">&#xe61a;</span>学员端下载
+                        </div>
+                    </a>
+                    <a href="https://itunes.apple.com/cn/app/%E4%BC%98%E5%BF%AB%E5%AD%A6%E8%BD%A6-%E6%95%99%E7%BB%83%E7%AB%AF/id1163572490?mt=8"
+                       class="aui-col-xs-6 aui-padded-l-15 aui-padded-r-15">
+                        <div class="aui-btn aui-btn-sm aui-btn-block"><span
+                                    class="aui-iconfont iconfont aui-col-xs-3 aui-font-size-18">&#xe61a;</span>教练端下载
+                        </div>
+                    </a>
+                    <a href="https://itunes.apple.com/cn/app/%E4%BC%98%E5%BF%AB%E5%AD%A6%E8%BD%A6-%E4%B8%9A%E5%8A%A1%E7%AB%AF/id1158751258?mt=8"
+                       class="aui-col-xs-6 aui-margin-t-15 aui-padded-l-15 aui-padded-r-15">
+                        <div class="aui-btn aui-btn-sm aui-btn-block"><span
+                                    class="aui-iconfont iconfont aui-col-xs-3 aui-font-size-18">&#xe61a;</span>业务端下载
+                        </div>
+                    </a>
+                    <a href="https://itunes.apple.com/cn/app/you-kuai-xue-cheboss/id1146227381?mt=8"
+                       class="aui-col-xs-6 aui-margin-t-15 aui-padded-l-15 aui-padded-r-15">
+                        <div class="aui-btn aui-btn-sm aui-btn-block"><span
+                                    class="aui-iconfont iconfont aui-col-xs-3 aui-font-size-18">&#xe61a;</span>BOSS端下载
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="floor2 aui-margin-t-25">
+        <div class="aui-text-center">
+            <ul>
+                <li style="font-size: 1.2rem">给您<font color="ff9058">与众不同</font>的学车体验</li>
+                <li style="font-size: .55rem;margin-bottom: 1.5rem;" class="aui-margin-t-15 aui-text-default">免费全真模拟考试 /
+                    最全的科二科三视频讲解
+                </li>
+                <li style="font-size: .55rem;" class="aui-text-default">专家课程通过率高达99%</li>
+                <li class="aui-margin-t-5 aui-margin-b-5"><img src="/images/include/download-pagen.png"
+                                                               alt="优快学车全方位为您的驾考之路保驾护航"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="floor3">
+        <div class="aui-text-center">
+            <ul>
+                <li style="font-size: 1.2rem;">你可以<font color="#109cdf">再懒一些</font></li>
+                <li style="font-size: .55rem;margin-bottom: 1.5rem;" class="aui-margin-t-15 aui-text-default">
+                    不出门，跟有趣的人聊上片刻
+                </li>
+                <li style="font-size: .55rem" class="aui-text-default">好玩话题、社区公告，随时随地，动动手指就可以</li>
+                <li class="aui-margin-t-5 aui-margin-b-5"><img src="/images/include/app-download-page3.png"
+                                                               alt="好玩话题、社区公告，随时随地，动动手指就可以"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="floor3">
+        <div class="aui-text-center">
+            <ul>
+                <li style="font-size: 1.2rem;margin-top: 2rem;">优快学车<font color="#fb7c28">8大服务</font></li>
+                <li style="font-size: .55rem;margin-bottom: 1.5rem;" class="aui-margin-t-15 aui-text-default">
+                    收费透明合理，保证价格最优
+                </li>
+                <li style="font-size: .55rem" class="aui-text-default">好玩话题、社区公告，随时随地，动动手指就可以</li>
+                <li class="aui-margin-t-5 aui-margin-b-5"><img src="/images/include/app-download-page4.png"
+                                                               alt="自主约车,收费透明,价格最低"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="floor4 aui-margin-t-45">
+        <div class="aui-text-center">
+            <ul>
+                <li style="font-size: 1.2rem;margin-top: 2rem;"><font color="#109cdf">专为驾培行业量身打造</font></li>
+                <li style="font-size: .55rem;margin-bottom: 2rem;" class="aui-margin-t-15 aui-text-default">
+                    一款最贴近驾考实践的APP
+                </li>
+                <li class="aui-margin-t-5 aui-margin-b-5"><img src="/images/include/download-page4.png"
+                                                               alt="最贴近驾考实践的APP"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="floor5 aui-margin-t-45">
+        <div class="aui-text-center">
+            <ul>
+                <li style="font-size: 1.2rem">随时随地移动化办公</li>
+                <li style="font-size: .55rem;margin-bottom: 2rem;" class="aui-margin-t-15 aui-text-default">
+                    无论身在何处，随时随地办理驾考业务
+                </li>
+                <li class=""><img src="/images/include/download-page5.png" alt="移动化办公"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="aui-popup aui-popup-top-right" id="top-right" style="display: none;">
+    <div class="aui-popup-arrow"></div>
+    <div class="aui-popup-content">
+        <ul class="aui-list aui-list-noborder">
+            <a href="/" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner aui-list-item-middle">
+                    首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页
+                </div>
+            </a>
+            <a href="/jxjg" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    郑州驾校
+                </div>
+            </a>
+            <a href="/zxhd" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    最新活动
+                </div>
+            </a>
+            <a href="/dachemobile" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    客货增驾
+                </div>
+            </a>
+
+            <a href="/jkmj" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    驾考秘籍
+                </div>
+            </a>
+            <a href="/ykkb" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    优快快报
+                </div>
+            </a>
+            <a href="/mnks" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    模拟考试
+                </div>
+            </a>
+            <a href="/comit" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    优快社区
+                </div>
+            </a>
+            <a href="/appdownload" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    APP下载
+                </div>
+            </a>
+            <a href="/my" class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont iconfont aui-text-info"></i>
+                </div>
+                <div class="aui-list-item-inner">
+                    个人中心
+                </div>
+            </a>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isAndroid) {
+            $(".isAndroid").show();
+            $(".isiOS").hide();
+        }
+        if (isiOS) {
+            $(".isiOS").show();
+            $(".isAndroid").hide();
+        }
+    })
+
+</script>
+</body>
+</html>

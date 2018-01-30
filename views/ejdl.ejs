@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<div class="aui-content">
+    <div class="aui-text-center aui-bg-info syzj aui-text-white">
+        <div class="aui-text-left aui-padded-l-15 aui-margin-b-15">昵称：陆仁贾</div>
+        <div class="aui-font-size-16">收益总计：￥0</div>
+        <div class="aui-row aui-margin-t-15 aui-padded-b-15">
+            <div class="aui-col-xs-4">累计邀请:2人</div>
+            <div class="aui-col-xs-4">报名累计:0人</div>
+            <div class="aui-col-xs-4">科一通过:0人</div>
+        </div>
+    </div>
+    <div class="aui-card-list aui-list aui-media-list">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <div class="aui-tab" id="tab">
+                    <div class="aui-tab-item aui-active">邀请人数(2)</div>
+                    <div class="aui-tab-item"><div></div>报名成功(0)</div>
+                    <div class="aui-tab-item">科一通过(0)</div>
+                </div>
+            </ul>
+        </div>
+        <div class="aui-list-item aui-list-item-middle">
+            <div href="ejdl.html" class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/liulangnan.png" class="aui-img-round aui-list-img-sm">
+                </div>
+                <div class="aui-list-item-inner">
+                    流浪男 <font color="#039be5" class="iconfont"><small>&#xe609;</small></font> <small class="aui-text-default">15838078087</small>
+                </div>
+            </div>
+        </div>
+        <div class="aui-card-list-footer aui-border-t aui-text-center">
+            <div class="wdyjjd " style="width: 31%;">注册成功</div>
+            <div class="wdyjjd wdyjjding" style="width: 35%;">报名成功</div>
+            <div class="wdyjjd aui-col-xs-4">科一成功</div>
+        </div>
+        <div class="aui-card-list-header aui-border-t">
+            <div></div>
+            <div class="aui-text-default">
+                <span class="aui-font-size-14">收益：¥0</span><i class="aui-iconfont aui-icon-right"></i>
+            </div>
+
+        </div>
+    </div>
+</div>
+<% include footPublic %>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+</html>

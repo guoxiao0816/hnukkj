@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <style type="text/css">
+        a {
+            display: block;
+        }
+
+        .aui-col-xs-6 {
+            border: 1px solid #e6e6e6;
+            border-left: none;
+            border-top: none;
+        }
+        .aui-col-xs-6 .icon_img{
+            height: 6rem;
+            width: 6rem;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 6rem;
+        }
+
+        .aui-col-xs-6 .icon_img img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-margin-l-5 aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <%= title %>
+    </div>
+</header>
+<div class="aui-content">
+    <section class="aui-grid">
+        <div class="aui-row">
+            <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/ben.png" alt="">
+                    </div>
+                    <div class="aui-grid-label aui-ellipsis-1">停车区预告停车区预告停车区预告停车区预告</div>
+                </div>
+            </a>
+            <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/zzjz_title1.png" alt="">
+                    </div>
+                    <div class="aui-grid-label">首页</div>
+                </div>
+            </a>
+            <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/bmlc-i2.png" alt="">
+                    </div>
+                    <div class="aui-grid-label">首页</div>
+                </div>
+            </a>
+            <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/bdtg_banner.jpg" alt="">
+                    </div>
+                    <div class="aui-grid-label">首页</div>
+                </div>
+            </a>
+            <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/bolang.png" alt="">
+                    </div>
+                    <div class="aui-grid-label">首页</div>
+                </div>
+            </a>
+            <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/哪里领.png" alt="">
+                    </div>
+                    <div class="aui-grid-label">首页</div>
+                </div>
+            </a>
+            <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/哪里领.png" alt="">
+                    </div>
+                    <div class="aui-grid-label">首页</div>
+                </div>
+            </a>
+            <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/哪里领.png" alt="">
+                    </div>
+                    <div class="aui-grid-label">ssss</div>
+                </div>
+            </a>
+             <a href="/photosbrowser">
+                <div class="aui-col-xs-6">
+                    <div class="icon_img">
+                        <img src="/images/include/哪里领.png" alt="">
+                    </div>
+                    <div class="aui-grid-label">首页</div>
+                </div>
+            </a>
+
+
+        </div>
+    </section>
+</div>
+<div id="fixed_app" style="">
+    <a href="http://ukxueche.com/app"><img src="/images/include/download.png" alt="下载优快学车"></a>
+    <div class="close" onclick="close_fixed_app()">×</div>
+</div>
+<script type="text/javascript">
+    //应用推广
+    function close_fixed_app() {
+        $('#fixed_app').fadeOut();
+        /*若用户关闭推广，移除所有*/
+        $('#fixed_app').remove();
+    }
+    //应用推广end
+</script>
+<% include footPublic %>
+</body>
+</html>

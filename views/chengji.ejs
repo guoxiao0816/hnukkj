@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .chengji_box{background: #dc3b49;border-radius: 5px;color: #fff;position: relative;margin: 0 auto;margin-top: 4rem;margin-left: 8.333333333%;padding:0 4%;}
+        .chengji_box .aui-col-xs-6{padding-left:1rem;line-height: 2.5rem;}
+        .chengji_box hr{height: 1px; background: #fff;width: 100%;}
+        .chengji_title{background: #dc3b49;border-radius: 7px;border-bottom: 4px solid #fff;display: inline-block;position: absolute;left: 0;top: -39px;padding: 0 1rem;line-height:2rem;}
+    </style>
+</head>
+<body style="background: #f75b69;">
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <%=title%>
+    </div>
+</header>
+<div class="aui-content">
+    <div class="aui-text-center">
+        <img src="images/include/qiuanwei.png" alt="" style="width: 58%;">   <!--chaoshen.png 合格   qiuanwei.png不合格-->
+    </div>
+    <div class="chengji_box aui-font-size-18 aui-col-xs-10">
+        <div class="chengji_title">考试成绩</div>
+        <div class="aui-col-xs-6">答对：3</div>
+        <div class="aui-col-xs-6">打错：97</div>
+        <hr />
+        <div class="aui-col-xs-6">得分：3</div>
+        <div class="aui-col-xs-6">用时：00:10</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        button, .aui-btn{font-size: 0.6rem;}
+        .aui-list .aui-list-item-media{width: 5.4rem;}
+    </style>
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-tab screening" id="tab">
+    <a href="javascript:;" class="aui-tab-item aui-active">全部</a>
+    <a href="javascript:;" class="aui-tab-item">已取消</a>
+    <a href="javascript:;" class="aui-tab-item">已完成</a>
+    <a href="javascript:;" class="aui-tab-item">待付款</a>
+    <a href="javascript:;" class="aui-tab-item">已退款</a>
+    <a href="javascript:;" class="aui-tab-item">已付款</a>
+</div>
+<!--dzf：待支付；yzf：已支付-->
+<div class="aui-content" style="margin-top: 2rem;">
+    <div class="aui-list aui-media-list aui-margin-t-10 dzf">
+        <a href="/wdddxq">
+            <div class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title"><font color="#e51c23" class="iconfont">&#xe666;</font> AUI</div>
+                        <div class="aui-list-item-right"><font color="#e51c23">待付款</font></div>
+                    </div>
+                </div>
+            </div>
+            <div class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/dd_k2.png">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title aui-font-size-16">普通班 科二场地驾驶技能学时</div>
+                        <div class="aui-info" style="padding:0">
+                            2017-04-11 20:04:32
+                        </div>
+                        <div class="aui-info" style="padding:0">
+                            单价：¥100
+                            <div class="aui-info-item">数量：1</div>
+                        </div>
+                    </div>
+                </div>
+            </div></a>
+            <div class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">合计：<font color="#e51c23"><small>¥</small>100</font></div>
+                        <div class="aui-list-item-right aui-btn aui-btn-info" onclick="zffs()">立即支付</div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    <div class="aui-list aui-media-list aui-margin-t-10 yzf">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title"><font color="#e51c23" class="iconfont">&#xe666;</font> AUI</div>
+                    <div class="aui-list-item-right"><font color="#e51c23">已付款</font></div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/dd_bm.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title aui-font-size-16">标准班 报名缴费</div>
+                    <div class="aui-info" style="padding:0">
+                        2017-04-11 20:04:32
+                    </div>
+                    <div class="aui-info" style="padding:0">
+                        单价：¥2500.00
+                        <div class="aui-info-item">数量：1</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title">合计：<font color="#e51c23"><small>¥</small>2500</font></div>
+                    <div class="aui-list-item-right aui-btn">支付完成</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aui-list aui-media-list aui-margin-t-10 dzf">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title"><font color="#e51c23" class="iconfont">&#xe666;</font> AUI</div>
+                    <div class="aui-list-item-right"><font color="#e51c23">待付款</font></div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/dd_k2.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title aui-font-size-16">普通班 科二场地驾驶技能学时</div>
+                    <div class="aui-info" style="padding:0">
+                        2017-04-11 20:04:32
+                    </div>
+                    <div class="aui-info" style="padding:0">
+                        单价：¥100
+                        <div class="aui-info-item">数量：1</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title">合计：<font color="#e51c23"><small>¥</small>100</font></div>
+                    <div class="aui-list-item-right aui-btn aui-btn-info">立即支付</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aui-list aui-media-list aui-margin-t-10 dzf">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title"><font color="#e51c23" class="iconfont">&#xe666;</font> AUI</div>
+                    <div class="aui-list-item-right"><font color="#e51c23">待付款</font></div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/dd_k2.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title aui-font-size-16">普通班 科二场地驾驶技能学时</div>
+                    <div class="aui-info" style="padding:0">
+                        2017-04-11 20:04:32
+                    </div>
+                    <div class="aui-info" style="padding:0">
+                        单价：¥100
+                        <div class="aui-info-item">数量：1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title">合计：<font color="#e51c23"><small>¥</small>100</font></div>
+                    <div class="aui-list-item-right aui-btn aui-btn-info">立即支付</div>
+                </div>
+            </div>
+        </div>
+        <!--<input type="button" id="show-loading" value="">-->
+    </div>
+</div>
+<ul class="aui-list aui-select-list" id="zffs" style="display: none;">
+    <li class="aui-list-item">
+        <div class="aui-list-item-inner">
+            <label><input class="aui-checkbox" type="radio" name="checkbox" checked=""5> 支付宝支付</label>
+        </div>
+    </li>
+    <li class="aui-list-item">
+        <div class="aui-list-item-inner">
+            <label><input class="aui-checkbox" type="radio" name="checkbox"> 微信支付</label>
+        </div>
+    </li>
+</ul>
+
+<% include footPublic %>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+         /*callback:function(o,dom){
+             alert("aa")
+         }*/
+    },function(ret){
+        switch(ret.index)
+        {
+            case 1:
+                $(".aui-list").show();
+                break;
+            case 2:
+                $(".aui-list").hide();
+                $(".dzf").show();
+                break;
+            case 3:
+                $(".aui-list").hide();
+                $(".yzf").show();
+                break;
+        }
+        console.log(ret.index)
+    });
+</script>
+<script>
+    function zffs() {
+        layer.open({
+            type: 1,
+            title :'请选择支付方式',
+            content: $('#zffs'),
+            closeBtn:0,
+            offset: '40%',
+            scrollbar:false,
+            btn: ['确定', '取消'],
+            yes: function(index, layero){  //确定按钮的点击回调
+
+                layer.close(index);
+            },
+            cancel: function(index, layero){
+                layer.close(index);
+            }
+        });
+    }
+</script>
+</html>

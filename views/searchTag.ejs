@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        input[type="text"]{
+            min-height: 0;
+        }
+    </style>
+</head>
+<body>
+<header class="weui-search-bar weui-search-bar_focusing" id="searchBar" style="width: 100%;z-index: 150;">
+    <a href="javascript:history.back();" class="aui-pull-left" style="display:block;margin-right:10px;line-height:28px;white-space: nowrap"><span class="aui-iconfont aui-icon-left"></span></a>
+    <form class="weui-search-bar__form">
+        <div class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="text" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+            <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+        </div>
+        <label class="weui-search-bar__label" id="searchText">
+            <i class="weui-icon-search"></i>
+            <span>搜索</span>
+        </label>
+    </form>
+    <a href="javascript:" style="display:block;margin-left:10px;line-height:28px;color:#09bb07;white-space: nowrap">搜索</a>
+</header>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

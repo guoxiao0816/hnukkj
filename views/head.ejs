@@ -1,0 +1,32 @@
+<header class="aui-bar aui-bar-nav aui-bar-light">
+    <a class="aui-pull-left UKlogo" href="/">
+        <img src="/images/include/UKlogo.png" alt="">
+    </a>
+    <div class="aui-pull-right">
+        <a href="/search" class="aui-iconfont aui-icon-search"></a>
+        <span class="aui-iconfont aui-icon-menu aui-margin-l-10" aui-popup-for="top-right" tapmode=""></span>
+    </div>
+</header>
+<div class="toTop"></div>
+<script>
+    /*返回顶部*/
+    function toTop() {
+        $(document).ready(function(e) {
+            $('.toTop').click(function(e) {
+                $("html,body").animate({
+                    scrollTop : 0
+                }, 500);
+            });
+        });
+        $('.toTop').hide();
+        var $scroll = $(window).scroll(function() {
+            var $height = $(window).scrollTop();
+           if ($height > 200){
+                $('.toTop').show(100);
+           }else {
+               $('.toTop').hide();
+           }
+        });
+    }
+    toTop();
+</script>

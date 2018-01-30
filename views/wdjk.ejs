@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        tbody,table,td,tr,thead,#useravt{box-sizing: border-box;font-size: 0.6rem;}
+        .aui-bar-nav{line-height: 54px;height: 54px;min-height:54px;}
+        .aui-bar{line-height: 54px;height: 54px;min-height:54px; }
+        .bgeee{background-color: #eeeeea;}
+        .border_t_n{border-top: none!important;}
+       .aui-content .page{margin:0 2.6%;width: 94.6%;}
+        .aui-content .page thead{color: #757575;line-height: 37px;text-align: right;}
+
+       .aui-content .page tbody{line-height: 37px;}
+       .aui-content .page tbody tr{border: 1px solid #cccccc;}
+       .aui-content .page tbody tr td:nth-child(odd){background-color: #eeeeee;width: 22.2%;text-align: center;border: 1px solid #cccccc;}
+        .aui-content .page tbody tr td:nth-child(even){text-indent: 8px;}
+        #useravt{position:absolute;top:91px;right: 2.6%;width:28%;height:152px;background-color: #FFFfff;border: 1px solid #cccccc;border-bottom: none; z-index: 1;text-align: center;}
+        #useravt img{margin: 16% auto; width:81%;height: 80%;background-color: #eeeeea;display: block;text-align: center;}
+        .weui-toast_content{color: #FFFfff;}
+    </style>
+</head>
+<body style="background-color: #FFFfff;">
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<div class="aui-content" style="padding-top: 54px;">
+    <div id="useravt">
+        <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1629769058,2636999237&fm=26&gp=0.jpg" alt="驾考信息头像">
+    </div>
+    <table class="page">
+        <thead>
+            <tr>
+                <td></td>
+                <td style="position: relative;"><span>合同编号：</span>410100021612260003</td>
+            </tr>
+        </thead>
+            <tr>
+                <td>姓名</td>
+                <td>郭晓</td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>年龄</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>手机号码</td>
+                <td>18749076110</td>
+            </tr>
+            <tr>
+                <td>证件名称</td>
+                <td>暂住证</td>
+            </tr>
+            <tr>
+                <td>证件号码</td>
+                <td>455666199506208888</td>
+            </tr>
+            <tr>
+                <td>登记地址</td>
+                <td>河南濮阳</td>
+            </tr>
+            <tr>
+                <td>联系地址</td>
+                <td>郑州金水区</td>
+            </tr>
+            <tr>
+                <td>驾校名称</td>
+                <td>中原驾校(总校)</td>
+            </tr>
+        <table class="page">
+            <tr class="border_t_n">
+                <td class="border_t_n">报名日期</td>
+                <td>2017-8-99</td>
+                <td class="bgeee border_t_n">业务类型</td>
+                <td width="30%">初次申请</td>
+            </tr>
+            <tr>
+                <td>申请车型</td>
+                <td>小汽车</td>
+                <td class="bgeee">班型名称</td>
+                <td width="30%">夜班</td>
+            </tr>
+        </table>
+        <table class="page border_t_n">
+            <tr class="border_t_n">
+                <td class="border_t_n">驾校地址</td>
+                <td>花园路农业路高架动物园</td>
+            </tr>
+        </table>
+    </table>
+    <div class="aui-row aui-text-center jindu border_t_n aui-margin-b-15 aui-padded-t-10 aui-padded-b-10">
+        <div class="aui-col-xs-1 passed">
+            <div class="iconfont">
+                <div class="jindu-line"></div>
+                <span>&#xe607;</span>
+            </div>
+            <div>体检</div>
+        </div>
+        <div class="aui-col-xs-1 passed">
+            <div class="iconfont">
+                <div class="jindu-line"></div>
+                <span>&#xe607;</span>
+            </div>
+            <div>面签</div>
+        </div>
+        <div class="aui-col-xs-1 passed">
+            <div class="iconfont">
+                <div class="jindu-line"></div>
+                <span>&#xe607;</span>
+            </div>
+            <div>受理</div>
+        </div>
+        <div class="aui-col-xs-1 passed">
+            <div class="iconfont">
+                <div class="jindu-line"></div>
+                <span>&#xe607;</span>
+            </div>
+            <div>科目一</div>
+        </div>
+        <div class="aui-col-xs-1 ">
+            <div class="iconfont">
+                <div class="jindu-line"></div>
+                <span>&#xe607;</span>
+            </div>
+            <div>科目二</div>
+        </div>
+        <div class="aui-col-xs-1 ">
+            <div class="iconfont">
+                <div class="jindu-line"></div>
+                <span>&#xe607;</span>
+            </div>
+            <div>科目三</div>
+        </div>
+        <div class="aui-col-xs-1 ">
+            <div class="iconfont">
+                <div class="jindu-line"></div>
+                <span>&#xe607;</span>
+            </div>
+            <div>科目四</div>
+        </div>
+        <div class="aui-col-xs-1 ">
+            <div class="iconfont">
+                <div class="jindu-line"></div>
+                <span>&#xe607;</span>
+            </div>
+            <div>出证</div>
+        </div>
+        <div class="aui-col-xs-1  ">
+            <div class="iconfont">
+                <span>&#xe607;</span>
+            </div>
+            <div>领证</div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        /*只有已经完成的项目可以点击， 所以*/
+        $('.jindu .passed').click(function () {
+            var msg= $(this).children("div:last").text();
+            $.toast(msg +"时间&nbsp;" + "2017-8-22", "text");
+        })
+    })
+</script>
+</html>

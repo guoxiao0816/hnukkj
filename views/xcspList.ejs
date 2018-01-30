@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-content{padding: 2.2rem 0;}
+    </style>
+    <script src="//at.alicdn.com/t/font_nhrss69kvqiu23xr.js"></script>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<div class="aui-content">
+    <ul class="aui-list aui-media-list xcspList aui-text-center">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-row aui-row-padded">
+                    <a href="###" class="aui-col-xs-6">
+                        <img src="images/include/ykkb.jpg">
+                        <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                        <p>侧方停车</p>
+                    </a>
+                    <a href="###" class="aui-col-xs-6">
+                        <img src="images/include/ykkb.jpg">
+                        <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                        <p>侧方停车</p>
+                    </a>
+                    <a href="###" class="aui-col-xs-6">
+                        <img src="images/include/ykkb.jpg">
+                        <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                        <p>侧方停车</p>
+                    </a>
+                    <a href="###" class="aui-col-xs-6">
+                        <img src="images/include/ykkb.jpg">
+                        <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                        <p>侧方停车</p>
+                    </a>
+                    <a href="###" class="aui-col-xs-6">
+                        <img src="images/include/ykkb.jpg">
+                        <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                        <p>侧方停车</p>
+                    </a>
+                    <a href="###" class="aui-col-xs-6">
+                        <img src="images/include/ykkb.jpg">
+                        <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                        <p>侧方停车</p>
+                    </a>
+                    <a href="###" class="aui-col-xs-6">
+                        <img src="images/include/ykkb.jpg">
+                        <div class="xy-num"><i class="iconfont">&#xe660;</i> 2789名学员</div>
+                        <p>侧方停车</p>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div id="page" class="aui-text-center aui-margin-t-5"></div>
+</div>
+<% include footPublic %>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+<script>
+    laypage({
+        cont: 'page',
+        pages: 18, //可以叫服务端把总页数放在某一个隐藏域，再获取。假设我们获取到的是18
+        curr: function(){ //通过url获取当前页，也可以同上（pages）方式获取
+            var page = location.search.match(/page=(\d+)/);
+            return page ? page[1] : 1;
+        }(),
+        jump: function(e, first){ //触发分页后的回调
+            if(!first){ //一定要加此判断，否则初始时会无限刷新
+                location.href = '?page='+e.curr;
+            }
+        }
+    });
+</script>
+</html>

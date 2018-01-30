@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        img{width: 100%;}
+        #mynumber {
+            background: #c5dfff;
+        }
+        #mynumber .mycontent {
+            text-align: center;
+            margin-top: -15%;
+        }
+
+        #mynumber .mycontent p {
+            color: #515759;
+        }
+
+        #mynumber .mycontent span {
+            color: #009be8;
+        }
+
+        #mynumber .wenxin_ma {
+            padding: 0 25%;
+            margin: 5% 0;
+        }
+
+        #mynumber .myremind {
+            text-align: justify;
+            color: #515759;
+            line-height: 1.5em;
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body id="mynumber">
+<div class="aui-content" style="padding-top: 0;">
+    <div class="myphoto">
+        <img src="images/include/mynumber_bg.png"
+             alt="">
+    </div>
+    <div class="mycontent">
+        <p class="wenxin_ma">
+            <img src="/rqcode/wdyqm.rq?wdyqm=" alt="">
+        </p>
+        <h2>
+            我的邀请码：<span class="number"></span>
+        </h2>
+    </div>
+    <div class="myremind center">
+        <p class="aui-font-size-14">温馨提示：把你的姓名和邀请码发给你的好友，在优快注册并报名，考试科目一合格之后你就可以获得优快业务的提成，下月的1-10号会转入你的支付宝或者微信账号。优快学车微信公众号：ukxueche。官网：www.ukxueche.com</p>
+    </div>
+</div>
+</body>
+</html>

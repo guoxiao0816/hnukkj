@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list:before,.aui-list.aui-list-in .aui-list-item-inner:after{height: 0;}
+        .aui-content .swiper-container{height: 100%}
+        .aui-content .swiper-container img{width: auto;}
+        .aui-content .swiper-container .swiper-slide{width: 80%!important;height: 90%; margin: 5% 10%;
+            border-radius: .5rem;
+            box-shadow:0 2px 10px #666;}
+        .aui-content .swiper-container .swiper-slide .aui-list-item{border: none;}
+        .aui-content .aui-list:after,.aui-list-item:after{ content: normal;background-color: #fff;}
+
+        .aui-content .swiper-container .swiper-slide .swiper-slide-img{
+            max-width: 70%;margin-top: 10%;margin-bottom: 10%; max-height: 100%;
+        }
+    </style>
+</head>
+<body style="height: 100%;background-color: #fff;">
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-margin-l-5 aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <%= title %>
+    </div>
+</header>
+<div class="aui-content" style="height: 100%;padding-bottom: 0;">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide answer-container">
+                <ul class="aui-list aui-list-in aui-media-list">
+                    <div class="aui-text-center">
+                        <img class="swiper-slide-img" src="images/include/802800.jpg" alt="停车区预告预告停车区预告">
+                    </div>
+                    <div class="aui-list-item ">
+                        <div class="aui-list-item-title aui-font-size-16">带有媒体的列表二</div>
+                        <div class="aui-list-item-inner aui-font-size-14">
+                            停车区预告停车区预告停
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="swiper-slide answer-container">
+                <ul class="aui-list aui-list-in aui-media-list">
+                    <div class="aui-text-center">
+                        <img class="swiper-slide-img" src="images/include/app-download1.png" alt=""></div>
+                    <div class="aui-list-item">
+                        <div class="aui-list-item-title aui-font-size-16">带有媒体的列表二</div>
+                        <div class="aui-list-item-inner aui-font-size-14">
+                             驾驶机动车在道路上违反道路交通安全法的行为，属于什么行为？
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="swiper-slide answer-container">
+                <ul class="aui-list aui-list-in aui-media-list">
+                    <div class="aui-text-center">
+                        <img class="swiper-slide-img" src="images/include/合格标准.png" alt=""></div>
+                    <div class="aui-list-item">
+                        <div class="aui-list-item-title aui-font-size-16">两侧同行</div>
+                        <div class="aui-list-item-inner aui-font-size-14">
+                             两侧同行
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(document).on('click','.swiper-slide-img',function () {
+        var imgs = [];
+        var indexs = $(this).index() / 2;
+        $("img", $(this).parent('.aui-text-center')).each(function () {
+            imgs.push($(this).attr('src'));
+        });
+        pb1 = $.photoBrowser({
+            items: imgs,
+            initIndex: indexs
+        });
+        pb1.open();
+    })
+</script>
+<script type="text/javascript">
+    var all=10,nowans=1
+    var answer = '<div class="swiper-slide answer-container"> <ul class="aui-list aui-list-in aui-media-list"> <div class="aui-text-center"> <img class="swiper-slide-img" src="images/include/合格标准.png" alt=""></div> <div class="aui-list-item"> <div class="aui-list-item-title aui-font-size-16">两侧同行</div> <div class="aui-list-item-inner aui-font-size-14">两侧同行 </div> </div> </ul> </div>'
+    var mySwiper = new Swiper('.swiper-container', {
+        onSlideNextEnd: function () {        //slider向前(右、下)切换结束时执行
+            nowans++;
+            if (nowans == all) {
+                mySwiper.removeSlide(0);
+                console.log("最后一题:" + nowans);
+                return;
+            } else {
+                if (mySwiper.slides.length == 2) {
+                    mySwiper.removeSlide(0);
+                }
+                console.log(mySwiper.slides.length);
+                console.log("当前是第几道：" + nowans);
+                mySwiper.appendSlide(answer);
+                console.log('debug');
+            }
+        },
+        onSlidePrevEnd: function () {        //slider向前(左)切换结束时执行
+            nowans--;
+            if (nowans == 1) {
+                console.log("第一题");
+                console.log(nowans);
+                mySwiper.removeSlide(2);
+                return;
+            } else {
+                if (mySwiper.slides.length == 2) {
+                    mySwiper.removeSlide(2);
+                }
+                console.log("当前是第几道：" + nowans);
+                mySwiper.prependSlide(answer);
+            }
+        }
+    });
+</script>
+
+</html>

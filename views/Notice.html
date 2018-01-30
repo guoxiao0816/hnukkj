@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>公告：</title>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        body {
+            background: #fff;
+        }
+
+        .mianBox {
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            width: 600px;
+            margin-top: 100px;
+            text-align: center;
+            color: #1e71b1;
+        }
+
+        #show {
+            margin-top: 20px;  color: red;
+        }
+        #show a{
+            color: red;text-decoration: none;
+        }
+        .textThis h1{
+            margin-bottom: 20px;
+        }
+
+        .textThis h2{
+            text-indent: 40px;font-size: 24px;text-align: justify;
+        }
+        .textThis h2 a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="mianBox">
+    <div class="tipInfo">
+        <div class="in">
+            <div class="textThis">
+                <h1>公告<br></h1>
+                <h2>感谢大家长期以来对郑州车管所官方网站的关注和支持，根据《郑州市人民政府办公厅关于印发郑州市政府网站集约化建设方案的通知》（郑政办明电【2017】313号）文件要求郑州车管所官方网站已并入郑州市公安局门户网站
+                    <a href="http://www.zhengzhouga.gov.cn">（网址:www.zhengzhouga.gov.cn）</a><div style="margin-top: 10px">给您带来不便敬请谅解！谢谢您的支持~</div></h2>
+                <div id="show"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var t = 10;//设定跳转的时间
+    setInterval("refer()", 1000);
+    function refer() {
+        if (t == 0) {
+            location = "http://www.zhengzhouga.gov.cn"; //#设定跳转的链接地址
+        }
+        document.getElementById('show').innerHTML = "" + t + "  <a href='http://www.zhengzhouga.gov.cn'>秒后跳转至郑州市公安局门户网站</a>"; // 显示倒计时
+        t--; // 计数器递减
+    }
+</script>
+</html>

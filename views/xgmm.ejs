@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<% include head.ejs %>
+<div class="aui-content">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd aui-margin-r-10"><font size="4" class="iconfont">&#xe702;</font></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="number" pattern="[0-9]*" placeholder="手机号码">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell__hd aui-margin-r-10">
+                <font size="4" class="iconfont">&#xe623;</font>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="tel" placeholder="新密码">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell__hd aui-margin-r-10">
+                <font size="4" class="iconfont">&#xe623;</font>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="tel" placeholder="再次输入新密码">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell__hd aui-margin-r-10">
+                <font size="4" class="iconfont">&#xe69d;</font>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="tel" placeholder="手机验证码">
+            </div>
+            <div class="weui-cell__ft">
+                <button class="weui-vcode-btn">获取验证码</button>
+            </div>
+        </div>
+    </div>
+    <div class="aui-content-padded">
+        <input id="doRevise" type="button" value="确定修改" class="aui-btn aui-btn-info aui-btn-block">
+    </div>
+</div>
+
+<% include footPublic %>
+</body>
+</html>

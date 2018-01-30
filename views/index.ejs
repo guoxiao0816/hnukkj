@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <!--<style>
+        #menu{background: #03a9f4}
+        #menu *{color: #fff;}
+        #menu .aui-list .aui-list-item:after,#menu .aui-list:after{
+            background: none;height: 0;
+        }
+        #menu .aui-list .aui-list-item{background: none;}
+        #panel{background:#F5F5F5}
+        .aui-list .aui-list-item-media{width: 4rem;}
+        .aui-card-list{margin-bottom: 0;}
+        .search{transition:all 0.2s;border-radius: 0.2rem;width:0;position: absolute;right: 0;top: 0;background: #fff;height: 1.7rem;border-radius:0.9rem;margin-top: 0.3rem}
+        .search input{min-height: 1.9rem;height: 1.9rem;padding-left: 0.5rem;padding-right: 1.8rem;vertical-align: middle;line-height: 1.9rem;}
+        .aui-icon-close{display: none;}
+        .search_active .search{width: 12rem;}
+        .search_active .aui-icon-close{display: inline-block;}
+        .search_active .aui-iconfont{color: #333 !important;}
+        .icon {
+            vertical-align:middle;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        .aui-list .aui-list-item-media {
+            width: 4.5rem;height: 3.5rem;
+        }
+        .aui-list .aui-list-item-media img {
+            width:100%;height: 100%;
+        }
+        .aui-list .aui-list-item-right{max-width:62%;}
+    </style>-->
+    <script src="//at.alicdn.com/t/font_nhrss69kvqiu23xr.js"></script>
+</head>
+<body class="tabs1">
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left aui-btn" href="javascript:;">
+            郑州<i class="iconfont">&#xe602;</i>
+        </a>
+        <div class="aui-title">
+            <a href=""><%=title%></a>
+        </div>
+        <a class="aui-pull-right aui-btn" href="/search">
+            <span class="aui-iconfont aui-icon-search"></span>
+        </a>
+    </header>
+    <div class="aui-content">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img data-src="http://files.ukxueche.com/ad/4101/banner1.png" alt="" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img data-src="http://files.ukxueche.com/ad/4101/banner3.png" alt="" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!--<div class="aui-row aui-margin-t-15">
+            <div class="aui-col-xs-6 aui-text-center xsqg">
+                <div class="aui-margin-r-5 aui-bg-default aui-padded-l-10 aui-padded-r-10  aui-border-t aui-border-b aui-border-r aui-padded-t-5">
+                    <a href="xsqg.html">
+                        <div class="aui-font-size-18 aui-margin-t-5"><i class="iconfont aui-font-size-18">&#xe628;</i>限时抢购</div>
+                        <div class="aui-text-default">距离结束 <span style="color: #fff;border-radius: 2px;" class="aui-bg-info aui-font-size-16 aui-padded-l-5 aui-padded-r-5"><strong>74</strong></span> 天</div>
+                        <div class="aui-margin-t-5">普通班（本地）<span class="aui-iconfont aui-icon-right aui-font-size-12"></span></div>
+                        <div class="aui-margin-t-5"><span class="aui-font-size-18">￥2000</span> <del class="aui-text-default aui-font-size-14"><small>市场价2200</small></del></div>
+                    </a>
+                </div>
+            </div>
+            <div class="aui-col-xs-6 aui-text-center jspx">
+                <div class="aui-bg-default aui-padded-l-10 aui-padded-r-10 aui-margin-l-5 aui-border-b aui-border-t aui-border-l aui-padded-t-5">
+                    <a href="jspx.html">
+                        <div class="aui-font-size-18 aui-margin-t-5"><i class="iconfont aui-font-size-18">&#xe626;</i>计时培训</div>
+                        <div class="aui-text-default">限时限量 先到先得</div>
+                        <div class="aui-margin-t-5">普通班（本地）<span class="aui-iconfont aui-icon-right aui-font-size-12"></span></div>
+                        <div class="aui-margin-t-5 aui-font-size-18">￥2000</div>
+                    </a>
+                </div>
+            </div>
+        </div>-->
+        <section class="aui-grid aui-margin-t-15 aui-border-b">
+            <div class="aui-row index-list">
+                <a href="/bmxz">
+                    <div class="aui-col-xs-3 aui-padded-t-5 aui-padded-b-5">
+                        <font class="iconfont" color="#ff9f22"></font>
+                        <div class="aui-grid-label aui-margin-t-0 c-555">报名须知</div>
+                    </div>
+                </a> <a href="/xclc">
+                    <div class="aui-col-xs-3 aui-padded-t-5 aui-padded-b-5">
+                        <font class="iconfont" color="#ff6767"></font>
+                        <div class="aui-grid-label aui-margin-t-0  c-555 ">学车流程</div>
+                    </div>
+                </a> <a href="/question">
+                    <div class="aui-col-xs-3 aui-padded-t-5 aui-padded-b-5">
+                        <font class="iconfont" color="#8a90f9"></font>
+                        <div class="aui-grid-label aui-margin-t-0  c-555">学车问答</div>
+                        <div class="aui-badge" style="min-width:2.8rem;left:48%;background: #ff6767;font-size: 0.5rem;">一键咨询</div>
+                    </div>
+                </a> <a href="/ykbz">
+                    <div class="aui-col-xs-3 aui-padded-t-5 aui-padded-b-5">
+                        <font class="iconfont" color="#07b8ff"></font>
+                        <div class="aui-grid-label aui-margin-t-0  c-555">服务承诺</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <div class="swiper-active aui-margin-t-10" style="width: 100%;overflow: hidden;height: 3.45rem;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/activity/4101/105_sm.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/activity/4101/105_sm.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/activity/4101/105_sm.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/activity/4101/105_sm.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/activity/4101/105_sm.png">
+                </div>
+            </div>
+        </div>
+        <ul class="aui-list aui-margin-t-10">
+            <a href="/ykkb">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-label-icon aui-col-xs-4">
+                        <img src="images/include/kuaibao.png" alt="" style="width:120px;"><font size="6" color="red" class="aui-margin-l-5 iconfont">&#xe712;</font>
+                    </div>
+                    <div class="aui-col-xs-8">
+                        <div class="swiper-kuaibao aui-margin-l-5" style="overflow: hidden;height: 2.2rem;line-height: 2.3rem">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="aui-ellipsis-1">郑州驾培市场将迎来新的市场格局</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="aui-ellipsis-1">郑州驾考新增科目五？</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="aui-ellipsis-1">郑州科目三考试，距离顺利通过只差10个点？</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </a>
+        </ul>
+        <div class="aui-card-list aui-margin-t-10">
+            <a href="/jxjg">
+                <div class="aui-card-list-header aui-border-b">
+                    <div><font color="#ff9322" size="2" class="iconfont"></font><span class=""> 附近推荐</span></div>
+                    <span class="aui-font-size-14 c-666">更多</span>
+                </div>
+            </a>
+            <ul class="aui-list aui-media-list" id="aui-list">
+                <li class="aui-list-item aui-list-item-middle">
+                    <a href="/jxjg">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-margin-t-5">
+                                <img src="http://files.ukxueche.com/school/4101/4101168002/logo.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">嵩山驾校</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14">
+                            <span>
+                                <font size="1" class="iconfont aui-text-warning"></font>
+                                <font size="1" class="iconfont aui-text-warning"></font>
+                                <font size="1" class="iconfont aui-text-warning"></font>
+                                <font size="1" class="iconfont aui-text-warning"></font>
+                                <font size="1" class="iconfont aui-text-warning"></font>
+                            </span>
+                                    </div>
+                                    <div class="aui-list-item-right aui-text-warning aui-font-size-14">1600元起</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <small class="aui-text-default">0人已报名</small>
+                                    <div class="aui-list-item-right"><span class="distance0">最近817m</span> 河医校区</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="aui-list-item aui-list-item-middle"><a href="/jxjg">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-margin-t-5">
+                                <img src="http://files.ukxueche.com/school/4101/4101168002/logo.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">嵩山驾校</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14">
+                                        <span>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                        </span>
+                                    </div>
+                                    <div class="aui-list-item-right aui-text-warning aui-font-size-14">1600元起</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <small class="aui-text-default">0人已报名</small>
+                                    <div class="aui-list-item-right"><span class="distance0">最近817m</span> 河医校区</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="aui-list-item aui-list-item-middle"><a href="/jxjg">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-margin-t-5">
+                                <img src="http://files.ukxueche.com/school/4101/4101168002/logo.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">嵩山驾校</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14">
+                                        <span>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                        </span>
+                                    </div>
+                                    <div class="aui-list-item-right aui-text-warning aui-font-size-14">1600元起</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <small class="aui-text-default">0人已报名</small>
+                                    <div class="aui-list-item-right"><span class="distance0">最近817m</span> 河医校区</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="aui-list-item aui-list-item-middle"><a href="/jxjg">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-margin-t-5">
+                                <img src="http://files.ukxueche.com/school/4101/4101168002/logo.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">嵩山驾校</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14">
+                                        <span>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                        </span>
+                                    </div>
+                                    <div class="aui-list-item-right aui-text-warning aui-font-size-14">1600元起</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <small class="aui-text-default">0人已报名</small>
+                                    <div class="aui-list-item-right"><span class="distance0">最近817m</span> 河医校区</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="aui-list-item aui-list-item-middle"><a href="/jxjg">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-margin-t-5">
+                                <img src="http://files.ukxueche.com/school/4101/4101168002/logo.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">嵩山驾校</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14">
+                                        <span>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                        </span>
+                                    </div>
+                                    <div class="aui-list-item-right aui-text-warning aui-font-size-14">1600元起</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <small class="aui-text-default">0人已报名</small>
+                                    <div class="aui-list-item-right"><span class="distance0">最近817m</span> 河医校区</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="aui-list-item aui-list-item-middle"><a href="/jxjg">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-margin-t-5">
+                                <img src="http://files.ukxueche.com/school/4101/4101168002/logo.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">嵩山驾校</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14">
+                                        <span>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                        </span>
+                                    </div>
+                                    <div class="aui-list-item-right aui-text-warning aui-font-size-14">1600元起</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <small class="aui-text-default">0人已报名</small>
+                                    <div class="aui-list-item-right"><span class="distance0">最近817m</span> 河医校区</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="aui-list-item aui-list-item-middle"><a href="/jxjg">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media aui-margin-t-5">
+                                <img src="http://files.ukxueche.com/school/4101/4101168002/logo.png">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">嵩山驾校</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14">
+                                        <span>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                            <font size="1" class="iconfont aui-text-warning"></font>
+                                        </span>
+                                    </div>
+                                    <div class="aui-list-item-right aui-text-warning aui-font-size-14">1600元起</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <small class="aui-text-default">0人已报名</small>
+                                    <div class="aui-list-item-right"><span class="distance0">最近817m</span> 河医校区</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item aui-text-center aui-font-size-14">
+                    <div class="aui-list-item-inner">
+                        <a href="/jxjg" class="aui-text-default">查看更多校区<font size="3" class="iconfont" style="vertical-align: middle;"></font></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--<footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item aui-active">
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">优快学车</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <i class="aui-iconfont aui-icon-star"></i>
+            <div class="aui-bar-tab-label">模拟考试</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-badge">99</div>
+            <i class="aui-iconfont aui-icon-cart"></i>
+            <div class="aui-bar-tab-label">学车指南</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot"></div>
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">社区</div>
+        </div>
+    </footer>-->
+<% include footPublic %>
+</body>
+<script>
+    var swiper=$(".swiper-container").swiper({
+        loop : true,
+        pagination : '.swiper-pagination',
+        autoplay : 6000,
+        autoplayDisableOnInteraction : false,
+        lazyLoading : true,
+        initialSlide:1
+    })
+    $(".swiper-active").swiper({
+        pagination: '.swiper-pagination1',
+        slidesPerView: 2.5,
+        paginationClickable: true,
+        spaceBetween: 10,
+        freeModeMomentum:false,
+        freeMode: true
+    });
+    $(".swiper-kuaibao").swiper({
+        pagination: '.swiper-pagination2',
+        paginationClickable: true,
+        direction: 'vertical',
+        autoplay:5000,
+        loop:true,
+        autoplayDisableOnInteraction:false
+    });
+    console.log(swiper);
+</script>
+<!--<script>
+    $(function () {
+        var gsFiles = JSON.parse(localStorage.getItem("gsFiles")) || {};
+        gsFilesDate = gsFiles.date;
+        date = new Date();
+        todaysDate = (date.getMonth() + 1).toString() + date.getDate().toString();
+        // 检查数据，如果不存在或者数据过期，则创建一个本地存储
+        if (typeof gsFilesDate === "undefined" || gsFilesDate < todaysDate) {
+            // 图片加载完成后执行
+            &lt;!&ndash;image1&ndash;&gt;
+            $('img').each(function () {
+                console.log(this)
+                var imgCanvas = document.createElement("canvas");
+                imgContext = imgCanvas.getContext("2d");
+// 确保canvas尺寸和图片一致
+                imgCanvas.width = $(this).width();
+                imgCanvas.height = $(this).height();
+// 在canvas中绘制图片
+                imgContext.drawImage(this, 0, 0, $(this).width(), $(this).height());
+// 将图片保存为Data URI
+                gsFiles.a = imgCanvas.toDataURL("image/jpeg");
+                gsFiles.date = todaysDate;
+                console.log(gsFiles.a);
+// 将JSON保存到本地存储中
+                try {
+                    localStorage.setItem("gsFiles", JSON.stringify(gsFiles));
+                }
+                catch (e) {
+                    console.log("Storage failed: " + e);
+                }
+            })
+// 设置图片
+//        a.setAttribute("src", "");
+        }
+        else {
+// Use image from localStorage
+            $('img').each(function () {
+                $(this).attr("src", gsFiles.a);
+            })
+
+        }
+    })
+</script>-->
+</html>

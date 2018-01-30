@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_150593_w4bq81effb9be29.css">
+    <style>
+        html, body {
+            font-family: "微软雅黑";
+        }
+
+        .evaluate {
+            padding: 7px 15px;
+            border: 1px solid #dcdcdc;
+            border-radius: 18px;
+            color: #757575;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .evaluate_disabled {
+            color: #fff;
+            background-color: #ff8901;
+            border: none;
+        }
+
+        .border_bottom {
+            border-bottom: 1px solid #DCDCDC;
+            background-color: #fff;
+        }
+
+        .pingjia .aui-row {
+            padding: 5px;
+        }
+
+        .aui-list-item-media {
+            width: 2.5rem !important;
+        }
+
+        .aui-list-item-media img{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+        }
+        .xingxing{margin-left: 10px;}
+        .xingxing i{margin-left: 5px;}
+        .aui-text-warning{color: #ff9500!important;}
+    </style>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%= title %></a>
+    </div>
+    <a href="/pjjl" class="aui-pull-right">
+        <span class="iconfont icon-17" style="color: #fff;font-size: 20px;"></span>
+    </a>
+</header>
+<div class="aui-content">
+    <!-- 滑动加载效果 -->
+    <div class="weui-pull-to-refresh__layer" style="margin-bottom: 1rem;">
+        <div class='weui-pull-to-refresh__arrow'></div>
+        <div class='weui-pull-to-refresh__preloader'></div>
+        <div class="down">下拉刷新</div>
+        <div class="up">释放刷新</div>
+        <div class="refresh">正在刷新</div>
+    </div>
+    <!-- 其他内容 -->
+    <div class="aui-info aui-padded-l-10 aui-padded-r-10 border_bottom">
+        <div class="aui-info-item">
+            <span class="aui-margin-l-5" style="font-size: 15px;color: #333;">总体评价</span>
+            <!--关于评价，你可以把五个都显示出来，控制点亮 aui-text-warning || 或者控制 i 即星星的数量 -->
+            <span class="xingxing">
+                <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                <i class="iconfont icon-xingxing11 "></i>
+            </span>
+        </div>
+        <div class="aui-info-item" style="color: #999999;">4.5分</div>
+    </div>
+    <section class="aui-grid aui-margin-b-15 pingjia">
+        <div class="aui-row">
+                <!--有多少循环多少，evaluate_disabled 是当前标签列表，下面数据是会跟着变的，每个标签，对应一组数据-->
+                <a href="" class="evaluate evaluate_disabled">教学好</a>
+
+                <a href="" class="evaluate">责任心强</a>
+
+                <a href="" class="evaluate">教学好</a>
+
+                <a href="" class="evaluate">责任心强</a>
+
+                <a href="" class="evaluate">教学好</a>
+
+                <a href="" class="evaluate">教学好</a>
+
+                <a href="" class="evaluate">教学好</a>
+
+        </div>
+    </section>
+    <div class="aui-info aui-padded-l-10 aui-padded-r-10 border_bottom">
+        <div class="aui-info-item">
+            <span class="aui-margin-l-5" style="font-size: 15px;color: #333;">学员评价</span>
+        </div>
+        <div class="aui-info-item" style="color: #999999;">1518条评价</div>
+    </div>
+    <ul id="datalist" class="aui-list aui-media-list">
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <a href="/usercomit"><img src="http://files.ukxueche.com/photo/driver/4970_1501661517190.png"></a>
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">带有媒体的列表二</div>
+                        <div class="aui-list-item-right" style="color: #999999;">2017-08-02</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                      <span>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                        </span>
+                    </div>
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        很好很不错，牛逼啊！
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <a href="/usercomit"><img src="http://files.ukxueche.com/photo/driver/4970_1501661517190.png"></a>
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">带有媒体的列表二</div>
+                        <div class="aui-list-item-right" style="color: #999999;">2017-08-02</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                      <span>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                        </span>
+                    </div>
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        很好很不错，牛逼啊！
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <a href="/usercomit"><img src="http://files.ukxueche.com/photo/driver/4970_1501661517190.png"></a>
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">带有媒体的列表二</div>
+                        <div class="aui-list-item-right" style="color: #999999;">2017-08-02</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                      <span>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11"></i>
+                        </span>
+                    </div>
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        很好很不错，牛逼啊！
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <a href="/usercomit"><img src="http://files.ukxueche.com/photo/driver/4970_1501661517190.png"></a>
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">带有媒体的列表二</div>
+                        <div class="aui-list-item-right" style="color: #999999;">2017-08-02</div>
+                    </div>
+                    <div class="aui-list-item-text">
+                      <span>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                            <i class="iconfont icon-xingxing11"></i>
+                        </span>
+                    </div>
+                    <div class="aui-list-item-text">
+                        很好很不错，牛逼啊！很好很不错，牛逼啊！很好很不错，牛逼啊！很好很不错，牛逼啊！很好很不错，牛逼啊！很好很不错，牛逼啊！
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="weui-loadmore">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+    <div class="weui-loadmore weui-loadmore_line">
+        <span class="weui-loadmore__tips">暂无更多数据~</span>
+    </div>
+</div>
+
+<% include footPublic %>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $('.pingjia a').click(function () {return false;});
+    })
+
+    /*下拉刷新*/
+    function huadong() {
+        $('.aui-content').pullToRefresh();
+        $('.aui-content').on("pull-to-refresh", function() {
+            setTimeout(function () {
+                $('.aui-content').pullToRefreshDone();
+            }, 1500);
+        });
+    }
+    huadong();
+    /*滑动加载*/
+    var loading = false;
+    $(document.body).infinite(200).on("infinite", function () {
+        if (loading) return;
+        loading = true;
+        setTimeout(function () {
+            for (var i = 0; i < 3; i++) {
+                $('datalist').append("<p> 我是新加载的内容 </p>");
+                loading = false;
+            }
+        /*
+        * 执行请求数据
+        * */
+        }, 1500);
+    });
+
+</script>
+</html>

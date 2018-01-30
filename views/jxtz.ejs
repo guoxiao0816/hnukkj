@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <style>
+        .aui-list .aui-list-item-media {
+            width: 4rem;
+        }
+
+        .choose-show {
+            top: 2.2rem;
+        }
+
+        .aui-info {
+            padding-bottom: 0;
+        }
+
+        .aui-label {
+            font-size: 0.7rem
+        }
+    </style>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title open-popup">
+        全部通知<font class="iconfont">&#xe602;</font>
+    </div>
+</header>
+<div class="aui-content-padded" style="padding-top: 2rem;padding-bottom: 2.5rem;">
+    <ul class="aui-list aui-media-list">
+        <div class="aui-text-center">
+            <div class="aui-label">2017-04-04 20:00:00</div>
+        </div>
+        <li class="aui-list-item aui-margin-t-10">
+            <a href="/tzxq">
+                <div class="aui-info">
+                    <div class="aui-info-item">
+                        体检通知
+                    </div>
+                </div>
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/include/xiaoxi_01.png">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            体检通知
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <div class="aui-text-center aui-margin-t-10">
+            <div class="aui-label">2017-04-04 20:00:00</div>
+        </div>
+        <li class="aui-list-item aui-margin-t-10">
+            <div class="aui-info">
+                <div class="aui-info-item">
+                    受理通知
+                </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/xiaoxi_02.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        受理通知
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item aui-margin-t-10">
+            <div class="aui-info">
+                <div class="aui-info-item">
+                    面签通知
+                </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/xiaoxi_03.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        面签通知
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item aui-margin-t-10">
+            <div class="aui-info">
+                <div class="aui-info-item">
+                    报考通知
+                </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/xiaoxi_04.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        报考通知
+                    </div>
+                </div>
+            </div>
+        </li>
+        <div class="aui-text-center aui-margin-t-10">
+            <div class="aui-label">2017-04-04 20:00:00</div>
+        </div>
+        <li class="aui-list-item aui-margin-t-10">
+            <div class="aui-info">
+                <div class="aui-info-item">
+                    考试通知
+                </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/xiaoxi_05.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        考试通知
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item aui-margin-t-10">
+            <div class="aui-info">
+                <div class="aui-info-item">
+                    出证通知
+                </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/xiaoxi_06.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        出证通知
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item aui-margin-t-10">
+            <div class="aui-info">
+                <div class="aui-info-item">
+                    领证通知
+                </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/xiaoxi_07.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        领证通知
+                    </div>
+                </div>
+            </div>
+        </li>
+        <div class="aui-text-center aui-margin-t-10">
+            <div class="aui-label">2017-04-04 20:00:00</div>
+        </div>
+        <li class="aui-list-item aui-margin-t-10">
+            <div class="aui-info">
+                <div class="aui-info-item">
+                    遗留通知
+                </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/xiaoxi_08.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text">
+                        遗留通知
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<div class="choose choose-text shaixuan aui-text-center">
+    <ul class="aui-list aui-list-in">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                全部通知
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                体检通知
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                受理通知
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                面签通知
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                报考通知
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                考试通知
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                出证通知
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                领证通知
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                遗留通知
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="shadow"></div>
+<% include footPublic %>
+</body>
+<script>
+    $(function () {
+        $(".open-popup").click(function () {
+            $(".shaixuan").toggleClass('choose-show');
+            $(".shadow").fadeToggle();
+        })
+        $(".shadow").click(function () {
+            $(".shaixuan").toggleClass('choose-show');
+            $(".shadow").fadeToggle();
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <!--<style>
+        button, .aui-btn{font-size: 0.6rem;}
+        .aui-list .aui-list-item-media{width: 5.4rem;}
+    </style>-->
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<!--dzf：待支付；yzf：已支付-->
+<div class="aui-content">
+    <div class="aui-list aui-media-list">
+        <div class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="images/include/dd_k2.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title aui-font-size-16">普通班 科二场地驾驶技能学时</div>
+                    <div class="aui-info" style="padding:0">
+                        2017-04-11 20:04:32
+                    </div>
+                    <div class="aui-info" style="padding:0">
+                        <font color="#ff6767">¥100</font>
+                        <div class="aui-info-item">数量：1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title">合计：<font color="#e51c23"><small>¥</small>100</font></div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-list aui-form-list aui-margin-t-10">
+            <li class="aui-list-header">
+                退款原因
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <label><input class="aui-radio" type="radio" name="radio" checked=""> 这是一个列表项</label>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <label><input class="aui-radio" type="radio" name="radio"> 这是一个列表项</label>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <label><input class="aui-radio" type="radio" name="radio"> 这是一个列表项</label>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <label><input class="aui-radio" type="radio" name="radio"> 这是一个列表项</label>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <label><input class="aui-radio" type="radio" name="radio"> 这是一个列表项</label>
+                </div>
+            </li>
+        </div>
+        <div class="aui-margin-l-15 aui-margin-r-15 aui-margin-t-10">
+            <div class="aui-btn aui-btn-primary aui-btn-block aui-btn-sm">取消订单</div>
+        </div>
+    </div>
+</div>
+<% include footPublic %>
+</body>
+</html>

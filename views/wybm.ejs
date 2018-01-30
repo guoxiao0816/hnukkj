@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list .aui-list-item-label{width:33%;}
+        .aui-list .aui-list-item-media{width: 2rem;}
+    </style>
+</head>
+<body>
+<% include head.ejs%>
+<div class="aui-content">
+    <div class="aui-card-list">
+        <div class="aui-card-list-header">报名类型</div>
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <label class="aui-list-item aui-list-item-middle">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <input class="aui-checkbox" type="radio" name="bmlx" checked="">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">普通班 C1</div>
+                                <div class="aui-list-item-right aui-font-size-14"><font color="#03a9f4"><small>¥</small>1900</font></div>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <div class=" aui-font-size-12">吉祥驾校(信息学院路校区)</div>
+                                <div class="aui-list-item-right">全额付款</div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <label class="aui-list-item aui-list-item-middle">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <input class="aui-checkbox" type="radio" name="bmlx">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">报名首付</div>
+                                <div class="aui-list-item-right aui-font-size-14"><font color="#03a9f4"><small>¥</small>300</font></div>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <div class=" aui-font-size-12">首付报名，先占名额</div>
+                                <div class="aui-list-item-right">首付报名</div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header">报名信息</div>
+        <form action="/postForm" id="bmxx">
+            <ul class="aui-list aui-form-list">
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label aui-font-size-14">
+                            <font color="red">*</font>&nbsp;您的姓名：
+                        </div>
+                        <div class="aui-list-item-input">
+                            <input type="text" name="xm" placeholder="请输入您的真实姓名">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label  aui-font-size-14">
+                            <font color="red">*</font>&nbsp;手机号码：
+                        </div>
+                        <div class="aui-list-item-input">
+                            <input type="text" name="sjhm" placeholder="请输入手机号码">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-label  aui-font-size-14">
+                            &nbsp;&nbsp;&nbsp;身份证号：
+                        </div>
+                        <div class="aui-list-item-input">
+                            <input type="text" placeholder="请输入身份证号">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <ul class="aui-list aui-margin-t-15">
+        <li class="aui-list-item"><a href="/djq" class="aui-list-item-inner aui-list-item-arrow">我的优惠券</a></li>
+    </ul>
+    <div class="aui-card-list aui-margin-t-10">
+        <div class="aui-card-list-header">支付方式</div>
+            <ul class="aui-list aui-media-list">
+                <label class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title"><font style="vertical-align: middle;font-size: 22px;" color="#03a9f4" class="aui-iconfont iconfont">&#xe662;</font> 支付宝</div>
+                            <div class="aui-list-item-right"><input type="radio" class="aui-checkbox" name="zffs"></div>
+                        </div>
+                    </div>
+                </label>
+                <label class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title"><font style="vertical-align: middle;font-size: 22px;" color="#1dbe20" class="aui-iconfont iconfont">&#xe661;</font> 微信</div>
+                            <div class="aui-list-item-right"><input type="radio" class="aui-checkbox" name="zffs"></div>
+                        </div>
+                    </div>
+                </label>
+            </ul>
+    </div>
+</div>
+<div class="aui-bar aui-bar-tab aui-font-size-16" style="line-height: 2.5rem;">
+    <div class="aui-col-xs-9 aui-bar-tab-item aui-text-left aui-padded-l-15">
+        合计：￥9000
+    </div>
+    <div class="aui-col-xs-3 aui-bar-tab-item aui-bg-info aui-text-white"> 我想报名</div>
+</div>
+<% include nav.ejs %>
+</body>
+</html>

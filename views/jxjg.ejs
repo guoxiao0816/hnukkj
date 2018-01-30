@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list .aui-list-item-media {
+            width: 25%;
+        }
+        .h3{margin: 0.1rem 0;}
+        .address .aui-icon-location{font-size: 0.6rem;}
+        .aui-media-list .aui-list-item-inner.aui-col-xs-9{width: 70%}
+    </style>
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-tab screening aui-border-b" id="tab">
+    <div class="aui-tab-item aui-ellipsis-1 aui-active">练车近</div>
+    <div class="aui-tab-item aui-ellipsis-1">学费低</div>
+    <div class="aui-tab-item aui-ellipsis-1">评价好</div>
+    <div class="aui-tab-item aui-ellipsis-1">筛选<i class="iconfont aui-margin-l-5">&#xe602;</i></div>
+</div>
+<div class="choose choose-text shaixuan">
+    <div class="aui-margin-l-10 aui-margin-r-10">
+        <div class="aui-margin-b-15 aui-margin-t-15">驾照类型</div>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10" onclick="setpxcxValue('C1')">C1:小型汽车</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10" onclick="setpxcxValue('C2')">C2:小型自动档汽车</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10" onclick="setpxcxValue('C5')">C5:残疾人专用小型自动挡载客汽车</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10" onclick="setpxcxValue('B1')">B1:中型客车</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10" onclick="setpxcxValue('B2')">B2:大型货车</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10" onclick="setpxcxValue('A1')">A1:大型客车</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10" onclick="setpxcxValue('A2')">A2:牵引车</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10" onclick="setpxcxValue('A3')">A3:城市公共汽车</span>
+    </div>
+    <div class="aui-margin-l-10 aui-margin-r-10">
+        <div class="aui-margin-b-15">班型</div>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('1')">普通班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('2')">夜间班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('3')">贵宾班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('4')">双休班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('5')">平时班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('6')">老年班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('7')">残疾班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('8')">加急班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('9')">计时班</span>
+        <span class="aui-btn aui-btn-outlined aui-margin-r-10 aui-margin-b-10 " onclick="setbxxzValue('10')">异地班</span>
+    </div>
+
+        <a href="javascript:void(0)" onclick="resertValues()" class="aui-col-xs-6 aui-btn shaixuan-resize" style="border-radius: 0;line-height: 30px;">重置</a>
+        <a href="javascript:void(0)" onclick="sendParams(null,'sx')" class="aui-col-xs-6 aui-btn aui-btn-info shaixuan-submit" style="border-radius: 0;line-height: 30px;">确定</a>
+</div>
+<div class="aui-content" style="padding-top: 5rem">
+    <div class="aui-info aui-padded-l-10 aui-padded-r-10 aui-bg-default aui-margin-b-15 aui-border-b ">
+        <div class="aui-info-item aui-ellipsis-1 aui-col-xs-11">
+            <i class="aui-iconfont aui-icon-location"></i><span>当前位置：<span class="mylocaltion">定位中...</span></span>
+        </div>
+        <div class="aui-info-item iconfont" onclick="javascript:location.reload();"></div>
+    </div>
+    <ul class="aui-list aui-media-list aui-margin-t-10" id="aui-list">
+        <li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="http://files.ukxueche.com/school/4101/4101168002002/logo.png" alt="嵩山驾校">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+        <ul class="aui-list">
+            <li class="aui-list-item"><a href="/bxxq">
+                    <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">普通班（外地）
+                                &nbsp;<small class="c-666">C1</small>
+                            </div>
+                        </div>
+                        <div class="h3">
+                            <span class="aui-text-info"><strong>¥2300</strong></span><small class="aui-margin-l-10 aui-text-default c-999"><del>市场价格：¥2300</del></small>
+                        </div>
+                        <div class="aui-font-size-12 c-666">
+                            <div class="aui-pull-left"><font size="2" color="#6fb72a" class="iconfont">&#xe65e;</font> 服务好</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ee7c7d" class="iconfont"></font> 急速拿证</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#2e9dd9" class="iconfont"></font> 通过率超85%</div>
+                        </div>
+                    </div>
+                </a></li>
+            <li class="aui-list-item"><a href="/bxxq">
+                    <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">普通班（本地）
+                                &nbsp;<small class="c-666">C1</small>
+                            </div>
+                        </div>
+                        <div class="h3">
+                            <span class="aui-text-info"><strong>¥1600</strong></span><small class="aui-margin-l-10 aui-text-default c-999"><del>市场价格：¥1600</del></small>
+                        </div>
+                        <div class="aui-font-size-12 c-666">
+
+                            <div class="aui-pull-left"><font size="2" color="#2cafff" class="iconfont"></font> 拿证放心</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ee7c7d" class="iconfont"></font> 拿证快</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ff5757" class="iconfont"></font> 全程媒体监督</div>
+                        </div>
+                    </div>
+                </a></li>
+        </ul>
+    </ul>
+    <ul class="aui-list aui-media-list aui-margin-t-10" id="aui-list">
+        <li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="http://files.ukxueche.com/school/4101/4101168002002/logo.png" alt="嵩山驾校">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+        <ul class="aui-list">
+            <li class="aui-list-item"><a href="/bxxq">
+                    <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">普通班（外地）
+                                &nbsp;<small class="c-666">C1</small>
+                            </div>
+                        </div>
+                        <div class="h3">
+                            <span class="aui-text-info"><strong>¥2300</strong></span><small class="aui-margin-l-10 aui-text-default c-999"><del>市场价格：¥2300</del></small>
+                        </div>
+                        <div class="aui-font-size-12 c-666">
+                            <div class="aui-pull-left"><font size="2" color="#6fb72a" class="iconfont"></font> 服务好</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ee7c7d" class="iconfont"></font> 急速拿证</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#2e9dd9" class="iconfont"></font> 通过率超85%</div>
+                        </div>
+                    </div>
+                </a></li>
+            <li class="aui-list-item">
+                <a href="/bxxq">
+                    <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">普通班（本地）
+                                &nbsp;<small class="c-666">C1</small>
+                            </div>
+                        </div>
+                        <div class="h3">
+                            <span class="aui-text-info"><strong>¥1600</strong></span><small class="aui-margin-l-10 aui-text-default c-999"><del>市场价格：¥1600</del></small>
+                        </div>
+                        <div class="aui-font-size-12 c-666">
+
+                            <div class="aui-pull-left"><font size="2" color="#2cafff" class="iconfont"></font> 拿证放心</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ee7c7d" class="iconfont"></font> 拿证快</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ff5757" class="iconfont"></font> 全程媒体监督</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </ul>
+    <ul class="aui-list aui-media-list aui-margin-t-10" id="aui-list">
+        <li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="http://files.ukxueche.com/school/4101/4101168002002/logo.png" alt="嵩山驾校">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+        <ul class="aui-list">
+            <li class="aui-list-item"><a href="/bxxq">
+                    <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">普通班（外地）
+                                &nbsp;<small class="c-666">C1</small>
+                            </div>
+                        </div>
+                        <div class="h3">
+                            <span class="aui-text-info"><strong>¥2300</strong></span><small class="aui-margin-l-10 aui-text-default c-999"><del>市场价格：¥2300</del></small>
+                        </div>
+                        <div class="aui-font-size-12 c-666">
+                            <div class="aui-pull-left"><font size="2" color="#6fb72a" class="iconfont"></font> 服务好</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ee7c7d" class="iconfont"></font> 急速拿证</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#2e9dd9" class="iconfont"></font> 通过率超85%</div>
+                        </div>
+                    </div>
+                </a></li>
+            <li class="aui-list-item">
+                <a href="/bxxq">
+                    <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">普通班（本地）
+                                &nbsp;<small class="c-666">C1</small>
+                            </div>
+                        </div>
+                        <div class="h3">
+                            <span class="aui-text-info"><strong>¥1600</strong></span><small class="aui-margin-l-10 aui-text-default c-999"><del>市场价格：¥1600</del></small>
+                        </div>
+                        <div class="aui-font-size-12 c-666">
+
+                            <div class="aui-pull-left"><font size="2" color="#2cafff" class="iconfont"></font> 拿证放心</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ee7c7d" class="iconfont"></font> 拿证快</div>
+                            <div class="aui-pull-left aui-margin-l-5"><font size="2" color="#ff5757" class="iconfont"></font> 全程媒体监督</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </ul>
+</div>
+<div class="shadow"></div>
+<% include footPublic %>
+<div id="allmap" style="display:none"></div>
+</body>
+<script>
+    $(".screening div").click(function() {
+        ifclass();
+    })
+    //    筛选下拉菜单选项选择效果
+    $(".shaixuan span").click(
+        function() {
+            $(this).addClass("aui-btn-info").siblings("span")
+                .removeClass("aui-btn-info");
+        })
+    //    筛选下拉菜单提交按钮点击
+    $(".shaixuan-submit").click(function() {
+        ifclass();
+    })
+    //    筛选下拉菜单重置按钮点击
+    $(".shaixuan-resize").click(function() {
+        $(".shaixuan span").removeClass("aui-btn-info");
+    })
+    $(".shadow").click(function() {
+        ifclass();
+    })
+    function ifclass() {
+        if ($(".choose").hasClass("choose-show")) {
+            $(".choose").removeClass("choose-show")
+            $(".shadow").hide();
+        } else {
+            $(".choose").addClass("choose-show").siblings(".choose")
+                .removeClass("choose-show");
+            $(".shadow").show();
+        }
+    }
+</script>
+</html>

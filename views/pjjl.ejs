@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_150593_w4bq81effb9be29.css">
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .aui-list .aui-list-item:after, .aui-list:after {
+            content: normal;
+        }
+
+        .aui-list-header a img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+        }
+
+        .pingjia {
+            width: 100%;
+            text-align: center;
+            padding-top: 1rem
+        }
+
+        .pingjia .icon-xingxing11 {
+            font-size: 30px;
+            margin: 6px;
+        }
+
+        .aui-text-warning {
+            color: #ff9500 !important;
+        }
+
+        .aui-btn-warning {
+            line-height: 1.5rem;
+            font-size: .8rem;
+            background-color: #ff9500 !important;
+            border-radius: 10px;
+        }
+
+        .evaluation_l {
+            color: #ffac68;
+            margin: 5px;
+        }
+
+        .textarea {
+            padding: 2%;
+            height: 4rem !important;
+            margin: 0 6px !important;
+            text-align: justify;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+        }
+
+        textarea {
+            color: #666666;
+        }
+
+        .evaluate {
+            padding: 7px 15px;
+            border: 1px solid #dcdcdc;
+            border-radius: 18px;
+            color: #757575;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .evaluate_disabled {
+            color: #fff;
+            border: 1px solid #ff8901;
+            background-color: #ff8901;
+        }
+
+        .evaluate_hollow {
+            color: #ff8901;
+            border: 1px solid #ff8901;
+        }
+    </style>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%= title %></a>
+    </div>
+</header>
+<div class="aui-content">
+    <div class="aui-list">
+        <div class="aui-list-header aui-bg-default aui-text-center">
+            <a href="/usercomit">
+                <img src="http://files.ukxueche.com/photo/driver/4970_1501661517190.png">
+                <div style="padding: 5px;color: #666;font-size: .7rem">蔡集</div>
+            </a>
+        </div>
+        <div class="aui-list-item" style="padding: 0 12%;">
+            <div class="aui-list-item-inner" style="border-top: 1px solid #f4f4f4; position: relative;">
+                <span style="position: absolute;top: -12.333%;left: 27.3333%;background-color: #fff;padding: 0 10px;color: #cccccc">夸夸你的教练吧~</span>
+                <div class="pingjia" data="5">
+                    <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                    <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                    <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                    <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                    <i class="iconfont icon-xingxing11 aui-text-warning"></i>
+                    <!--级别不同，显示不同提示-->
+                    <div class="evaluation_l">非常满意，无可挑剔</div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-list-item" style="padding: 0 12%;">
+            <section class="aui-grid aui-margin-b-15">
+                <div style="color: #cccccc;margin-left: 8px;margin-bottom: 8px;">请选择标签</div>
+                <div class="aui-row">
+                    <!--有多少循环多少，evaluate_disabled 是点亮状态 evaluate_hollow 是空心点亮状态-->
+                    <a href="javascript:void(0);" class="evaluate evaluate_disabled">教学好</a>
+
+                    <a href="javascript:void(0);" class="evaluate">责任心强</a>
+
+                    <a href="javascript:void(0);" class="evaluate">教学好</a>
+
+                    <a href="javascript:void(0);" class="evaluate">责任心强</a>
+
+                    <a href="javascript:void(0);" class="evaluate evaluate_hollow">教学好</a>
+
+                    <a href="javascript:void(0);" class="evaluate">教学好</a>
+
+                    <a href="javascript:void(0);" class="evaluate">教学好</a>
+                </div>
+            </section>
+        </div>
+        <div class="aui-list-item" style="padding: 0 12%;">
+            <textarea class="textarea" placeholder="写下您对教练的评价吧~"></textarea>
+        </div>
+        <div class="aui-btn aui-btn-warning aui-btn-sm" style="margin:10px 13%;width: 74%">提交评价</div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $('.evaluate').bind("click", function () {
+            $(this).removeClass('evaluate_hollow').toggleClass('evaluate_disabled');
+        });
+        var _star = $('.pingjia').attr('data');
+        (function () {
+            $('.pingjia i').removeClass('aui-text-warning');
+            $('.pingjia i').slice(0, _star).addClass('aui-text-warning');
+        })();
+        $('.pingjia i').bind("click", function () {
+            var _index = $(this).index() + 1;
+            $(this).siblings().removeClass('aui-text-warning');
+            $(this).prevAll().addClass('aui-text-warning');
+            $(this).addClass('aui-text-warning');
+            //把星星个数传入后台保存
+            $('.pingjia').attr('data', _index);
+        });
+    });
+</script>
+</html>

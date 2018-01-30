@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <link rel="stylesheet" href="/stylesheets/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="/stylesheets/jquery.emoji.css">
+    <link rel="stylesheet" href="/stylesheets/svgani.css">
+    <style>
+      /*  .header{position: fixed;width: 100%;}*/
+        input[type="search"] {
+            min-height: auto;
+        }
+        img{ width: auto;}
+        .commit .top a{display: inherit;width: 100%;}
+
+        /*社区发帖专栏，溢出已隐藏*/
+        .label_con p{
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        .gallery .lazy{opacity: 0;height: 100px; width: 100%;position: relative;}
+        .gallery .imgdpd{height: 100px;cursor: pointer; opacity: 1;width: 95%!important;margin: 0.125rem; position: absolute;top: 0;left: 0; background-repeat: no-repeat; background-position: center center; background-size: cover;}
+    </style>
+</head>
+<% include head %>
+<!--兼容html标签-->
+<body class="commit">
+    <div class="aui-card-list" style="background-color: #777;margin-top: 54px;z-index: 5;position: relative;">
+        <div class="header aui-card-list-header" style="color: #fff;width: 100%;background-color: #777;">
+            <div class="aui-title" style="color: #fff;"></div>
+        </div>
+        <a href="###" class="aui-card-list-header aui-card-list-user" style="padding-bottom: 22px;">
+            <div class="aui-card-list-user-avatar">
+                <img src="http://saturn-image.kakamobi.com/saturn-image/2015/12/17/10/1c9773205bcd43d799c99b90b8f29171_100X100.png" class="aui-img-round">
+            </div>
+            <div class="aui-card-list-user-name" style="color: #fff;">
+                <div>科目二模块模板</div>
+            </div>
+            <div class="aui-card-list-user-info aui-text-left" style="color: #fff;">成员<font class="aui-margin-l-5" color="#ffb502">1</font>&nbsp;&nbsp;&nbsp;&nbsp;话题<font class="aui-margin-l-5" color="#ffb502">120</font></div>
+            <a class="aui-pull-right">
+                <!--<span class="aui-iconfont" style="color: #fff;position: relative;top: -3rem;right: 1rem;"> + 订阅</span>-->
+                <span class="aui-iconfont"  style="color: #fff;position: relative;top: -3rem;right: 1rem;">已订阅</span>
+            </a>
+        </a>
+    </div>
+    <div class="aui-content" style="padding-top: .4rem; z-index:1;">
+        <!-- body 顶部加上如下代码 -->
+        <div class="weui-pull-to-refresh__layer" style="height: 40px;z-index:1;">
+            <div class='weui-pull-to-refresh__arrow'></div>
+            <div class='weui-pull-to-refresh__preloader'></div>
+            <div class="down"></div>
+            <div class="up"></div>
+            <div class="refresh"></div>
+        </div>
+        <div class="ssss">
+            <div class="aui-card-list">
+                <div class="aui-card-list-content-padded">
+                    <div class="aui-list-item">倒车入库车技交流</div>
+                    <div class="topiclabel aui-margin-t-5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="###">科目三</a></div>
+                            <div class="swiper-slide"><a href="###">郑州市</a></div>
+                            <div class="swiper-slide"><a href="###">啊</a></div>
+                            <div class="swiper-slide"><a href="###">科三经验分享</a></div>
+                            <div class="swiper-slide"><a href="###">郑州市</a></div>
+                            <div class="swiper-slide"><a href="###">播种驾校</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-tab" id="tab">
+            <div class="aui-tab-item aui-active">最新回复</div>
+            <div class="aui-tab-item">最新发布</div>
+            <div class="aui-tab-item">精华话题</div>
+        </div>
+
+    <ul class="aui-list aui-media-list commit_list">
+        <li class="aui-list-item aui-margin-t-10">
+            <div class="aui-media-list-item-inner">
+                <a href="/usercomit" class="aui-list-item-media">
+                    <img src="images/liulangnan.png" class="aui-img-round" style="width:1.5rem">
+                </a>
+                <div class="aui-list-item-inner">
+                    <a href="/htxq">
+                        <div class="aui-list-item-header">
+                            <div class="aui-card-list-title">
+                                路人甲 <font class="iconfont" color="#d4237a">&#xe65b;</font><font class="iconfont" color="#1296db">&#xe633;</font><font class="iconfont" color="#03a9f4"></font>
+                            </div>
+                        </div>
+                        <p>54分钟前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自 郑州市</p>
+                        <div class="aui-row aui-row-padded aui-margin-t-5" style="margin-left: 0;">
+                            <h4 class="aui-margin-b-5">科目三已过，电脑显示我没考</h4>
+                            <div class="label_con aui-margin-b-5">
+                                <p>明天就要考科目三了，我是特意来许愿的老天、大神、典典都保佑吧保佑我这次能顺利过关，我在这里提前先谢谢各路大神了，拜托</p>
+                            </div>
+                            <div class="gallery">
+                                <div class="aui-col-xs-4">
+                                    <img class="lazy" data-original="http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/dace7025d0bc473a8a25452704b0dbef.jpeg!list.3">
+                                    <div class="imgdpd" style="background-image: url(http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/dace7025d0bc473a8a25452704b0dbef.jpeg!list.3);"></div>
+                                </div>
+                                <div class="aui-col-xs-4">
+                                    <img class="lazy" data-original="http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/26c04728bfac497ea38210fa732d0f99.jpeg!list.3">
+                                    <div class="imgdpd" style="background-image: url(http://cheyouquan.image.mucang.cn/saturn-image/2017/05/31/17/26c04728bfac497ea38210fa732d0f99.jpeg!list.3);"></div>
+                                </div>
+                                <div class="aui-col-xs-4">
+                                    <img class="lazy" src="images/Class.jpg">
+                                    <div class="imgdpd" style=" background-image: url(images/Class.jpg);"></div>
+                                </div>
+                                <div class="aui-col-xs-4">
+                                    <img class="lazy" src="images/banner1.png">
+                                    <div class="imgdpd" style="background-image: url(images/banner1.png);"></div>
+                                </div>
+                                <div class="aui-col-xs-4">
+                                    <img class="lazy" src="images/xianyu.jpg">
+                                    <div class="imgdpd" style="background-image: url(images/xianyu.jpg);"></div>
+                                </div>
+                            </div>
+
+                            <!--音频-->
+                            <!--<div class="aui-row">
+                                <div class="aui-col-xs-12">
+                                    <audio src="/images/cat.mp4" controls></audio>
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="aui-row">
+                            <div class="aui-col-xs-12">
+                                <video src="/images/cat.mp4" poster="images/Class.jpg" width="95%" controls></video>
+                            </div>
+                        </div>
+                        <div class="aui-row">
+                            <div class="aui-col-xs-12">
+                                <video src="/images/mov_bbb.mp4" poster="images/comit1.jpg" width="95%" controls></video>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="topiclabel aui-margin-t-5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="###">科目三</a></div>
+                            <div class="swiper-slide"><a href="###">郑州市</a></div>
+                            <div class="swiper-slide"><a href="###">啊</a></div>
+                            <div class="swiper-slide"><a href="###">科三经验分享</a></div>
+                            <div class="swiper-slide"><a href="###">郑州市</a></div>
+                            <div class="swiper-slide"><a href="###">播种驾校</a></div>
+                        </div>
+                    </div>
+                    <div class="aui-info aui-margin-t-5" style="padding:0">
+                        <div class="aui-info-item"></div>
+                        <div class="aui-info-item">
+                            <span class="iconfont">&#xe695;</span>
+                            <span class="iconfont aui-margin-l-10" style="color: #00a0e9">&#xe6af;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!--<ul>
+        <li>客服优优
+        <a href="tencent://message/?uin=1953378846&amp;Site=%qq&amp;Menu=yes" target="_self" style="outline: 0px; color: rgb(51, 51, 51); text-decoration: none; cursor: pointer; word-wrap: break-word;">
+            <img alt="点击这里给我发消息" src="http://files.ukxueche.com/ueditor/jsp/upload/image/20160924/1474717343081011699.gif">
+        </a></li>
+        <li>客服乐乐
+        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2678175372&amp;site=qq&amp;menu=yes" target="_blank" style="outline: 0px; color: rgb(51, 51, 51); text-decoration: none; cursor: pointer; word-wrap: break-word;">
+            <img alt="在线咨询" src="http://files.ukxueche.com/ueditor/jsp/upload/image/20170318/1489831764824027002.gif">
+        </a></li>
+        <li>一键加群
+        <a href="http://shang.qq.com/wpa/qunwpa?idkey=8ceb831a877e5febb41f758d671423ccb2a259a7f16fae8687bfeacbd39d59c7" target="_blank" style="outline: 0px; color: rgb(51, 51, 51); line-height: 22.4px; font-family: 'Microsoft Yahei', 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, tahoma, arial, 'WenQuanYi Micro Hei', Verdana, sans-serif, 宋体; font-size: 14px; text-decoration: none; cursor: pointer; word-wrap: break-word; background-color: rgb(246, 246, 246);">
+            <img title="郑州考驾照-优快学车" alt="郑州考驾照-优快学车" src="http://files.ukxueche.com/ueditor/jsp/upload/image/20170318/1489831764849069997.png">
+        </a></li>
+    </ul>-->
+    <div></div>
+
+    <div class="weui-loadmore">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+        <div class="weui-loadmore weui-loadmore_line">
+            <span class="weui-loadmore__tips">暂无数据</span>
+        </div>
+</div>
+
+<div class="aui-card-list lable_box">
+    <div style="height:77%;overflow-y: auto;">
+        <div class="aui-card-list-header aui-border-b aui-padded-r-0">
+            <div class="aui-font-size-16">已订阅标签</div>
+            <div class="sort">
+                <div>排序/删除</div>
+                <i class="aui-iconfont iconfont">&#xe6a2;</i>
+            </div>
+        </div>
+        <div class="aui-card-list-content-padded subscribed">
+            <div class="aui-row aui-row-padded aui-text-center">
+                <div class="aui-col-xs-4" onclick="subClick(0)">热门</div>
+                <div class="aui-col-xs-4" onclick="subClick(1)">最新</div>
+                <div class="aui-col-xs-4" onclick="subClick(2)">科目一</div>
+                <div class="aui-col-xs-4" onclick="subClick(3)">科目二</div>
+                <div class="aui-col-xs-4" onclick="subClick(4)">科目三</div>
+                <div class="aui-col-xs-4" onclick="subClick(5)">科目四</div>
+                <div class="aui-col-xs-4" onclick="subClick(6)">晒驾照</div>
+                <div class="aui-col-xs-4" onclick="subClick(7)">考前许愿</div>
+                <div class="aui-col-xs-4" onclick="subClick(8)">校花校草</div>
+                <div class="aui-col-xs-4" onclick="subClick(9)">学车趣事</div>
+            </div>
+        </div>
+        <div class="aui-card-list-header aui-border-b aui-padded-r-0 aui">
+            <div class="aui-font-size-16">推荐标签</div>
+        </div>
+        <div class="aui-card-list-content-padded subscribed">
+            <div class="aui-row aui-row-padded aui-text-center">
+                <div class="aui-col-xs-4">帮选车</div>
+                <div class="aui-col-xs-4">提车作业</div>
+                <div class="aui-col-xs-4">狼族自驾游</div>
+                <div class="aui-col-xs-4">教练之家</div>
+            </div>
+        </div>
+        <div class="searchMore" style="border-radius: 5rem;height: 1.7rem;line-height: 1.7rem;text-align: center; border:1px solid #bbb;background: #fff;margin: 1rem 0.5rem">
+            <font class="iconfont"></font>搜索您感兴趣的任意标签
+        </div>
+       <!-- <div class="aui-searchbar" id="search" style="">
+            <div class="aui-searchbar-input aui-border-radius" tapmode onclick="doSearch()">
+                <i class="aui-iconfont aui-icon-search"></i>
+                <form action="javascript:search();">
+                    <input type="search" placeholder="请输入搜索内容" id="search-input">
+                </form>
+            </div>
+            <div class="aui-searchbar-cancel" tapmod>取消</div>
+        </div>-->
+    </div>
+</div>
+   <!-- <div class="l-wrapper">
+        <svg viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="circle" class="g-circles g-circles&#45;&#45;v3">
+                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
+                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
+                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
+                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
+                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
+                <circle id="7" cx="60" cy="110" r="10"></circle>
+                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
+                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
+                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
+                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
+                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
+                <circle id="1" cx="60" cy="10" r="10"></circle>
+            </g>
+        </svg>
+    </div>-->
+<% include footPublic %>
+</body>
+<script src="/javascripts/jquery.mCustomScrollbar.min.js"></script>
+<script src="/javascripts/jquery.mousewheel-3.0.6.min.js"></script>
+<script src="/javascripts/jquery.emoji.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+<script src="/javascripts/picture_browser.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    },function(ret){
+        console.log(ret)
+    });
+</script>
+<script>
+    var swiper_KM2 = new Swiper('#commit_banner', {
+        pagination: '.swiper-pagination',
+        resistanceRatio: 0
+    });
+    $(".swiper-hot").swiper({
+        slidesPerView: 3.5,
+        paginationClickable: true,
+        spaceBetween: 10,
+        freeModeMomentum: false,
+        freeMode: true,
+        pagination: '.swiper-pagination1'
+    });
+
+</script>
+<script>
+    htmlobj = $.ajax({url: "stylesheets/test_input.txt", async: false});
+    for (var i = 0; i < 5; i++) {
+        $(".commit_list").append(htmlobj.responseText);
+    }
+//    console.log(htmlobj.responseText);
+</script>
+<!--延迟加载-->
+<script type="text/javascript">
+    $(function () {
+        $("img.lazy").lazyload();
+    });
+</script>
+<!--图片浏览器-->
+<script type="text/javascript">
+    $Picture_browser(".gallery .aui-col-xs-4");
+</script>
+<!--顶部swiper-->
+<script>
+    var swiper_topiclabel = new Swiper('.topiclabel', {
+        freeMode: true,
+        freeModeMomentumRatio: 0.5,
+        slidesPerView: 'auto'
+    });
+</script>
+<!--weui 加载-->
+<script>
+    /*滑动加载*/
+    var loading = false;
+    $(document.body).infinite(100).on("infinite", function () {
+        if (loading) return;
+        loading = true;
+        setTimeout(function () {
+            for (var i = 0; i < 3; i++) {
+                $('.commit_list').append(htmlobj.responseText);
+                loading = false;
+            }
+        }, 1500);
+    });
+</script>
+<script>
+    /*下拉刷新*/
+    $(function () {
+        $('.aui-content').pullToRefresh();
+        $('.aui-content').on("pull-to-refresh", function() {
+            setTimeout(function () {
+                $('.aui-content').pullToRefreshDone();
+            }, 1500);
+        });
+    })
+</script>
+

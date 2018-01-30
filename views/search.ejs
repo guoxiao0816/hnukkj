@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        input[type="text"]{
+            min-height: 0;
+        }
+    </style>
+</head>
+<body>
+<header class="weui-search-bar weui-search-bar_focusing" id="searchBar" style="width: 100%;z-index: 150;">
+    <a href="javascript:history.back();" class="aui-pull-left" style="display:block;margin-right:10px;line-height:28px;white-space: nowrap"><span class="aui-iconfont aui-icon-left"></span></a>
+    <form class="weui-search-bar__form">
+        <div class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="text" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+            <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+        </div>
+        <label class="weui-search-bar__label" id="searchText">
+            <i class="weui-icon-search"></i>
+            <span>搜索</span>
+        </label>
+    </form>
+    <a href="javascript:" style="display:block;margin-left:10px;line-height:28px;color:#09bb07;white-space: nowrap">搜索</a>
+</header>
+<div class="aui-tab" id="tab" style="position: fixed;width: 100%;top: 2.25rem;z-index: 150;">
+    <div class="aui-tab-item aui-active">驾校</div>
+    <div class="aui-tab-item">教练</div>
+</div>
+<div class="aui-content" style="padding-top: 4rem;">
+    <ul class="aui-list aui-media-list aui-margin-t-15" id="aui-list">
+        <li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img alt="嵩山驾校" src="http://files.ukxueche.com/school/4101/4101168002002/logo.png">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li><li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img alt="嵩山驾校" src="http://files.ukxueche.com/school/4101/4101168002002/logo.png">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li><li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img alt="嵩山驾校" src="http://files.ukxueche.com/school/4101/4101168002002/logo.png">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li><li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img alt="嵩山驾校" src="http://files.ukxueche.com/school/4101/4101168002002/logo.png">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li><li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img alt="嵩山驾校" src="http://files.ukxueche.com/school/4101/4101168002002/logo.png">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li><li class="aui-list-item"><a href="/jxxq">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img alt="嵩山驾校" src="http://files.ukxueche.com/school/4101/4101168002002/logo.png">
+                    </div>
+                    <div class="aui-list-item-inner aui-col-xs-9">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">
+                                嵩山驾校 <small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <div>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                                <font size="1" class="iconfont   aui-text-warning"></font>
+                            </div>
+                            <div class="aui-list-item-right">已有<font color="#11a9f5">0</font>人报名</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <span class="aui-ellipsis-1 address aui-font-size-12"><font class="aui-iconfont aui-icon-location" color="#11a9f5"></font>建新西街军械所院内</span><span class="aui-list-item-right"><span class="distance distance0">817m</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <% include footPublic %>
+</div>
+</body>
+<script type="text/javascript">
+    apiready = function() {
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element : document.getElementById("tab"),
+        // callback:function(o,dom){
+        //     console.log(o);
+        // }
+    }, function(ret) {
+        console.log(ret)
+    });
+</script>
+</html>

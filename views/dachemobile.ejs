@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <link rel="stylesheet" href="/stylesheets/swiper-3.4.2.min.css">
+</head>
+<style>
+    @font-face {
+        font-family: 'iconfont';  /* project id 156200 */
+        src: url('//at.alicdn.com/t/font_e01408l28yr5dn29.eot');
+        src: url('//at.alicdn.com/t/font_e01408l28yr5dn29.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_e01408l28yr5dn29.woff') format('woff'),
+        url('//at.alicdn.com/t/font_e01408l28yr5dn29.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_e01408l28yr5dn29.svg#iconfont') format('svg');
+    }
+
+    #dachemobile {
+        color: #666666;
+        background-color: #fff;
+    }
+
+    img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .UKlogo {
+        width: 11rem;
+        display: inline-block !important;
+        text-align: left;
+    }
+
+    .UKlogo img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .dachesx .swiper-slide img {
+        height: 160px;
+    }
+
+    .youshi .aui-card-list-header {
+        background: url("images/include/kh_bg.png") 50% no-repeat;
+        background-size: 100%;
+        padding-bottom: .3rem;
+        margin-top: .5rem;
+    }
+
+    .youshi .aui-card-list-header .h1 {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+    .youshi .aui-grid .aui-col-xs-6 {
+        width: 48% !important;
+        height: 90px;
+        background-color: #fdfdfd;
+        border: 1px solid #e4e3e3;
+        margin: 1%;
+        padding: .3rem 0;
+    }
+
+    .youshi .aui-grid .aui-col-xs-6 .youshiBox p {
+        height: 32px;
+        overflow: hidden;
+    }
+    .class .aui-card-list-header {
+        background: url("images/include/kh_bg.png") 50% no-repeat;
+        background-size: 100%;
+        padding-bottom: .3rem;
+        margin-top: .5rem;
+    }
+
+    .class .aui-card-list-header .h1 {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    .class .bx_box {
+        width: 96%;
+        margin: 0 2%;
+    }
+
+    .class .bx_box .aui-col-xs-9 {
+        text-align: left;
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+    .class .bx_box .aui-col-xs-3 {
+        text-align: left;
+        color: #101010;
+        padding-left: 15px;
+        font-size: 12px;
+    }
+
+    .class .bx_box .h3 {
+        background-color: #ff9702;
+        border: 2px solid #b87413
+    }
+
+    .class .bx_box .h3 img {
+        /*padding: 15px 0;*/
+        margin: .7rem;
+    }
+
+    .bx_box .bx-y a {
+        width: 40%;
+        height: 40px;
+        line-height: 38px;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .bx_box .bx-y a {
+        background: #ff9702;
+        border-bottom: 4px solid #b87413
+    }
+
+    .bx_box .bx-b a {
+        width: 40%;
+        height: 40px;
+        line-height: 38px;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .bx_box .bx-b a {
+        background: #00a0ea;
+        border-bottom: 4px solid #066f9e
+    }
+
+    .jiaxiao .aui-card-list-header {
+        background: url("images/include/kh_bg.png") 50% no-repeat;
+        background-size: 100%;
+        padding-bottom: .3rem;
+        margin-top: .5rem;
+    }
+
+    .jiaxiao .aui-card-list-header .h1 {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    #jxfc {
+        margin: 1rem 0
+    }
+
+    #jxfc .swiper-wrapper img {
+        border: 1px solid #d1d1d1;
+        height: 320px;
+    }
+
+    #xyhj {
+        margin: 1rem 0
+    }
+    #xyhj .swiper-wrapper img {
+        border: 1px solid #d1d1d1;
+        height: 280px;
+    }
+    .jxjlclass .aui-card-list-header {
+        background: url("images/include/kh_bg.png") 50% no-repeat;
+        background-size: 100%;
+        padding-bottom: .3rem;
+        margin-top: .5rem;
+    }
+
+    .jxjlclass .aui-card-list-header .h1 {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+    .jxjlclass .jjjlbox { border: 1px solid #e4e3e3;padding: 2%;height: 185px;overflow: hidden;}
+    .jxjlclass .jjjlbox .jxjlName {margin: .8rem 0;}
+    .jxjlclass .aui-col-xs-6 {
+        width: 48% !important;
+        margin: 1%;padding: 0!important;
+    }
+
+    .chexingzs .aui-card-list-header {
+        background: url("images/include/kh_bg.png") 50% no-repeat;
+        background-size: 100%;
+        padding-bottom: .3rem;
+        margin-top: .5rem;
+    }
+
+    .chexingzs .aui-card-list-header .h1 {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+    .chexingzs .chexingzx_txt { border: 1px solid #e4e3e3;height:280px;overflow: hidden;}
+    .chexingzs .chexingzx_txt p{padding: 5% 10%;font-size: 9px;color: #262626;text-align: justify;}
+    .chexingzs .aui-col-xs-6 {
+        width: 48% !important;
+        margin: 1%;padding: 0!important;
+    }
+
+    .xueyuanhj .aui-card-list-header {
+        background: url("images/include/kh_bg.png") 50% no-repeat;
+        background-size: 100%;
+        padding-bottom: .3rem;
+        margin-top: .5rem;
+    }
+
+    .xueyuanhj .aui-card-list-header .h1 {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+    .xueyuanhj .aui-col-xs-6 {
+        width: 48% !important;
+        margin: 1%;padding: 0!important;
+    }
+    .xueyuanhj .row {  margin: 1%;}
+
+</style>
+<body id="dachemobile">
+<header class="aui-bar aui-bar-nav aui-bar-light">
+    <a class="aui-pull-left UKlogo" href="javascript:void(0);">
+        <img src="images/include/UKlogo.png" alt="">
+    </a>
+    <div class="aui-pull-right">
+        <span class="aui-iconfont aui-icon-search"></span>
+        <span class="aui-iconfont aui-icon-menu aui-margin-l-10" aui-popup-for="top-right"></span>
+    </div>
+</header>
+<div class="aui-content">
+    <div class="swiper-container">
+        <div class="swiper-wrapper dachesx">
+            <div class="swiper-slide"><a href="###"><img src="images/include/dachemobile_banner.jpg" alt=""></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--六大优势-->
+    <div class="aui-card-list youshi">
+        <div class="aui-card-list-header aui-padded-t-10">
+            <div class="h1"><span style="color: #ff9900">6大优势</span><span style="color: #505050">成就汇通</span></div>
+        </div>
+        <div class="h4" style="text-align: center;font-size: 10px;margin-bottom: 1rem;margin-top: -5px;">河南省规模最大 考大车报名首选</div>
+        <section class="aui-grid aui-margin-t-15">
+            <div class="aui-row">
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="youshiBox">
+                        <div style="width: 25%;padding:5%;margin-top: 5%; float: left;"><font style=" font-size: 30px;"
+                                                                                               color="#ff9702"
+                                                                                               class="iconfont mr-10">
+                                &#xe703;</font></div>
+
+                        <div style="width: 69%; margin-left: 5%; float: left;text-align: left">
+                            <h3 class="mb-0"><span style="font-size: 14px;color: #000;position: relative;">实力品牌</span><br>
+                                <div style="font-size: 8px!important;color: #bbbbbb">THE STRENGTH OF BRAND</div>
+                            </h3>
+                            <font color="#ff9702" style="position: absolute;top: 36px;">————</font>
+                            <p style="font-size: .5rem!important;margin-top: 10px;">河南省规模最大的大中型考试培训基地</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="youshiBox">
+                        <div style="width: 25%;padding:5%;margin-top: 5%; float: left;"><font style=" font-size: 30px;"
+                                                                                               color="#ff9702"
+                                                                                               class="iconfont mr-10">
+                                &#xe8b0;</font></div>
+
+                        <div style="width: 69%; margin-left: 5%; float: left;text-align: left">
+                            <h3 class="mb-0"><span style="font-size: 14px;color: #000;position: relative">费用透明</span><br>
+                                <div style="font-size: 8px!important;color: #bbbbbb">THE STRENGTH OF BRAND</div>
+                            </h3>
+                            <font color="#ff9702" style="position: absolute;top: 36px;">————</font>
+                            <p style="font-size: .5rem!important;margin-top: 10px">
+                                始终坚持一费制收费，全程费用透明，无隐藏收费</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="youshiBox">
+                        <div style="width: 25%;padding:5%;margin-top: 5%; float: left;"><font style=" font-size: 30px;"
+                                                                                               color="#ff9702"
+                                                                                               class="iconfont mr-10">
+                                &#xe62f;</font></div>
+
+                        <div style="width: 69%; margin-left: 5%; float: left;text-align: left">
+                            <h3 class="mb-0"><span style="font-size: 14px;color: #000;position: relative">免费住宿</span><br>
+                                <div style="font-size: 8px!important;color: #bbbbbb;">THE STRENGTH OF BRAND
+                                </div>
+                            </h3>
+                            <font color="#ff9702" style="position: absolute;top: 36px;">————</font>
+                            <p style="font-size: .5rem!important;letter-spacing: -1px!important;margin-top: 10px">
+                                为外地学员免费提供住宿（带空调、WIFI）</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="youshiBox">
+                        <div style="width: 25%;padding:5%;margin-top: 5%; float: left;"><font style=" font-size: 30px;"
+                                                                                               color="#ff9702"
+                                                                                               class="iconfont mr-10">
+                                &#xe6a6;</font></div>
+
+                        <div style="width: 69%; margin-left: 5%; float: left;text-align: left">
+                            <h3 class="mb-0"><span style="font-size: 14px;color: #000;position: relative">1对1教学</span><br>
+                                <div style="font-size: 8px!important;color: #bbbbbb;word-spacing: -1px;">THE STRENGTH OF BRAND
+                                </div>
+                            </h3>
+                            <font color="#ff9702" style="position: absolute;top: 36px;">————</font>
+                            <p style="font-size: .5rem!important;margin-top: 10px">资深教练数十名，专业1对1指导培训</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="youshiBox">
+                        <div style="width: 25%;padding:5%;margin-top: 5%; float: left;"><font style=" font-size: 30px;"
+                                                                                               color="#ff9702"
+                                                                                               class="iconfont mr-10">
+                                &#xe614;</font></div>
+
+                        <div style="width: 69%; margin-left: 5%; float: left;text-align: left">
+                            <h3 class="mb-0"><span style="font-size: 14px;color: #000;position: relative">考场练车</span><br>
+                                <div style="font-size: 8px!important;color: #bbbbbb;word-spacing: -1px;">THE STRENGTH OF BRAND
+                                </div>
+                            </h3>
+                            <font color="#ff9702" style="position: absolute;top: 36px;">————</font>
+                            <p style="font-size: .5rem!important;margin-top: 10px">
+                                考场培训考场考试，历年考试通过率河南排名第一</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="youshiBox">
+                        <div style="width: 25%;padding:5%;margin-top: 5%; float: left;"><font style=" font-size: 30px;"
+                                                                                               color="#ff9702"
+                                                                                               class="iconfont mr-10">
+                                &#xe621;</font></div>
+
+                        <div style="width: 69%; margin-left: 5%; float: left;text-align: left">
+                            <h3 class="mb-0"><span style="font-size: 14px;color: #000;position: relative">考试周期短</span><br>
+                                <div style="font-size: 8px!important;color: #bbbbbb;word-spacing: -1px;">THE STRENGTH OF BRAND
+                                </div>
+                            </h3>
+                            <font color="#ff9702" style="position: absolute;top: 36px;">————</font>
+                            <p style="font-size: .5rem!important;margin-top: 10px">每月4次考试，时间灵活最快60天拿证</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!--大车班型-->
+    <div class="aui-card-list class">
+        <div class="aui-card-list-header aui-padded-t-10">
+            <div class="h1"><span style="color: #ff9900">稳过</span><span style="color: #505050">精品班型</span></div>
+        </div>
+        <div class="h4" style="text-align: center;font-size: 10px;margin-bottom: 1rem;margin-top: -5px;">省时省力学车 稳稳当当拿证</div>
+        <section class="aui-grid aui-margin-t-15">
+            <div class="aui-row">
+                <div class="row aui-list-item" style="padding-top: .3rem">
+                    <div class="bx_box">
+                        <div class="text-center h3"><img src="images/include/ben.png" style="width: 3rem">&nbsp;&nbsp;&nbsp;<font
+                                    style="font-size: 1rem!important;color: #ffffff; font-weight: bold;">客货本地大包班</font>&nbsp;&nbsp;&nbsp;&nbsp;<font
+                                    color="#fdfe00" style="font-size: .9rem;">
+                                <small style="color:#fdfe00;">￥</small>11000<small style="color:#fdfe00;">元</small>
+                            </font>
+                        </div>
+                        <div style="border: 1px solid #dddddd;padding-bottom: 25px;border-bottom:2px solid #dddddd;">
+                            <div class="conlist border-bottom mt-15">
+                                <div class="pull-left aui-col-xs-3">包含服务</div>
+                                <ul class="pull-left aui-col-xs-9">
+                                    <li>• 随到随学，专业教练现场指导</li>
+                                    <li>• 建档费 • 考试费 • 补考费 • 培训费</li>
+                                    <li>• 服务费 (上门咨询，考试定点接送，带考，专属客服)</li>
+                                </ul>
+                            </div>
+                            <div class="conlist border-bottom">
+                                <div class="pull-left aui-col-xs-3 aui-padded-b-10"
+                                     style="border: 1px solid #f4f4f4;border-right: none;border-left: none;padding-top: 10px;">不包含服务</div>
+                                <ul class="pull-left aui-col-xs-9 aui-padded-b-10"
+                                    style="border: 1px solid #f4f4f4;border-right: none;border-left: none;padding-top: 10px;">
+                                    <li>• 体检费</li>
+                                </ul>
+                            </div>
+                            <div class="conlist mb-15">
+                                <div class="pull-left aui-col-xs-3">报名条件</div>
+                                <ul class="pull-left aui-col-xs-9">
+                                    <li>• 拥有郑州户口</li>
+                                    <li>• 年龄18-70周岁之间 • 身高155CM以上</li>
+                                    <li>• 无色弱，弱视，身体残疾等</li>
+                                </ul>
+                            </div>
+                            <div class="row bx-y" style="text-align: center;">
+                                <a class="text-center" href="tel:0371-58508808">戳我快速拿证></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="aui-grid aui-margin-t-15">
+            <div class="aui-row">
+                <div class="row aui-list-item" style="padding-top: .3rem">
+                    <div class="bx_box">
+                        <div class="text-center h3" style="background: #00a0ea;border: 2px solid #066f9e"><img
+                                    src="images/include/wai.png" style="width: 3rem">&nbsp;&nbsp;&nbsp;<font
+                                    style="font-size: 1rem!important;color: #ffffff; font-weight: bold;">客货外地大包班</font>&nbsp;&nbsp;&nbsp;&nbsp;<font
+                                    color="#fdfe00" style="font-size: .9rem;">
+                                <small style="color:#fdfe00;">￥</small>13000<small style="color:#fdfe00;">元</small>
+
+                            </font>
+                        </div>
+                        <div style="border: 1px solid #dddddd;padding-bottom: 25px;border-bottom:2px solid #dddddd;">
+                            <div class="conlist border-bottom mt-15">
+                                <div class="pull-left aui-col-xs-3">包含服务</div>
+                                <ul class="pull-left aui-col-xs-9">
+                                    <li>• 随到随学，专业教练现场指导</li>
+                                    <li>• 建档费 • 考试费 • 补考费 • 培训费</li>
+                                    <li>• 服务费 (上门咨询，考试定点接送，带考，专属客服)</li>
+                                </ul>
+                            </div>
+                            <div class="conlist border-bottom">
+                                <div class="pull-left aui-col-xs-3 aui-padded-b-10" style="border: 1px solid #f4f4f4;border-right: none;border-left: none;padding-top: 10px;">不包含服务
+                                </div>
+                                <ul class="pull-left aui-col-xs-9 aui-padded-b-10"
+                                    style="border: 1px solid #f4f4f4;border-right: none;border-left: none;padding-top: 10px;">
+                                    <li>• 体检费</li>
+                                </ul>
+                            </div>
+                            <div class="conlist mb-15">
+                                <div class="pull-left aui-col-xs-3">报名条件</div>
+                                <ul class="pull-left aui-col-xs-9">
+                                    <li>• 拥有郑州暂住登记凭证</li>
+                                    <li>• 年龄18-70周岁之间 • 身高155CM以上</li>
+                                    <li>• 无色弱，弱视，身体残疾等</li>
+                                </ul>
+                            </div>
+                            <div class="row bx-b" style="text-align: center;">
+                                <a class="text-center" href="tel:0371-58508808">戳我快速拿证></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div class="aui-card-list jiaxiao">
+        <div class="aui-card-list-header aui-padded-t-10">
+            <div class="h1"><span style="color: #505050">驾校<span style="color: #ff9900">风采</span>展示</span></div>
+        </div>
+        <div class="h4" style="text-align: center;font-size: 10px;margin-bottom: 1rem;margin-top: -5px;">场地设施完善 驾校环境优美</div>
+        <div class="swiper-container" id="jxfc">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/changDiShow1.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/changDiShow2.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/changDiShow3.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/changDiShow4.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/changDiShow5.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/changDiShow6.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/changDiShow7.png" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!--专业教练团队-->
+    <div class="aui-card-list jxjlclass">
+        <div class="aui-card-list-header aui-padded-t-10">
+            <div class="h1"><span style="color: #ff9900">专业</span><span style="color: #505050">教练团队</span></div>
+        </div>
+        <div class="h4" style="text-align: center;font-size: 10px;margin-bottom: 1rem;margin-top: -5px;">一流的教练团队  独特的教学模式</div>
+        <section class="aui-grid aui-margin-t-15" style="padding: 0;">
+            <div class="aui-row">
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="jjjlbox">
+                        <div class="jxjlImg">
+                            <img src="images/JiaXiaoJL1.jpg" alt="">
+                        </div>
+                        <div class="jxjlName h4" style="font-size: .7rem;color: #414141;line-height: 1">
+                            专业教练认真负责<br>
+                            <small class="text-uppercase" style="font-size: 6px;">SERIOUS AND RESPONSIBLE PROFESSIONAL COACHES</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="jjjlbox">
+                        <div class="jxjlImg">
+                            <img src="images/JiaXiaoJL2.jpg" alt="">
+                        </div>
+                        <div class="jxjlName h4" style="font-size: .7rem;color: #414141;line-height: 1">
+                            优秀教练集体合影 <br>
+                            <small class="text-uppercase" style="font-size: 6px;">GOOD COACH GROUP PHOTO</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="jjjlbox">
+                        <div class="jxjlImg">
+                            <img src="images/JiaXiaoJL3.jpg" alt="">
+                        </div>
+                        <div class="jxjlName h4" style="font-size: .7rem;color: #414141;line-height: 1">
+                            驾校工作人员合影<br>
+                            <small class="text-uppercase" style="font-size: 6px;">DRIVING SCHOOL STAFF</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="jjjlbox">
+                        <div class="jxjlImg">
+                            <img src="images/JiaXiaoJL4.jpg" alt="">
+                        </div>
+                        <div class="jxjlName h4" style="font-size: .7rem;color: #414141;line-height: 1">
+                            大车培训基地报名中心<br>
+                            <small class="text-uppercase" style="font-size: 6px;">CART TRAINING REGISTRATION CENTER</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!--车型展示-->
+    <div class="aui-card-list chexingzs">
+        <div class="aui-card-list-header aui-padded-t-10">
+            <div class="h1"><span style="color: #ff9900">驾考</span><span style="color: #505050">车型展示</span></div>
+        </div>
+        <div class="h4" style="text-align: center;font-size: 10px;margin-bottom: 1rem;margin-top: -5px;">多样化驾培车型任你选择</div>
+        <section class="aui-grid aui-margin-t-15" style="padding: 0;">
+            <div class="aui-row">
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="chexingzx_txt">
+                        <img src="images/dache1.png">
+                        <p class="">指车长大于等于6米或者核定载客人数大于等于20人的载客汽车，大型客车的运距多达数百公里，有的车厢内全部设座位；有的全部设铺位，所以俗称“卧铺车”，并有存放乘客随身行李的行李架或行李仓。</p>
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="chexingzx_txt">
+                        <img src="images/dache2.png">
+                        <p>前面有驱动能力的车头叫牵引车，后面没有牵引驱动能力的车叫挂车，挂车是被牵引车拖着走的。简单说就是车头和车箱之间是用工具牵引的。<p/>
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="chexingzx_txt" >
+                        <img src="images/dache3.png">
+                        <p>“中型客车”的全名叫做“中型载客汽车”。根据《机动车辆及挂车分类》，在中国大陆，车长小于6米且核定载客人数（含司机）10座（含）以上，19座（含）以下的客运车辆称为中型客车。</p>
+                    </div>
+                </div>
+                <div class="aui-col-xs-6 aui-list-item">
+                    <div class="chexingzx_txt">
+                        <img src="images/dache4.png">
+                        <p>大型货车指重型和中型载货汽车。重型载货汽车车长大于等于6m，总质量大于等于12000kg。中型载货汽车车长大于等于6m，总质量大于等于4500kg且小于12000kg。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--学院环境-->
+    <div class="aui-card-list xueyuanhj">
+        <div class="aui-card-list-header aui-padded-t-10">
+            <div class="h1"><span style="color: #505050">学员<span style="color: #ff9900">生活</span>环境</span></div>
+        </div>
+        <div class="h4" style="text-align: center;font-size: 10px;margin-bottom: 1rem;margin-top: -5px;">吃宿优雅舒适  学车安心顺心 </div>
+        <div class="swiper-container" id="xyhj">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/fwxm-xyct2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fwxm-xyct4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fwxm-xyct3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fwxm-xyct1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fwxm-xyss1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fwxm-xyss2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fwxm-xyss3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/fwxm-xyss4.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        var swiper = new Swiper('#jxfc', {
+            effect: 'coverflow',
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            coverflow: {
+                rotate: 0,
+                stretch: 60,
+                depth: 160,
+                modifier: 1,
+                slideShadows: false
+            }
+        });
+        var swiper2 = new Swiper('#xyhj', {
+            effect: 'coverflow',
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            coverflow: {
+                rotate: 0,
+                stretch: 60,
+                depth: 160,
+                modifier: 1,
+                slideShadows: false
+            },
+            onProgress: function (swiper) {
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slide = swiper.slides[i], d = slide.progress;
+                    es = slide.style;
+                    es.opacity = 1 - Math.min(Math.abs(d / 2), 1);
+                }
+            }
+        })
+    })
+</script>
+</html>

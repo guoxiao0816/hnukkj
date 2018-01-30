@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-col-xs-6.aui-bar-tab-item{line-height: 2.7rem;}
+        .xuecheguwen .aui-card-list-content .aui-list-item-media img{width: 50px;height: 50px;}
+    </style>
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-content">
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user aui-border-b">
+            <div class="aui-card-list-user-name">
+                <div>VIP快速班 <small>C1</small></div>
+                <font color="#03a9f4">¥4880</font>
+            </div>
+            <div class="aui-card-list-user-name">
+                <small>京顺驾校</small>
+                <small><del>市场价：￥4880</del></small>
+            </div>
+        </div>
+    </div>
+    <div class="aui-tab" id="tab">
+        <a href="javascript:;" class="aui-tab-item aui-active" tapmode="" data-item-order="0">班型详情</a>
+        <a href="javascript:;" class="aui-tab-item" tapmode="" data-item-order="1">费用明细</a>
+        <a href="javascript:;" class="aui-tab-item" tapmode="" data-item-order="2">约车方式</a>
+        <a href="javascript:;" class="aui-tab-item " tapmode="" data-item-order="3">购买学时</a>
+    </div>
+    <div class="aui_tab_bd aui-margin-b-15">
+        <!--班型详情-->
+        <div class="aui_tab_bd_item aui_tab_bd_item_active">
+            <table class="table table-bordered ">
+                <tbody>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">培训模式</td>
+                    <td class="aui-col-xs-9">传统培训</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">培训车型</td>
+                    <td class="aui-col-xs-9">C2</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">车型品牌</td>
+                    <td class="aui-col-xs-9">奇瑞</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">教练分配</td>
+                    <td class="aui-col-xs-9">统一安排</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center" rowspan="2">练车人数</td>
+                    <td class="aui-col-xs-9">科目二：0人/车</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-9">科目三：0人/车</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">接送方式</td>
+                    <td class="aui-col-xs-9">自行前往</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">约考方式</td>
+                    <td class="aui-col-xs-9">自主约考</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">考试方式</td>
+                    <td class="aui-col-xs-9">报名投诉</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">上车时间</td>
+                    <td class="aui-col-xs-9">最快7天上车</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">拿证周期</td>
+                    <td class="aui-col-xs-9">最快45天</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">其他说明</td>
+                    <td class="aui-col-xs-9"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--费用详情-->
+        <div class="aui_tab_bd_item">
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">优快价格</td>
+                    <td class="aui-col-xs-9">¥4000<small class="aui-margin-l-10"><del>¥4000</del></small></td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">包含的费用</td>
+                    <td class="aui-col-xs-9">资料建档, 科一初考, 科二初考, 科三初考, 安全文明初考, 工本, 科二补考, 科三补考, 安全文明补考</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3" colspan="2">可能产生的额外费用</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">额外费</td>
+                    <td class="aui-col-xs-9">体检, 照像, 科一补考, 科二模拟, 科三模拟</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--约车方式-->
+        <div class="aui_tab_bd_item">
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">可约天数</td>
+                    <td class="aui-col-xs-9">天</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">每天可约</td>
+                    <td class="aui-col-xs-9">2个时段</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">每周可约</td>
+                    <td class="aui-col-xs-9">14个时段</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">取消时隔</td>
+                    <td class="aui-col-xs-9">提前24个小时</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">可约时间</td>
+                    <td class="aui-col-xs-9">21:00:00</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">闲时可约</td>
+                    <td class="aui-col-xs-9">个时段</td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center">闲时可约时间</td>
+                    <td class="aui-col-xs-9"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--购买学时-->
+        <div class="aui_tab_bd_item ">
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td class="aui-col-xs-3 aui-text-center" rowspan="2">课时价格</td>
+                    <td class="aui-col-xs-9">科目二：0<a href="/jsdd" class="aui-bg-success aui-text-white border-radius aui-padded-l-5 aui-padded-r-5 aui-pull-right">购买学时</a></td>
+                </tr>
+                <tr>
+                    <td class="aui-col-xs-9">科目三：0<a href="/jsdd" class="aui-bg-success aui-text-white border-radius aui-padded-l-5 aui-padded-r-5 aui-pull-right">购买学时</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <ul class="aui-list aui-margin-b-15">
+        <li class="aui-list-item"><a rel="external nofollow" href="/bmxz" class="aui-list-item-inner aui-list-item-arrow"> 报名须知 </a></li>
+        <li class="aui-list-item"><a rel="external nofollow" href="/bmlc" class="aui-list-item-inner aui-list-item-arrow"> 报名流程 </a></li>
+    </ul>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user ">
+            <div>
+                <a href="">圆通驾校<small class="aui-margin-l-5 aui-text-default">圆通驾校</small></a>
+            </div>
+            <a href="http://api.map.baidu.com/marker?location=34.7724770000,113.6411440000&amp;title=圆通驾校&amp;content=联系地址：沙口路二环支路（水果市场西邻）&amp;output=html">
+                <div class="aui-card-list-user-info bxxq_jxxq_local aui-list-item-arrow aui-padded-r-10" style="position: relative;">沙口路二环支路（水果市场西邻）
+                    <span class="aui-pull-right"><span class="distance">1.9km</span></span>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-photo aui-margin-t-10"  style="height: 5rem; overflow: hidden" id="Gallery">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/school/4101/4101020002/pic/1.jpg" alt="圆通驾校">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/school/4101/4101020002/pic/2.jpg" alt="圆通驾校">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/school/4101/4101020002/pic/3.jpg" alt="圆通驾校">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/school/4101/4101020002/pic/4.jpg" alt="圆通驾校">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://files.ukxueche.com/school/4101/4101020002/pic/5.jpg" alt="圆通驾校">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aui-list aui-margin-t-15 xuecheguwen">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">优快学车顾问</div>
+                <div class="aui-list-item-right">
+                    <small class="aui-text-default">做您的贴心小管家</small>
+                </div>
+            </div>
+        </div>
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item aui-list-item-middle">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="http://files.ukxueche.com/ykgw/4101/UK0000000001.png" class="aui-img-round">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">刘建强</div>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <small>已成功帮助145人拿到驾照</small>
+                            </div>
+                        </div>
+                        <a href="tel:037158508808" class="aui-list-item-right aui-col-xs-3 aui-border-l aui-padded-l-15">
+                            <i class="aui-iconfont aui-icon-phone aui-text-info"></i>
+                            <div>咨询</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-bar aui-bar-tab">
+        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3198775872&amp;site=qq&amp;menu=yes" class="aui-col-xs-3 aui-bar-tab-item aui-padded-t-5"> <i class="aui-iconfont aui-icon-comment aui-text-info"></i>
+            <div class="aui-bar-tab-label">在线客服</div>
+        </a>
+        <a href="tel:037155507767" class="aui-col-xs-3 aui-bar-tab-item aui-padded-t-5"> <i class="aui-iconfont aui-icon-phone aui-text-info"></i>
+            <div class="aui-bar-tab-label">电话咨询</div>
+        </a>
+        <a href="/wybm" class="aui-col-xs-6 aui-bar-tab-item aui-bg-info aui-text-white" style="font-size: 18px;"> 我想报名
+        </a>
+    </div>
+</div>
+<% include nav.ejs%>
+</body>
+<script>
+    $(".swiper-photo").swiper({
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+        freeModeMomentum:false,
+        freeMode: true,
+        preventClicksPropagation:true,
+        preventClicks : true
+    });
+</script>
+<script type="text/javascript">
+    var tab = new auiTab({
+        element : document.getElementById("tab")
+    }, function(ret) {
+        $(".aui_tab_bd").find(".aui_tab_bd_item").eq(ret.index - 1).addClass(
+            "aui_tab_bd_item_active").siblings().removeClass(
+            "aui_tab_bd_item_active");
+        //      console.log(ret)
+    });
+</script>
+<script>
+    $("#Gallery .swiper-slide").click(function (e) {
+        e.preventDefault()
+        var imgs = [];
+        var indexs = $(this).index();
+        console.log(this);
+        $("img", $(this).parent()).each(function () {
+            imgs.push($(this).attr('src'));
+            console.log(imgs);
+        });
+        pb1 = $.photoBrowser({
+            items: imgs,
+            initIndex: indexs
+        });
+        pb1.open();
+    });
+</script>
+</html>

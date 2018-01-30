@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .swiper-container img{width:100%;height:100%}
+        .xuecheguwen .aui-card-list-content .aui-list-item-media img{width: 50px;height: 50px;}
+
+        .aui-list-item_after .aui-list-item:after {
+            content: normal;
+        }
+
+        .aui-list-item_after .aui-list-item:first-child {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .jljs_box {
+            font-size: 12px;
+            text-align: justify;
+            padding: .5rem 0;
+            max-height: 80px;
+            overflow: hidden;
+            color: #757575;
+            text-overflow: ellipsis;
+        }
+
+        .jljs_menu {
+            padding-top: 8px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+<% include head.ejs %>
+<div class="aui-content">
+    <div class="swiper-container" style="height: 250px">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img data-src="http://files.ukxueche.com/school/4101/4101020004/pic/1.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide"><img data-src="http://files.ukxueche.com/school/4101/4101020004/pic/1.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide"><img data-src="http://files.ukxueche.com/school/4101/4101020004/pic/1.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+            <div class="swiper-slide"><img data-src="http://files.ukxueche.com/school/4101/4101020004/pic/1.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="aui-card-list aui-list">
+
+            <div class="aui-card-list-header aui-card-list-user aui-list-item-title aui-border-b">
+                <div class="">
+                    嵩山驾校<small class="aui-margin-l-5 aui-text-default">河医校区</small>
+                </div>
+                <p class="aui-ellipsis-1">
+                    <i class="iconfont aui-text-warning"></i>
+                    <i class="iconfont aui-text-warning"></i>
+                    <i class="iconfont aui-text-warning"></i>
+                    <i class="iconfont aui-text-warning"></i>
+                    <i class="iconfont aui-text-warning"></i>
+                    0人已报名 | 0条评论
+                </p>
+            </div>
+        <a href="http://api.map.baidu.com/marker?location=34.7635360000,113.6526360000&amp;title=嵩山驾校(河医校区)&amp;content=联系地址：建新西街军械所院内&amp;output=html">
+            <div class="aui-card-list-header aui-card-list-user aui-list-item-arrow">
+                <div class="aui-card-list-user-info">
+                    <span class="aui-ellipsis-1 address">建新西街军械所院内</span>
+                    <span class="aui-pull-right aui-margin-r-10"><span class="distance">817m</span></span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item"><a href="/bxxq">
+                <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">普通班（外地）
+                            &nbsp;<small class="c-666">C1</small>
+
+                        </div>
+                    </div>
+                    <div class="h3">
+                        <span class="aui-text-warning"><strong>¥2300</strong></span><small class="aui-margin-l-10 aui-text-default c-999"><del>市场价格：¥2300</del></small>
+                    </div>
+                    <div class="aui-font-size-12 c-666">
+                        <div class="aui-pull-left">
+                            <font size="2" color="#6fb72a" class="iconfont"></font>
+                            服务好</div>
+                        <div class="aui-pull-left aui-margin-l-5">
+                            <font size="2" color="#ee7c7d" class="iconfont"></font>
+                            急速拿证</div>
+                        <div class="aui-pull-left aui-margin-l-5">
+                            <font size="2" color="#2e9dd9" class="iconfont"></font>通过率超85%</div>
+                    </div>
+
+                </div>
+            </a></li>
+
+        <li class="aui-list-item"><a href="/bxxq">
+                <div class="aui-list-item-inner aui-list-item-arrow" style="overflow: hidden;">
+                    <div class="aui-list-item-text">
+                        <div class="aui-list-item-title">普通班（本地）
+                            &nbsp;<small class="c-666">C1</small>
+
+                        </div>
+                    </div>
+                    <div class="h3">
+                        <span class="aui-text-warning"><strong>¥1600</strong></span><small class="aui-margin-l-10 aui-text-default c-999"><del>市场价格：¥1600</del></small>
+                    </div>
+                    <div class="aui-font-size-12 c-666">
+                        <div class="aui-pull-left">
+                            <font size="2" color="#2cafff" class="iconfont"></font>
+                            拿证放心</div>
+                        <div class="aui-pull-left aui-margin-l-5">
+                            <font size="2" color="#ee7c7d" class="iconfont"></font>
+                            拿证快</div>
+                        <div class="aui-pull-left aui-margin-l-5">
+                            <font size="2" color="#ff5757" class="iconfont"></font>全程媒体监督</div>
+                    </div>
+
+                </div>
+            </a></li>
+
+
+        <!-- <li class="aui-list-item aui-text-center">
+    <div class="aui-list-item-inner">
+        <a href="###" class="aui-text-default">查看更多班型<i class="aui-iconfont aui-icon-down aui-margin-l-5">&#xe602;</i></a>
+    </div>
+</li> -->
+    </ul>
+
+    <!--教练介绍-->
+    <div class="aui-list aui-margin-t-15 aui-list-item_after">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title aui-ellipsis-1 aui-col-xs-9 aui-font-size-14">教练介绍</div>
+            </div>
+        </div>
+        <div class="aui-list-item aui-bg-default" style="display: block">
+            <div class="aui-list-item-inner">
+                <div class="jljs_box">
+                    那么，如何完美顺利的通过科目三考试呢？
+                </div>
+            </div>
+        </div>
+        <div class="jljs_menu" onclick="jljs_block()"><span class="aui-iconfont aui-icon-down"></span></div>
+    </div>
+
+    <ul class="aui-list aui-margin-t-15">
+        <li class="aui-list-item"><a href="/jxjl" class="aui-list-item-inner aui-list-item-arrow"> 驾校教练 </a></li>
+    </ul>
+
+    <div class="aui-list aui-margin-t-15 xuecheguwen">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">优快学车顾问</div>
+                <div class="aui-list-item-right">
+                    <small class="aui-text-default">做您的贴心小管家</small>
+                </div>
+            </div>
+        </div>
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item aui-list-item-middle">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="http://files.ukxueche.com/ykgw/4101/UK0000000001.png" class="aui-img-round">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title"></div>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <small>已成功帮助0人拿到驾照</small>
+                            </div>
+                        </div>
+                        <a href="tel:037158508808" class="aui-list-item-right aui-col-xs-3 aui-border-l aui-padded-l-15">
+                            <i class="aui-iconfont aui-icon-phone aui-text-info"></i>
+                            <div>咨询</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="aui-list aui-margin-t-15">
+        <a href="/jxpj">
+            <li class="aui-list-item" style="border-bottom: 1px solid #dddddd">
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    <div class="aui-list-item-title">驾校点评</div>
+                    <div class="aui-list-item-right">
+                        好评<span class="aui-text-danger">100%</span>
+                    </div>
+                </div>
+            </li>
+        </a>
+        <div class="aui-tab">
+            <div class="aui-tab-item">
+                服务态度:<span class="aui-text-danger">5</span>
+            </div>
+            <div class="aui-tab-item">
+                收费标准:<span class="aui-text-danger">5</span>
+            </div>
+            <div class="aui-tab-item">
+                车辆场地:<span class="aui-text-danger">5</span>
+            </div>
+            <div class="aui-tab-item">
+                教练教学:<span class="aui-text-danger">5</span>
+            </div>
+        </div>
+    </ul>
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item aui-text-center"><a href="/jlpj" class="aui-btn aui-btn-info aui-btn-outlined aui-margin-t-5">查看全部评价</a>
+        </li>
+    </ul>
+</div>
+</div>
+<% include footPublic %>
+</body>
+<script>
+    $(".swiper-container").swiper({
+        loop : true,
+        pagination : '.swiper-pagination',
+        autoplay : 6000,
+        autoplayDisableOnInteraction : false,
+        lazyLoading : true
+    });
+
+    if( $('.jljs_box').css('height') < "80px"){
+        $('.jljs_menu').hide();
+    }
+    function jljs_block() {
+        var $height = $('.jljs_box').css('height');
+        if ($height == '80px') {
+            $('.jljs_box').css({"height": "auto","max-height":"none"});
+            $('.jljs_menu .aui-iconfont').removeClass("aui-icon-down").addClass("aui-icon-top");
+        } else {
+            $('.jljs_box').css({"height": "80","max-height":"none"});
+            $('.jljs_menu .aui-iconfont').removeClass("aui-icon-top").addClass("aui-icon-down");
+        }
+    }
+
+</script>
+</html>

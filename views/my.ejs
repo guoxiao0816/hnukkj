@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include headPublic %>
+    <!--<style>
+        .aui-content{padding-top: 2.2rem;padding-bottom: 2.5rem;}
+        .aui-grid .aui-iconfont{vertical-align: middle;}
+        .aui-card-list .aui-grid [class*=aui-col-]{padding: 0.5rem 0;}
+        .aui-grid .aui-iconfont{vertical-align: middle;}
+        .aui-card-list-header span{border-left: 3px solid #fa7730;padding-left: 10px;}
+    </style>-->
+    <style>
+        .aui-content{padding-bottom:3.5rem;}
+        .setting span{font-size: 26px;}
+    </style>
+</head>
+<body class="tabs4">
+<% include head.ejs %>
+<div class="aui-content">
+    <div class="aui-text-center my_index">
+        <a class="setting" href="/set">
+            <span class="iconfont">&#xe85e;</span>
+        </a>
+        <div class="my_head"><a href="/xgzl"><img src="images/include/1.png" alt=""></a></div>
+        <h3 class="aui-margin-t-5">UK2562</h3>
+        <h4>这个人很懒，什么都没有留下</h4>
+        <section class="aui-grid">
+            <div class="aui-row">
+                <div class="aui-col-xs-3">
+                    <a href="/wddd">
+                        <font class="aui-iconfont iconfont">&#xe70c;</font>
+                        <div class="aui-grid-label">我的订单</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-3">
+                    <a href="/wdjk">
+                        <font size="5" class="aui-iconfont iconfont">&#xe70d;</font>
+                        <div class="aui-grid-label">我的驾考</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-3">
+                    <a href="/wdpx">
+                        <font class="aui-iconfont iconfont">&#xe70f;</font>
+                        <div class="aui-grid-label">我的培训</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-3">
+                    <a href="/wdxx">
+                        <font class="aui-iconfont iconfont">&#xe70b;</font>
+                        <div class="aui-grid-label">我的题库</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="aui-card-list">
+        <section class="aui-grid">
+            <div class="aui-row">
+                <div class="aui-col-xs-4">
+                    <a href="/zzyc">
+                        <font color="#1296db" size="5" class="aui-iconfont iconfont">&#xe702;</font>
+                        <div class="aui-grid-label">自主约车</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-4">
+                    <a href="/jsbc">
+                        <font color="#05bd73" size="5" class="aui-iconfont iconfont">&#xe745;</font>
+                        <div class="aui-grid-label">计时包车</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-4">
+                    <a href="/wdddxq">
+                        <font color="#ed9f3a" size="5" class="aui-iconfont iconfont">&#xe73f;</font>
+                        <div class="aui-grid-label">我的钱包</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="aui-grid">
+            <div class="aui-row">
+                <div class="aui-col-xs-4">
+                    <a href="/ksap">
+                        <font color="#05bd73" size="5" class="aui-iconfont iconfont">&#xe743;</font>
+                        <div class="aui-grid-label">考试安排</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-4">
+                    <a href="">
+                        <font color="#458ad5" size="5" class="aui-iconfont iconfont">&#xe744;</font>
+                        <div class="aui-grid-label">预约考试</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-4">
+                    <a href="/cjcx">
+                        <font color="#e95660" size="5" class="aui-iconfont iconfont">&#xe740;</font>
+                        <div class="aui-grid-label">成绩查询</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="aui-grid">
+            <div class="aui-row">
+                <div class="aui-col-xs-4">
+                    <a href="/xgmm">
+                        <font color="#61c040" size="5" class="aui-iconfont iconfont">&#xe623;</font>
+                        <div class="aui-grid-label">修改密码</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-4">
+                    <a href="/share">
+                        <font color="#ed9f3a" size="5" class="aui-iconfont iconfont">&#xe741;</font>
+                        <div class="aui-grid-label">邀请好友</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-4">
+                    <a href="/mynumber">
+                        <font color="#00aaf5" size="5" class="aui-iconfont iconfont">&#xe747;</font>
+                        <div class="aui-grid-label">邀请码</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="aui-card-list">
+        <a href="/usercomit">
+            <div class="aui-card-list-header aui-list-item-arrow">
+                <span>我的社区</span>
+            </div>
+        </a>
+        <section class="aui-grid">
+            <div class="aui-row">
+                <div class="aui-col-xs-4">
+                    <a href="/">
+                        <font color="#05bd73" size="5" class="aui-iconfont iconfont">&#xe74b;</font>
+                        <div class="aui-grid-label">话题</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-4">
+                    <a href="/">
+                        <font color="#e95660" size="5" class="aui-iconfont iconfont">&#xe74e;</font>
+                        <div class="aui-grid-label">收藏</div>
+                    </a>
+                </div>
+                <div class="aui-col-xs-4">
+                    <a href="/">
+                        <font color="#458ad5" size="5" class="aui-iconfont iconfont">&#xe74d;</font>
+                        <div class="aui-grid-label">留言板</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="aui-margin-l-15 aui-margin-r-15">
+        <div class="aui-btn aui-btn-info aui-btn-block aui-btn-sm">注销</div>
+    </div>
+</div>
+<% include footPublic %>
+</body>
+</html>

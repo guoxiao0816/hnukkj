@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>科三</title>
+    <% include headPublic %>
+</head>
+<body class="k3cz">
+<header class="aui-bar aui-bar-nav aui-bar-light aui-margin-b-15">
+    <a class="aui-pull-left aui-btn" href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <div class="aui-bar aui-bar-btn aui-bar-btn-round" id="aui-bar-btn">
+            <div class="aui-bar-btn-item aui-active">灯光操作</div>
+            <div class="aui-bar-btn-item">语音模拟</div>
+        </div>
+    </div>
+</header>
+<div class="aui-content">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <section class="aui-grid aui-margin-b-15">
+                    <div class="aui-row">
+                        <div class="aui-col-xs-3 aui-border-r" onclick="plays('images/notify.mp3')">
+                            <i class="aui-iconfont iconfont">&#xe692;</i>
+                            <div class="aui-grid-label">灯光一</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe692;</i>
+                            <div class="aui-grid-label">灯光二</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe692;</i>
+                            <div class="aui-grid-label">灯光三</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe692;</i>
+                            <div class="aui-grid-label">灯光四</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe692;</i>
+                            <div class="aui-grid-label">灯光五</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe692;</i>
+                            <div class="aui-grid-label">灯光六</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe692;</i>
+                            <div class="aui-grid-label">灯光七</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t">
+                            <i class="aui-iconfont iconfont">&#xe692;</i>
+                            <div class="aui-grid-label">灯光八</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="swiper-slide">
+                <section class="aui-grid aui-margin-b-15">
+                    <div class="aui-row">
+                        <div class="aui-col-xs-3 aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe68b;</i>
+                            <div class="aui-grid-label">考试准备</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe689;</i>
+                            <div class="aui-grid-label">起步</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe68a;</i>
+                            <div class="aui-grid-label">路口直行</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe688;</i>
+                            <div class="aui-grid-label">变更车道</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe690;</i>
+                            <div class="aui-grid-label">公共汽车站</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <img src="images/include/ic_voice_5.png" class="aui-iconfont iconfont"></img>
+                            <div class="aui-grid-label">学校</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe691;</i>
+                            <div class="aui-grid-label">直线行驶</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t">
+                            <i class="aui-iconfont iconfont">&#xe68f;</i>
+                            <div class="aui-grid-label">左转</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe68e;</i>
+                            <div class="aui-grid-label">右转</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe68c;</i>
+                            <div class="aui-grid-label">加减档</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <img src="images/include/ic_voice_10.png" class="aui-iconfont iconfont"></img>
+                            <div class="aui-grid-label">会车</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t">
+                            <img src="images/include/ic_voice_11.png" class="aui-iconfont iconfont"></img>
+                            <div class="aui-grid-label">超车</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe68d;</i>
+                            <div class="aui-grid-label">减速</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe687;</i>
+                            <div class="aui-grid-label">限速</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <img src="images/include/ic_voice_14.png" class="aui-iconfont iconfont"></img>
+                            <div class="aui-grid-label">人行横道</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t">
+                            <img src="images/include/ic_voice_15.png" class="aui-iconfont iconfont"></img>
+                            <div class="aui-grid-label">人行横道</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <img src="images/include/ic_voice_16.png" class="aui-iconfont iconfont"></img>
+                            <div class="aui-grid-label">隧道</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe686;</i>
+                            <div class="aui-grid-label">掉头</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t aui-border-r">
+                            <i class="aui-iconfont iconfont">&#xe685;</i>
+                            <div class="aui-grid-label">靠边停车</div>
+                        </div>
+                        <div class="aui-col-xs-3 aui-border-t"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<audio id="chatAudio"></audio>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination : '.pagination',
+        autoHeight: true,
+        onSlideChangeEnd:function (swiper) {
+            $(".aui-bar-btn .aui-bar-btn-item").eq(swiper.activeIndex).addClass('aui-active').siblings().removeClass('aui-active');
+        }
+    });
+</script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("aui-bar-btn"),
+        repeatClick:true
+    },function(ret){
+        mySwiper.slideTo(ret.index-1, 200, false);
+    });
+</script>
+<script>
+    function plays(src) {
+        var audioEle = document.getElementById("chatAudio");
+        var SourceEle = document.getElementById("chatSource");
+        audioEle.setAttribute("src",src);
+        audioEle.play();    //播放
+        /*$('#chatAudio source').attr('src',src);
+        $('#chatAudio')[0].play();*/
+    };
+</script>
+</html>

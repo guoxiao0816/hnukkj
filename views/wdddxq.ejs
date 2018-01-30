@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .xuecheguwen .aui-card-list-content .aui-list-item-media img{width: 50px;height: 50px;}
+    </style>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<% include head.ejs %>
+<div class="aui-content">
+    <div class="aui-info  aui-margin-t-10 aui-padded-l-15 aui-padded-r-15 aui-bg-default aui-padded-b-0">
+        <div class="aui-info-item aui-text-center">
+            订单已提交，等待支付
+        </div>
+    </div>
+    <secton class="aui-grid">
+        <div class="row aui-text-center aui-margin-l-15 aui-margin-r-15 schedule1">  <!--已预约：schedule1；已提交：schedule2；已支付：schedule3-->
+            <div class="aui-col-xs-3">
+                <i class="aui-iconfont iconfont">&#xe625;</i>
+                <p class="aui-font-size-14">已预约</p>
+            </div>
+            <div class="aui-col-xs-1 iconfont">&#xe667;&#xe667;&#xe667;</div>
+            <div class="aui-col-xs-3">
+                <i class="aui-iconfont iconfont">&#xe663;</i>
+                <p class="aui-font-size-14">已提交</p>
+            </div>
+            <div class="aui-col-xs-1 iconfont">&#xe667;&#xe667;&#xe667;</div>
+            <div class="aui-col-xs-3">
+                <i class="aui-iconfont iconfont">&#xe60a;</i>
+                <p class="aui-font-size-14">已支付</p>
+            </div>
+        </div>
+    </secton>
+    <div class="aui-info aui-padded-l-15 aui-padded-r-15 aui-bg-default aui-padded-t-0">
+        <div class="aui-info-item aui-text-center">
+            培训学员：路人甲 13888888888
+        </div>
+    </div>
+    <div class="aui-list aui-media-list aui-margin-t-10">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title"><font color="#e51c23" class="iconfont">&#xe666;</font> 吉祥驾校(信息学院路校区)</div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media" style="width: 5.4rem;">
+                    <img src="images/include/dd_k2.png">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title aui-font-size-14">普通班 科二场地驾驶技能学时</div>
+                    <div class="aui-info" style="padding:0">
+                        2017-04-11 20:04:32
+                    </div>
+                    <div class="aui-info" style="padding:0">
+                        单价：¥100
+                        <div class="aui-info-item">数量：1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-form-preview__bd">
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">订单金额</label>
+                <span class="weui-form-preview__value">¥100</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">购买方式</label>
+                <span class="weui-form-preview__value">网上购买</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">支付方式</label>
+                <span class="weui-form-preview__value">支付宝</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">下单时间</label>
+                <span class="weui-form-preview__value">2017-04-12 08:23:32</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">订单编号</label>
+                <span class="weui-form-preview__value">123456789789</span>
+            </div>
+        </div>
+    </div>
+    <div class="aui-list aui-margin-t-15 xuecheguwen">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">优快学车顾问</div>
+                <div class="aui-list-item-right">
+                    <small class="aui-text-default">做您的贴心小管家</small>
+                </div>
+            </div>
+        </div>
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item aui-list-item-middle">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media">
+                            <img src="http://files.ukxueche.com/ykgw/4101/UK0000000001.png" class="aui-img-round">
+                        </div>
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-text">
+                                <div class="aui-list-item-title">刘建强</div>
+                            </div>
+                            <div class="aui-list-item-text">
+                                <small>已成功帮助145人拿到驾照</small>
+                            </div>
+                        </div>
+                        <a href="tel:037158508808" class="aui-list-item-right aui-col-xs-3 aui-border-l aui-padded-l-15">
+                            <i class="aui-iconfont aui-icon-phone aui-text-info"></i>
+                            <div>咨询</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-list aui-media-list aui-margin-t-10">
+        <div class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title">售后保障</div>
+                </div>
+                <div class="aui-list-item-text">
+                    本订单由优快学车提供售后服务，全程保障您的驾考之路，客服热线：0371-55902879
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="aui-bar aui-bar-tab">
+    <a href="javascript:void(0)" class="aui-col-xs-12 aui-bar-tab-item aui-bg-info aui-text-white">去支付
+    </a>
+</div>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+         /*callback:function(o,dom){
+             alert("aa")
+         }*/
+    },function(ret){
+        switch(ret.index)
+        {
+            case 1:
+                $(".aui-list").show();
+                break;
+            case 2:
+                $(".aui-list").hide();
+                $(".dzf").show();
+                break;
+            case 3:
+                $(".aui-list").hide();
+                $(".yzf").show();
+                break;
+        }
+        console.log(ret.index)
+    });
+</script>
+<script>
+
+</script>
+</html>

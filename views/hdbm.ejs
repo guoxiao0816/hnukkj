@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list .aui-list-item-label{width: 35%}
+    </style>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<div class="aui-content">
+    <ul class="aui-list aui-margin-b-10">
+        <li class="aui-list-item ">
+            <div class="aui-list-item-inner aui-padded-t-10  aui-padded-b-10">
+                为了保证您的驾考服务，请如实填写报名信息，工作人员将会在3小时能联系您,免费获取学车活动券短信编码。
+            </div>
+        </li>
+    </ul>
+    <form action="" method="post" name="wybm" id="frmEdit" novalidate="novalidate">
+        <ul class="aui-list aui-form-list">
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        姓名：
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" name="xm" id="xm" placeholder="请输入您的姓名">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        户籍：
+                    </div>
+                    <div class="aui-list-item-input">
+                        <label class="aui-margin-r-10"><input class="aui-radio" type="radio" name="ly" value="A" checked=""> 本地</label>
+                        <label><input class="aui-radio" type="radio" name="ly" value="B"> 外地</label>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        联系方式：
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" id="sjhm" name="sjhm" placeholder="请输入您的手机号码">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        QQ：
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" id="QQ" name="QQ" placeholder="请输入QQ号">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        所在位置：
+                    </div>
+                    <div class="aui-list-item-input">
+                        <textarea placeholder="你的的详细地址"></textarea>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner aui-list-item-center aui-list-item-btn">
+                    <input type="submit" class="aui-btn aui-btn-info aui-margin-r-5 aui-col-xs-5 aui-padded-t-10 aui-padded-b-10 aui-font-size-16" value="立即报名">
+                    <input type="reset" class="aui-btn aui-btn-info aui-margin-r-5 aui-col-xs-5 aui-padded-t-10 aui-padded-b-10 aui-font-size-16" value="取消">
+                </div>
+            </li>
+        </ul>
+    </form>
+</div>
+</body>
+</html>

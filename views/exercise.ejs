@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list:before,.aui-list.aui-list-in .aui-list-item-inner:after{height: 0;}
+        .aui-card-list-header{align-items:baseline}
+        .swiper-container{height: 100%}
+        .aui-list-item-title{font-size: 0.8rem !important;;color: #18b4ed !important;font-weight: bold;}
+        .explain-p{color: #8e734d !important;}
+        .stxj{display: none;}
+        .answer-container.yizuo .dui .xu,.open_xiaingjie .dui .xu{
+            background: url('images/include/dui.png') #18b4ed no-repeat center center;
+            border-color: #18b4ed;
+            background-size: contain;
+            text-indent: -10em;
+        }
+        .answer-container.yizuo .select .xu,.open_xiaingjie .select .xu{
+            background: url('images/include/cuo.png') #f25e5e no-repeat center center;
+            border-color: #f25e5e;
+            background-size: contain;
+            text-indent: -10em;
+        }
+        .open_xiaingjie .stxj{display: block;}
+        button{border: none;width: 100%;text-align: left;font-size: 0.7rem;}
+        .weui-popup__container--visible .weui-popup__modal{transform:translate3d(0,120px,0)}
+        .weui-popup__container--visible .weui-popup__overlay{opacity:0.5;}
+        .weui-popup__container{z-index: 200;}
+        .flex1{height: 1.5rem;
+            border-radius: 5px;
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 0.6rem;
+            color: #fff;
+            margin-left: 0.55rem;
+            margin-top: 0.5rem;
+            background: #d2d2d2;
+            width: 10.2%;display: inline-block;
+        }
+        .datika .cuo {
+            background: #f25e5e;
+        }
+        .datika .dui {
+            background: #18b4ed;
+        }
+        .datika .current {
+            box-sizing: border-box;
+            border: 1px solid #000;
+        }
+        .xiangjie-on{color: #18b4ed}
+    </style>
+</head>
+<body style="height: 100%">
+<% include head.ejs%>
+<div class="aui-content" style="height: 100%;">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide answer-container" data-id="800000">
+                <ul class="aui-list aui-list-in aui-media-list">
+                    <div class="aui-list-item">
+                        <div class="aui-list-item-inner aui-font-size-18">
+                            <font color="#18b4ed" class="iconfont">&#xe66a;</font> 驾驶机动车在道路上违反道路交通安全法的行为，属于什么行为？
+                        </div>
+                    </div>
+                    <div class="aui-text-center" style="background: #fff;"><img src="images/include/802800.jpg" alt="" style="width: 70%"></div>
+                    <button type="button" class="aui-list-item" data-answer="1">
+                        <i class="xu">A</i> 过失行为
+                    </button>
+                    <button type="button" class="aui-list-item dui" data-answer="2">
+                            <i class="xu">B</i> 违法行为
+                    </button>
+                    <button type="button" class="aui-list-item" data-answer="3">
+                        <i class="xu">C</i> 违规行为
+                    </button>
+                    <button type="button" class="aui-list-item" data-answer="4">
+                        <i class="xu">D</i> 违章行为
+                    </button>
+                </ul>
+                <ul class="aui-list aui-media-list stxj">
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-title aui-margin-b-10 aui-margin-t-15">试题详解：</div>
+                            <div class="aui-list-item-text explain-p">
+                                《道路交通安全法》第一百零一条：违反道路交通安全法律、法规的规定，发生重大交通事故，构成犯罪的，依法追究刑事责任，并由公安机关交通管理部门吊销机动车驾驶证。
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide answer-container" data-id="800100">
+                <ul class="aui-list aui-list-in aui-media-list">
+                    <div class="aui-list-item">
+                        <div class="aui-list-item-inner aui-font-size-18">
+                            <font color="#18b4ed" size="4" class="iconfont">&#xe61b;</font> 机动车驾驶人造成事故后逃逸构成犯罪的，吊销驾驶证且多长时间不得重新取得驾驶证？
+                        </div>
+                    </div>
+                    <button type="button" class="aui-list-item" data-answer="1">
+                        <i class="xu">A</i> 20年内
+                    </button>
+                    <button type="button" class="aui-list-item dui" data-answer="2">
+                        <i class="xu">B</i> 终身
+                    </button>
+                    <button type="button" class="aui-list-item" data-answer="3">
+                        <i class="xu">C</i> 10年内
+                    </button>
+                    <button type="button" class="aui-list-item" data-answer="4">
+                        <i class="xu">D</i> 5年内
+                    </button>
+                </ul>
+                <ul class="aui-list aui-media-list stxj">
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-title aui-margin-b-10 aui-margin-t-15">试题详解：</div>
+                            <div class="aui-list-item-text explain-p">
+                                《道路交通安全法》第一百零一条：违反道路交通安全法律、法规的规定，发生重大交通事故，构成犯罪的，依法追究刑事责任，并由公安机关交通管理部门吊销机动车驾驶证。
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<footer class="aui-bar aui-bar-tab" id="footer">
+    <div class="aui-bar-tab-item open-popup" data-target="#half">
+        <i class="aui-iconfont aui-icon-cert"></i>
+        <div class="aui-bar-tab-label"><span class="page_now">1</span>/1325</div>
+    </div>
+    <div class="aui-bar-tab-item xiangjie">
+        <i class="aui-iconfont aui-icon-question"></i>
+        <div class="aui-bar-tab-label">打开详解</div>
+    </div>
+</footer>
+<div id="half" class="weui-popup__container">
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+        <div class="toolbar">
+            <div class="toolbar-inner aui-font-size-14"style="line-height: 2.2rem;padding-left: 0.75rem">
+                答对&nbsp;<font class="dadui" color="#18b4ed">0</font>&nbsp;&nbsp;&nbsp;&nbsp;打错&nbsp;<font class="dacuo" color="#f25e5e">0</font>&nbsp;&nbsp;&nbsp;&nbsp;未答题&nbsp;<font class="weida" color="#a0a0a0">1325</font>
+            </div>
+        </div>
+        <div class="modal-content">
+            <div class="weui-grids datika">
+                <a href="javascript:;" class="flex1" data-id="800000">1</a>
+                <a href="javascript:;" class="flex1" data-id="800100">2</a>
+                <a href="javascript:;" class="flex1" data-id="800200">3</a>
+            </div>
+        </div>
+    </div>
+</div>
+<% include nav.ejs %>
+</body>
+<script>
+    var checkClick=true;
+    var all=3,nowans=1,open_xiaingjie=false,dadui=0,dacuo=0;   //all:总题数，nowans:当前题号,open_xiaingjie:是否打开详解
+    var answer1='<div class="swiper-slide answer-container" data-id="800200"> <ul class="aui-list aui-list-in aui-media-list"> <div class="aui-list-item"> <div class="aui-list-item-inner aui-font-size-18"> <font color="#18b4ed" size="4" class="iconfont">&#xe61b;</font> 3.驾驶机动车在道路上违反道路交通安全法的行为，属于什么行为？ </div> </div> <button type="button" class="aui-list-item" data-answer="1"> <i class="xu">A</i> 过失行为 </button> <button data-answer="2" type="button" class="aui-list-item dui"><i class="xu">B</i> 违法行为  </button> <button data-answer="3" type="button" class="aui-list-item"><i class="xu">C</i> 违规行为 </button><button data-answer="4" type="button" class="aui-list-item"><i class="xu">D</i> 违章行为</button> </ul> <ul class="aui-list aui-media-list" style="display: none;"> <li class="aui-list-item"> <div class="aui-list-item-inner"> <div class="aui-list-item-title aui-margin-b-10 aui-margin-t-15">试题详解：</div> <div class="aui-list-item-text explain-p">《道路交通安全法》第一百零一条：违反道路交通安全法律、法规的规定，发生重大交通事故，构成犯罪的，依法追究刑事责任，并由公安机关交通管理部门吊销机动车驾驶证。 </div> </div> </li> </ul> </div>'
+    var mySwiper = new Swiper('.swiper-container',{
+        onSlideNextEnd:function(){        //slider向前(右、下)切换结束时执行
+            nowans++;
+            if(nowans==all){
+                mySwiper.removeSlide(0);
+                console.log("最后一题");
+                console.log(nowans);
+                return;
+            }else {
+                if (mySwiper.slides.length==3){
+                    mySwiper.removeSlide(0);
+                }
+                console.log("当前是第几道："+nowans);
+                mySwiper.appendSlide(answer1);
+            }
+        },
+        onSlidePrevEnd:function(){        //slider向前(坐)切换结束时执行
+            nowans--;
+            if(nowans == 1){
+                console.log("第一题");
+                console.log(nowans);
+                mySwiper.removeSlide(2);
+                return;
+            }else {
+//                mySwiper.removeSlide(2);
+                if (mySwiper.slides.length==3){
+                    mySwiper.removeSlide(2);
+                }
+                console.log("当前是第几道："+nowans);
+                mySwiper.prependSlide(answer1);
+            }
+        },
+        onSlideChangeStart:function(swiper){    //从一个slide过渡到另一个slide结束时执行
+            if(open_xiaingjie){
+                checkClick=false;
+            }else {
+                checkClick=true;
+            };
+            var datika=$(".datika a[data-id='" + mySwiper.slides.eq(mySwiper.activeIndex).attr('data-id') + "']");
+            datika.addClass('current').siblings().removeClass('current');
+            if(datika.hasClass('dui') || datika.hasClass('cuo')){
+                mySwiper.slides.eq(mySwiper.activeIndex).addClass('yizuo');
+                mySwiper.slides.eq(mySwiper.activeIndex).find("button[data-answer='"+ datika.attr('id-answer') +"']").addClass('select');
+            };
+            $('.page_now').text(datika.text());
+        }
+    });
+
+
+    $(function () {
+        /*for (var i=1;i<=3;i++){
+            $('.weui-grids').append('<a href="javascript:;" class="flex1">'+i+'</a>');
+        }*/
+        $('.swiper-container').on('click','.answer-container button',function () {
+            if(!checkClick || $(this).parents('.answer-container').hasClass('yizuo')){
+                return;
+            }else{
+                if($(this).hasClass('dui')){
+                    $(".datika a[data-id='"+$(this).parents('.answer-container').attr('data-id')+"']").addClass('dui');
+                    $(this).parents('.answer-container').addClass('yizuo');
+                    $(".dadui").text(dadui++);
+                }else {
+                    $(this).addClass('select');$(this).parents('.answer-container').addClass('yizuo');
+                    $(".datika a[data-id='"+$(this).parents('.answer-container').attr('data-id')+"']").addClass('cuo');
+                    $(".dacuo").text(dacuo++);
+                };
+                $('.weida').text(all--);
+                $(".datika a[data-id='"+$(this).parents('.answer-container').attr('data-id')+"']").attr('id-answer',$(this).attr('data-answer'));
+                checkClick=false;
+                $(this).unbind('click');
+            }
+        });
+    });
+    $(".xiangjie").click(function () {
+        $('.swiper-wrapper').toggleClass('open_xiaingjie');
+        $(this).toggleClass("xiangjie-on");
+        open_xiaingjie= !open_xiaingjie ? true : false;
+        checkClick= checkClick ? false : true;
+    });
+</script>
+</html>

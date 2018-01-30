@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+     /*   .aui-list .aui-list-item-media{width: 4rem;}
+        .choose-show{top: 2.2rem;}*/
+        .aui-list-item{
+            border-bottom: 1px solid #f4f4f4;
+        }
+     .aui-list.aui-list-in .aui-list-item-inner:after{height: 0;}
+    </style>
+</head>
+<body style="background: #FFFfff">
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title ">
+        ta的粉丝
+    </div>
+</header>
+<div class="aui-content-padded" style="padding-top: 2rem;padding-bottom: 2.5rem;">
+    <ul class="aui-list  aui-list-in">
+        <!--循环对象-->
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-info aui-list-item-title">
+                    <div class="aui-info-item">
+                        <img src="/images/liulangnan.png" style="width:1rem" class="aui-img-round"><span class="aui-margin-l-5">流浪男</span>
+                    </div>
+                </div>
+                <div class="aui-list-item-right"><div class="aui-btn aui-btn-info follow">关注TA</div></div>
+            </div>
+        </li>
+        <!--循环对象-->
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-info aui-list-item-title">
+                    <div class="aui-info-item">
+                        <img src="/images/comit1.jpg" style="width:1rem" class="aui-img-round"><span class="aui-margin-l-5">熊猫大侠</span>
+                    </div>
+                </div>
+                <div class="aui-list-item-right"><div class="aui-btn follow">已关注</div></div>
+            </div>
+        </li>
+
+        <!--消息提示-->
+        <li class="aui-media-list">
+            <div class="aui-list-item-inner aui-text-center">
+                <div class="aui-font-size-14 aui-text-center">没有更多消息了~</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="shadow"></div>
+<% include footPublic %>
+</body>
+<script>
+    $(function () {
+        $('.follow').click(function () {
+            var text = $(this).text();
+            console.log(text);
+            if(text=="关注TA"){
+                $(this).text("已关注").removeClass('aui-btn-info');
+            }else{
+                $(this).text("关注TA").addClass('aui-btn-info');
+            }
+        })
+    })
+</script>
+</html>

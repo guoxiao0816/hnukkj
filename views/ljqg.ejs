@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include headPublic %>
+    <style>
+        .aui-list .aui-list-item-label{width:33%;}
+        .aui-list .aui-list-item-media{width: 2rem;}
+    </style>
+</head>
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a class="aui-pull-left aui-btn " href="javascript:history.back();">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">
+        <a href=""><%=title%></a>
+    </div>
+</header>
+<div class="aui-content" ontouchstart>
+    <ul class="aui-list aui-card-list aui-list-in">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">吉祥驾校（信息学院路校区）代金券</div>
+                <div class="aui-list-item-right">￥100.0</div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">学时数量</div>
+                <div class="aui-list-item-right">
+                    <div class="aui-bar aui-bar-btn aui-bar-btn-sm" style="width:60%;float:right" type="count" id="demo">
+                        <div class="aui-bar-btn-item">
+                            <i class="aui-iconfont aui-icon-minus"></i>
+                        </div>
+                        <div class="aui-bar-btn-item">
+                            <input type="number" class="aui-input aui-text-center" value="0" id="count">
+                        </div>
+                        <div class="aui-bar-btn-item">
+                            <i class="aui-iconfont aui-icon-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">小计</div>
+                <div class="aui-list-item-right"><span id="xj">￥0.0</span></div>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-card-list aui-list-in">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">购买者姓名</div>
+                <div class="aui-list-item-right">王冠杰</div>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-media-list aui-card-list aui-list-in">
+        <div class="aui-card-list-header aui-margin-t-10 aui-border-b">支付方式</div>
+        <label class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title"><font style="vertical-align: middle;font-size: 22px;" color="#03a9f4" class="aui-iconfont iconfont">&#xe662;</font> 支付宝</div>
+                    <div class="aui-list-item-right"><input type="radio" class="aui-checkbox" name="zffs"></div>
+                </div>
+            </div>
+        </label>
+        <label class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text">
+                    <div class="aui-list-item-title"><font style="vertical-align: middle;font-size: 22px;" color="#1dbe20" class="aui-iconfont iconfont">&#xe661;</font> 微信</div>
+                    <div class="aui-list-item-right"><input type="radio" class="aui-checkbox" name="zffs"></div>
+                </div>
+            </div>
+        </label>
+    </ul>
+</div>
+<div class="aui-bar aui-bar-tab aui-font-size-16" style="line-height: 2.5rem;">
+    <div class="aui-col-xs-9 aui-bar-tab-item aui-text-left aui-padded-l-15">
+        合计：<span id="num">￥0.0</span>
+    </div>
+    <div class="aui-col-xs-3 aui-bar-tab-item aui-bg-info aui-text-white"> 立即抢购</div>
+</div>
+</body>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var bar = document.querySelectorAll(".aui-bar-btn");
+    if(bar){
+        for(var i=0; i<bar.length;i++){
+            var d = bar[i];
+            var tab = new auiTab({
+                element:bar[i],
+                repeatClick:true
+            },function(ret){
+                if(ret.dom.parentNode.getAttribute("type") && ret.dom.parentNode.getAttribute("type")=="count"){
+                    var count = parseInt(document.getElementById("count").value);
+                    if(ret.index==2)return;
+                    if(ret.index==1 && count >=1){
+                        document.getElementById("count").value = count-1;
+                        document.getElementById("num").innerHTML="¥"+(100*(count-1));
+                        document.getElementById("xj").innerHTML="¥"+(100*(count-1));
+                    }
+                    if(ret.index==3){
+                        document.getElementById("count").value = count+1;
+                        document.getElementById("num").innerHTML="¥"+(100*(count+1));
+                        document.getElementById("xj").innerHTML="¥"+(100*(count+1));
+                    }
+                }
+            });
+
+        }
+    }
+</script>
+</html>
